@@ -15,12 +15,14 @@ namespace = TriboDataFAIR.get_namespace('TriboDataFAIR_v0.4.owl')
 # reference to other Objects -------------------------------------------------------------------------------------------------
 other_objects_properties = list(TriboDataFAIR.involves.subclasses())  # get all involves properties which refer to a other object
 
-other_objects_properties += list(TriboDataFAIR.physicallyModifies.subclasses())  # Nick Edit: quick workaround
+for property in other_objects_properties:  # get children of involves properties
+    other_objects_properties += list(property.subclasses())  # add children to same property list
+
 
 #other_objects_properties += list(TriboDataFAIR.hasPart.subclasses())  # get all hasPart properties which refer to a other object
 other_objects_properties = list(str(i).removeprefix(OWL_master_name)for i in other_objects_properties)  # convert list elements to string and remove master sufix
 
-
+print(other_objects_properties)
 # ----------------------------------------------------------------------------------------------------------------------------
 
 def get_all_classes_as_list(class_list):
@@ -51,7 +53,7 @@ def check_for_object_refer(restriction):
                 if restriction in other_object:
                     other_object = other_object.removeprefix('.'+restriction)
                     other_object = other_object.removeprefix('('+OWL_master_name).removesuffix(')')
-                    return '<object '+other_object+'>'
+                    return '<object '+other_object+','+other_object_property+'>'  # <object 'refered_object, 'property_restriction'>
     return False
 
 
@@ -215,10 +217,12 @@ def children(key):
             friendly_names_dict['Input Value Type'] = placeholder_keys[i]  # assign data type to friendly name
 
         elif is_class_refer_other_object(placeholder_keys[i]):
-            referred_object = placeholder_keys[i].removeprefix('<object ').removesuffix('>')
-            children_classes_dict[referred_object] = 'refer to other Record'
+            referred_object_and_property = placeholder_keys[i].removeprefix('<object ').removesuffix('>').split(',')
+            referred_object = referred_object_and_property[0]
+            object_property = referred_object_and_property[1]
+            children_classes_dict[referred_object] = object_property
             del children_classes_dict[placeholder_keys[i]]
-            friendly_names_dict[className_to_friendlyName(referred_object)] = 'refer to other Record'  # assign object to friendly name
+            friendly_names_dict[className_to_friendlyName(referred_object)] = object_property  # assign object to friendly name
 
         else:
             children_keys.append(placeholder_keys[i])
@@ -326,3 +330,4 @@ search_string = "TribologicalExperiment"  # wanted OWL thing
 search_output = main_search(search_string)
 print(search_output[0])  # print dict with normal class names
 print(search_output[1])  # print dict with friendly names
+
