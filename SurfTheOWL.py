@@ -1,6 +1,6 @@
 from owlready2 import *
 import re
-
+# Here I am testing the integration of Git and PyCharm
 
 property_restrictions = ['some', 'only', 'min', 'max', 'exactly', 'value', 'has_self']
 special_restrictions = [['hasTimeStamp', 'dateTimeStamp']]
