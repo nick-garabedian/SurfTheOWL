@@ -9,8 +9,8 @@ data_input_types = ['float', 'string', 'decimal', 'dateTimeStamp', 'boolean', 'P
 
 
 
-TriboDataFAIR = get_ontology('TriboDataFAIR_v0.4.owl').load()
-namespace = TriboDataFAIR.get_namespace('TriboDataFAIR_v0.4.owl')
+TriboDataFAIR = get_ontology('SurfTheOWL/TriboDataFAIR_v0.4.owl').load()
+namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_v0.4.owl')
 
 # reference to other Objects -------------------------------------------------------------------------------------------------
 other_objects_properties = list(TriboDataFAIR.involves.subclasses())  # get all involves properties which refer to a other object
@@ -22,7 +22,7 @@ for property in other_objects_properties:  # get children of involves properties
 #other_objects_properties += list(TriboDataFAIR.hasPart.subclasses())  # get all hasPart properties which refer to a other object
 other_objects_properties = list(str(i).removeprefix(OWL_master_name)for i in other_objects_properties)  # convert list elements to string and remove master sufix
 
-print(other_objects_properties)
+#print(other_objects_properties)
 # ----------------------------------------------------------------------------------------------------------------------------
 
 def get_all_classes_as_list(class_list):
@@ -324,10 +324,10 @@ def main_search(className):
                                                 friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4][f_key5][f_key6][f_key7][f_key8][f_key9][f_key10] = output10[2]
 
 
-        return classes_dic, friendly_classes_dic
+        return friendly_classes_dic
 
-search_string = "TribologicalExperiment"  # wanted OWL thing
-search_output = main_search(search_string)
-print(search_output[0])  # print dict with normal class names
-print(search_output[1])  # print dict with friendly names
+#search_string = "TribologicalExperiment"  # wanted OWL thing
+#search_output = main_search(search_string)
+#print(search_output[0])  # print dict with normal class names
+#print(search_output[1])  # print dict with friendly names
 

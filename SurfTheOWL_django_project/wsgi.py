@@ -1,5 +1,5 @@
 """
-WSGI config for IAM project.
+WSGI config for SurfTheOWL_django_project project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'IAM.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SurfTheOWL_django_project.settings')
 
 application = get_wsgi_application()

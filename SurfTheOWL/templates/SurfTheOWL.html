@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SurfTheOWL</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/SurfTheOWL_style.css' %}">
+</head>
+<body>
+    <form action="/Surfing" method="post">
+        {% csrf_token %}
+        <input name="searched_class" type="search">
+        <button type="submit">SEARCH</button>
+    </form>
+    {% for key, value in data_tree.items %}
+    <h2>{{key}}</h2>  <!-- searched class name-->
+        {% for key2, value2 in value.items %}
+            <span class="layer2">{{key2}} :</span>  <!-- first layer keys -->
+            {% if not value2.items %} <!-- if first layer has no child dict -->
+            <span class="layer2">{{value2}}</span><br>
+            {% else %}
+            <br>
+            {% endif %}
+            {% for key3, value3 in value2.items %}
+                <span class="layer3">{{key3}} :</span>
+                {% if not value3.items %} <!-- if second layer has no child dict -->
+                <span class="layer3">{{value3}}</span><br>
+                {% else %}
+                <br>
+                {% endif %}
+                {% for key4, value4 in value3.items %}
+                    <span class="layer4">{{key4}} :</span>
+                    {% if not value4.items %} <!-- if third layer has no child dict -->
+                    <span class="layer4">{{value4}}</span><br>
+                    {% else %}
+                    <br>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}  <!-- first layer child end-->
+    {% endfor %} <!-- search class loop end  -->
+
+</body>
+</html>
+
+

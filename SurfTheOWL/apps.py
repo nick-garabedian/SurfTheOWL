@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class OwlTriboDataConfig(AppConfig):
-    name = 'OWL_Tribo_data'
+class SurftheowlConfig(AppConfig):
+    name = 'SurfTheOWL'

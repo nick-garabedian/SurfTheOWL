@@ -1,5 +1,5 @@
 """
-ASGI config for IAM project.
+ASGI config for SurfTheOWL_django_project project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'IAM.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SurfTheOWL_django_project.settings')
 
 application = get_asgi_application()
