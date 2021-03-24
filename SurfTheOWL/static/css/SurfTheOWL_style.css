@@ -1,13 +1,28 @@
 .layer2{
-    display: block;
-    padding-top: 20px;
-    padding-left: 10px;
+    display: inline-block;
+    padding-top: 20px
 }
 .layer3{
-    display: block;
-    padding-left: 30px;
+    padding-left: 30px
 }
 .layer4{
-    display: block;
-    padding-left: 50px;
+    padding-left: 60px;
+}
+.layer5{
+    padding-left: 90px;
+}
+.layer6{
+    padding-left: 120px;
+}
+.layer7{
+    padding-left: 150px;
+}
+.layer8{
+    padding-left: 180px;
+}
+.layer9{
+    padding_left: 210px;
+}
+.layer10{
+    padding-left: 240px;
 }
