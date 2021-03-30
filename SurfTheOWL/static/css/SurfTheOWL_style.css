@@ -1,28 +1,90 @@
+@media print {
+body {-webkit-print-color-adjust: exact;}
+}
+body{
+    font-family: Arial;
+    width: 1500px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+hr.solid {
+  border-top: 3px solid #bababa;
+}
+.bulletpoint{
+    font-size: 25px;
+}
+.layer1_div{
+    background-color: lightblue;
+    padding-top: 5px;
+    padding-left: 5px;
+
+}
+.layer2_div{
+    background-color: #9b9b9b;
+    margin: 5px 5px 5px 50px;
+    padding-bottom: 5px;
+
+}
+.layer3_div{
+    background-color: #a7a7a7;
+    margin: 5px 5px 5px 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+.layer4_div{
+    background-color: #d4d4d4;
+    margin: 5px 5px 5px 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    -webkit-print-color-adjust: exact;
+}
+.layer5_div{
+    background-color: #e7e7e7;
+    margin: 5px 5px 5px 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+.layer6_div{
+    background-color: whitesmoke;
+    margin: 5px 5px 5px 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+.layer6_div{
+    background-color: white;
+    margin: 5px 5px 5px 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
 .layer2{
-    display: inline-block;
-    padding-top: 20px
+    font-size: large
 }
 .layer3{
-    padding-left: 30px
+
 }
 .layer4{
-    padding-left: 60px;
+
 }
 .layer5{
-    padding-left: 90px;
+
 }
 .layer6{
-    padding-left: 120px;
+
 }
 .layer7{
-    padding-left: 150px;
+
 }
 .layer8{
-    padding-left: 180px;
+    padding-left: 210px;
 }
 .layer9{
-    padding_left: 210px;
+    padding_left: 240px;
 }
 .layer10{
-    padding-left: 240px;
+    padding-left: 270px;
 }

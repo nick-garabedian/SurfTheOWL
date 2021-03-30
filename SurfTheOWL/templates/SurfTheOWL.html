@@ -12,9 +12,14 @@
         <input name="searched_class" type="search" placeholder="TribologicalExperiment">
         <button type="submit">SEARCH</button>
     </form>
+    <hr class="solid">
+
     {% for key, value in data_tree.items %}
-    <h2>{{key}}</h2>  <!-- searched class name-->
+    <div class="layer1_div">
+    <h2 >{{key}}</h2>  <!-- searched class name-->
         {% for key2, value2 in value.items %}
+            <div class="layer2_div">
+            <span class="bulletpoint">&#8226; </span>
             <span class="layer2">{{key2}} :</span>  <!-- first layer keys -->
             {% if not value2.items %} <!-- if first layer has no child dict -->
             <span class="layer2-value">{{value2}}</span><br>
@@ -22,6 +27,8 @@
             <br>
             {% endif %}
             {% for key3, value3 in value2.items %}
+                <div class="layer3_div">
+                    <span class="bulletpoint">&#8226; </span>
                 <span class="layer3">{{key3}} :</span>
                 {% if not value3.items %} <!-- if second layer has no child dict -->
                 <span class="layer3-value">{{value3}}</span><br>
@@ -29,6 +36,8 @@
                 <br>
                 {% endif %}
                 {% for key4, value4 in value3.items %}
+                    <div class="layer4_div">
+                        <span class="bulletpoint">&#8226; </span>
                     <span class="layer4">{{key4}} :</span>
                     {% if not value4.items %} <!-- if third layer has no child dict -->
                     <span class="layer4-value">{{value4}}</span><br>
@@ -36,6 +45,8 @@
                     <br>
                     {% endif %}
                     {% for key5, value5 in value4.items %}
+                        <div class="layer5_div">
+                            <span class="bulletpoint">&#8226; </span>
                         <span class="layer5">{{key5}} :</span>
                         {% if not value5.items %}
                         <span class="layer5-value">{{value5}}</span><br>
@@ -43,6 +54,8 @@
                         <br>
                         {% endif %}
                         {% for key6, value6 in value5.items %}
+                            <div class="layer6_div">
+                                <span class="bulletpoint">&#8226; </span>
                             <span class="layer6">{{key6}} :</span>
                             {% if not value6.items %}
                             <span class="layer6-value">{{value6}}</span><br>
@@ -50,6 +63,8 @@
                             <br>
                             {% endif %}
                             {% for key7, value7 in value6.items %}
+                                <div class="layer7_div">
+                                    <span class="bulletpoint">&#8226; </span>
                                 <span class="layer7">{{key7}} :</span>
                                 {% if not value7.items %}
                                 <span class="layer7-value">{{value7}}</span><br>
@@ -57,6 +72,7 @@
                                 <br>
                                 {% endif %}
                                 {% for key8, value8 in value7.items %}
+                                    <span class="bulletpoint">&#8226; </span>
                                     <span class="layer8">{{key8}} :</span>
                                     {% if not value8.items %}
                                     <span class="layer8-value">{{value8}}</span><br>
@@ -64,6 +80,7 @@
                                     <br>
                                     {% endif %}
                                     {% for key9, value9 in value8.items %}
+                                        <span class="bulletpoint">&#8226; </span>
                                         <span class="layer9">{{key9}} :</span>
                                         {% if not value9.items %}
                                         <span class="layer9-value">{{value9}}</span><br>
@@ -71,21 +88,29 @@
                                         <br>
                                         {% endif %}
                                         {% for key10, value10 in value9.items %}
+                                            <span class="bulletpoint">&#8226; </span>
                                             <span class="layer10">{{key10}} :</span>
                                             {% if not value10.items %}
                                             <span class="layer9-value">{{value10}}</span><br>
                                             {% else %}
                                             <br>
                                             {% endif %}
-                                        {% endfor %}
-                                    {% endfor %}
-                                {% endfor %}
-                            {% endfor %}
-                        {% endfor %}
-                    {% endfor %}
-                {% endfor %}
-            {% endfor %}
-        {% endfor %}  <!-- first layer child end-->
+                                        {% endfor %} <!-- tenth layer child end -->
+                                    {% endfor %} <!-- ninth layer child end -->
+                                {% endfor %} <!-- eighth layer child end -->
+                                </div>
+                            {% endfor %} <!-- seventh layer child end  -->
+                            </div>
+                        {% endfor %} <!-- sixth layer child end -->
+                        </div>
+                    {% endfor %} <!-- fifth layer child end -->
+                    </div>
+                {% endfor %} <!-- fourth layer child end -->
+                </div>
+            {% endfor %}  <!-- third layer child end -->
+            </div>
+        {% endfor %}  <!-- second layer child end-->
+        </div>
     {% endfor %} <!-- search class loop end  -->
 
 </body>
