@@ -5,15 +5,15 @@
     <title>SurfTheOWL</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/SurfTheOWL_style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/autocomplet.css' %}">
-    <script src="{% static 'js/autocomplet_skript.js' %}"></script>
 </head>
 <body>
     <form action="/Surfing" method="post" autocomplete="off">
         {% csrf_token %}
-        <div class="autocomplete" style="width: 300px">
-            <input id="searched_class" name="searched_class" type="text" placeholder="wanted owl thing">
-        </div>
+        <select name="searched_class" id="searched_class">
+            {% for element in list_of_all_classes %}
+            <option value="{{element.0}}">{{element.1}}</option> <!--value=normal class name, >< = friendly name   -->
+            {% endfor %}
+        </select>
         <button id="submit_button" type="submit">SEARCH</button>
     </form>
 
@@ -123,12 +123,7 @@
         {% endfor %}  <!-- second layer child end-->
         </div>
     {% endfor %} <!-- search class loop end  -->
-{{ list_of_all_classes|json_script:'raw' }}
-<script>
-   var allClasses = JSON.parse(document.getElementById('raw').textContent);
 
-    autocomplete(document.getElementById("searched_class"), allClasses);
-</script>
 </body>
 </html>
 

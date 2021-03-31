@@ -7,8 +7,6 @@ special_restrictions = [['hasTimeStamp', 'dateTimeStamp']]
 OWL_master_name = 'TriboDataFAIR_v0.4.'
 data_input_types = ['float', 'string', 'decimal', 'dateTimeStamp', 'boolean', 'PlainLiteral', 'integer', 'dateTimeStamp']
 
-
-
 TriboDataFAIR = get_ontology('SurfTheOWL/TriboDataFAIR_v0.4.owl').load()
 namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_v0.4.owl')
 
@@ -22,7 +20,6 @@ for property in other_objects_properties:  # get children of involves properties
 #other_objects_properties += list(TriboDataFAIR.hasPart.subclasses())  # get all hasPart properties which refer to a other object
 other_objects_properties = list(str(i).removeprefix(OWL_master_name)for i in other_objects_properties)  # convert list elements to string and remove master sufix
 
-#print(other_objects_properties)
 # ----------------------------------------------------------------------------------------------------------------------------
 
 def get_all_classes_as_list(class_list):
@@ -31,9 +28,25 @@ def get_all_classes_as_list(class_list):
         element_string = str(element).split('.')
         list_class_names.append(element_string[-1]) # Nick Edited
     return list_class_names
+all_owl_classes = get_all_classes_as_list(TriboDataFAIR.classes())  # all owl things as list
 
+def get_searchable_classes_from_list(classes_list):  # converts a list of classes in a list as pair with friendly name [[className, friendlyName], ....]
+    friendly_name_list = []
+    normal_class_names = get_all_classes_as_list(classes_list) # get class name 
 
-all_owl_classes = get_all_classes_as_list(TriboDataFAIR.classes())
+    for element in classes_list:  # get friendly class Name 
+        friendly_name_list.append(element.friendlyName)
+
+    searchable_classes_name_pair = []
+    for i in range(len(friendly_name_list)):
+        if friendly_name_list[i]:  # non searchable classes have no friendly name, so only append if friendly name exists
+            searchable_classes_name_pair.append([normal_class_names[i],friendly_name_list[i][0]])
+ 
+    return searchable_classes_name_pair
+
+# all subs of Procedure get defined as searchable ---------------------------------------------------------------------
+searchable_owl_classes = get_searchable_classes_from_list(list(TriboDataFAIR.Procedure.descendants())) # all owl classes under Procedure which get the searchable classes in frontend 
+#----------------------------------------------------------------------------------------------------------------------
 
 
 def check_for_special_restriction(restriction):

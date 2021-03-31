@@ -116,6 +116,9 @@ hr.solid {
 .layer10{
     padding-left: 270px;
 }
+#searched_class{
+    font-size: 20px;
+}
 #submit_button{
-    margin-inline-start: 10px;
+    font-size: 20px;
 }
