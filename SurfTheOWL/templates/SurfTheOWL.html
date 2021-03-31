@@ -5,13 +5,18 @@
     <title>SurfTheOWL</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/SurfTheOWL_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/autocomplet.css' %}">
+    <script src="{% static 'js/autocomplet_skript.js' %}"></script>
 </head>
 <body>
-    <form action="/Surfing" method="post">
+    <form action="/Surfing" method="post" autocomplete="off">
         {% csrf_token %}
-        <input name="searched_class" type="search" placeholder="TribologicalExperiment">
-        <button type="submit">SEARCH</button>
+        <div class="autocomplete" style="width: 300px">
+            <input id="searched_class" name="searched_class" type="text" placeholder="wanted owl thing">
+        </div>
+        <button id="submit_button" type="submit">SEARCH</button>
     </form>
+
     <hr class="solid">
 
     {% for key, value in data_tree.items %}
@@ -72,6 +77,7 @@
                                 <br>
                                 {% endif %}
                                 {% for key8, value8 in value7.items %}
+                                    <div class="layer8-div">
                                     <span class="bulletpoint">&#8226; </span>
                                     <span class="layer8">{{key8}} :</span>
                                     {% if not value8.items %}
@@ -80,6 +86,7 @@
                                     <br>
                                     {% endif %}
                                     {% for key9, value9 in value8.items %}
+                                        <div class="layer9-div">
                                         <span class="bulletpoint">&#8226; </span>
                                         <span class="layer9">{{key9}} :</span>
                                         {% if not value9.items %}
@@ -88,6 +95,7 @@
                                         <br>
                                         {% endif %}
                                         {% for key10, value10 in value9.items %}
+                                            <div class="layer10-div">
                                             <span class="bulletpoint">&#8226; </span>
                                             <span class="layer10">{{key10}} :</span>
                                             {% if not value10.items %}
@@ -95,8 +103,11 @@
                                             {% else %}
                                             <br>
                                             {% endif %}
+                                            </div>
                                         {% endfor %} <!-- tenth layer child end -->
+                                        </div>
                                     {% endfor %} <!-- ninth layer child end -->
+                                    </div>
                                 {% endfor %} <!-- eighth layer child end -->
                                 </div>
                             {% endfor %} <!-- seventh layer child end  -->
@@ -112,7 +123,12 @@
         {% endfor %}  <!-- second layer child end-->
         </div>
     {% endfor %} <!-- search class loop end  -->
+{{ list_of_all_classes|json_script:'raw' }}
+<script>
+   var allClasses = JSON.parse(document.getElementById('raw').textContent);
 
+    autocomplete(document.getElementById("searched_class"), allClasses);
+</script>
 </body>
 </html>
 

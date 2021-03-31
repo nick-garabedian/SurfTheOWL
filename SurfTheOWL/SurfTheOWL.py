@@ -29,7 +29,7 @@ def get_all_classes_as_list(class_list):
     list_class_names = []
     for element in class_list:
         element_string = str(element).split('.')
-        list_class_names.append(element_string[-1])  # Nick Edited
+        list_class_names.append(element_string[-1]) # Nick Edited
     return list_class_names
 
 

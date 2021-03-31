@@ -61,6 +61,34 @@ hr.solid {
     padding-bottom: 3px;
 
 }
+.layer7_div{
+    background-color: whitesmoke;
+    margin: 5px 5px 5px 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+.layer8_div{
+    background-color: #e7e7e7;
+    margin: 5px 5px 5px 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+.layer9_div{
+    background-color: #d4d4d4;
+    margin: 5px 5px 5px 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+.layer10_div{
+    background-color: #a7a7a7;
+    margin: 5px 5px 5px 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
 .layer2{
     font-size: large
 }
@@ -87,4 +115,7 @@ hr.solid {
 }
 .layer10{
     padding-left: 270px;
+}
+#submit_button{
+    margin-inline-start: 10px;
 }

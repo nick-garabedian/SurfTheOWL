@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from . import SurfTheOWL
+import json
 
 # Create your views here.
 def landing(request):  # initial call of the website
-    return render(request, 'SurfTheOWL.html')
+    list_of_all_classes = SurfTheOWL.all_owl_classes
+    return render(request, 'SurfTheOWL.html', {'list_of_all_classes': list_of_all_classes})
 
 def search(request): #search call of website
     if request.method == 'POST':
