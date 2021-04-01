@@ -1,12 +1,13 @@
 from owlready2 import *
 import re
+
 # Here I am testing the integration of Git and PyCharm
 
 property_restrictions = ['some', 'only', 'min', 'max', 'exactly', 'value', 'has_self']
 special_restrictions = [['hasTimeStamp', 'dateTimeStamp']]
 OWL_master_name = 'TriboDataFAIR_v0.4.'
 data_input_types = ['float', 'string', 'decimal', 'dateTimeStamp', 'boolean', 'PlainLiteral', 'integer', 'dateTimeStamp']
-
+#SurfTheOWL/
 TriboDataFAIR = get_ontology('SurfTheOWL/TriboDataFAIR_v0.4.owl').load()
 namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_v0.4.owl')
 
@@ -215,6 +216,7 @@ def children(key):
     children_keys = []
     placeholder_keys = []
     friendly_names_dict = {}
+    other_object_refer_pair = [] #[({object: property},{friendly object: property}),(...),...]
     if not end_of_entries(key):
         children_classes_dict = dict.fromkeys(search_class(key))
         placeholder_keys = list(children_classes_dict.keys())
@@ -236,12 +238,12 @@ def children(key):
             children_classes_dict[referred_object] = object_property
             del children_classes_dict[placeholder_keys[i]]
             friendly_names_dict[className_to_friendlyName(referred_object)] = object_property  # assign object to friendly name
-
+            other_object_refer_pair.append(({referred_object: object_property},{className_to_friendlyName(referred_object):object_property})) # list of refer objects, to manipulate existing list
         else:
             children_keys.append(placeholder_keys[i])
             friendly_names_dict[className_to_friendlyName(placeholder_keys[i])] = children_classes_dict[placeholder_keys[i]]  # assign dict data to friendly name
 
-    return [children_classes_dict, children_keys, friendly_names_dict]
+    return [children_classes_dict, children_keys, friendly_names_dict, other_object_refer_pair]
 
 
 def main_search(className):
@@ -254,6 +256,7 @@ def main_search(className):
         classes_dic[className] = output[0]
         first_layer_keys = output[1]
         friendly_classes_dic[friendly_class_name] = output[2]
+        object_refer_pair = [] # placeholder list of refer objects for comparison an separation in existing list. prefer way because in further it might be necessary to get all objects
 
         for key1 in first_layer_keys:
             #print(key1 + '    -key1')
@@ -262,7 +265,7 @@ def main_search(className):
             classes_dic[className][key1] = output1[0]
             f_key1 = className_to_friendlyName(key1)
             friendly_classes_dic[friendly_class_name][f_key1] = output1[2]
-
+            object_refer_pair = output[3] # current only first layer elements refers to other objects
 
             for key2 in second_layer_keys:
                 #print(key2+'    -key2')
@@ -336,8 +339,37 @@ def main_search(className):
                                                 f_key10 = className_to_friendlyName(key10)
                                                 friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4][f_key5][f_key6][f_key7][f_key8][f_key9][f_key10] = output10[2]
 
+        # separate other objects for different appearance. prefer because further maybe complete object necessary -------------------------------
+        # delete objects from class list ------------------
+        keys_p = list(classes_dic[className].keys())
+        length = len(keys_p)
+        i = 0
+        while i < length: #delet other object refer from class list
+            for item in object_refer_pair:
+                if keys_p[i] == list(item[0].keys())[0]:
+                    if keys_p[i] in classes_dic[className]:
+                        del classes_dic[className][keys_p[i]]
+                        length -= 1
+            i += 1
 
-        return friendly_classes_dic
+        # delete objects from friendly name list ----------------
+        keys_p_f = list(friendly_classes_dic[friendly_class_name].keys())
+        length_f = len(keys_p)
+        j = 0
+        while j < length_f: #delet other object refer from class list (friendly name dict )
+            for item in object_refer_pair:
+                if keys_p_f[j] == list(item[1].keys())[0]:
+                    if keys_p_f[j] in friendly_classes_dic[friendly_class_name]:
+                        del friendly_classes_dic[friendly_class_name][keys_p_f[j]]
+                        length -= 1
+            j += 1
+        # generate object list with friendly name ----------------
+        special_objects_friendly = []
+        for item in object_refer_pair:
+            special_objects_friendly.append([list(item[1].keys())[0], item[1][list(item[1].keys())[0]]])
+        # -------------------------------------------------------------------------------------------------------------------------------------------
+
+        return [friendly_classes_dic, special_objects_friendly]
 
 #search_string = "TribologicalExperiment"  # wanted OWL thing
 #search_output = main_search(search_string)

@@ -11,8 +11,11 @@ def search(request): #search call of website
     list_of_all_classes = SurfTheOWL.searchable_owl_classes
     if request.method == 'POST':
         searched_class  =request.POST.get('searched_class')
-        data_tree = SurfTheOWL.main_search(searched_class)
+        data = SurfTheOWL.main_search(searched_class)
+        data_tree = data[0]
         search_result_heading = next(iter(data_tree))
-    return render(request, 'SurfTheOWL.html', {'search_result_heading': search_result_heading,
-                                               'data_tree': data_tree,
-                                               'list_of_all_classes': list_of_all_classes})
+        return render(request, 'SurfTheOWL.html', {'search_result_heading': search_result_heading,
+                                                    'data_tree': data_tree,
+                                                    'data_objects': data[1],
+                                                    'list_of_all_classes': list_of_all_classes,
+                                                   })

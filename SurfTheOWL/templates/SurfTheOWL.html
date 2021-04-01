@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/SurfTheOWL_style.css' %}">
 </head>
 <body>
-    <form action="/Surfing" method="post" autocomplete="off">
+    <form action="/Surfing" method="post">
         {% csrf_token %}
         <select name="searched_class" id="searched_class">
             {% for element in list_of_all_classes %}
@@ -19,9 +19,16 @@
 
     <hr class="solid">
 
-    {% for key, value in data_tree.items %}
+
     <div class="layer1_div">
-    <h2 >{{key}}</h2>  <!-- searched class name-->
+    <h2 >{{search_result_heading}}</h2>  <!-- searched class name-->
+        {% for element in data_objects%}
+            <div class="specialObjDiv">
+                <span class="bulletpoint">&#8226; </span>
+                <span class="layer2">{{element.0}}: {{element.1}}</span>
+            </div>
+        {% endfor %}
+        {% for key, value in data_tree.items %}
         {% for key2, value2 in value.items %}
             <div class="layer2_div">
             <span class="bulletpoint">&#8226; </span>
@@ -33,7 +40,7 @@
             {% endif %}
             {% for key3, value3 in value2.items %}
                 <div class="layer3_div">
-                    <span class="bulletpoint">&#8226; </span>
+                <span class="bulletpoint">&#8226; </span>
                 <span class="layer3">{{key3}} :</span>
                 {% if not value3.items %} <!-- if second layer has no child dict -->
                 <span class="layer3-value">{{value3}}</span><br>
@@ -69,7 +76,7 @@
                             {% endif %}
                             {% for key7, value7 in value6.items %}
                                 <div class="layer7_div">
-                                    <span class="bulletpoint">&#8226; </span>
+                                <span class="bulletpoint">&#8226; </span>
                                 <span class="layer7">{{key7}} :</span>
                                 {% if not value7.items %}
                                 <span class="layer7-value">{{value7}}</span><br>
@@ -121,8 +128,8 @@
             {% endfor %}  <!-- third layer child end -->
             </div>
         {% endfor %}  <!-- second layer child end-->
+        {% endfor %}
         </div>
-    {% endfor %} <!-- search class loop end  -->
 
 </body>
 </html>

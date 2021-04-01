@@ -14,80 +14,53 @@ hr.solid {
 .bulletpoint{
     font-size: 25px;
 }
+.specialObjDiv{
+    background-color: #788f78;
+    margin: 3px 3px 3px 50px;
+}
 .layer1_div{
     background-color: lightblue;
-    padding-top: 5px;
     padding-left: 5px;
-
 }
 .layer2_div{
     background-color: #9b9b9b;
-    margin: 5px 5px 5px 50px;
-    padding-bottom: 5px;
-
+    margin: 3px 3px 3px 50px;
 }
 .layer3_div{
     background-color: #a7a7a7;
-    margin: 5px 5px 5px 50px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
+    margin: 3px 3px 3px 50px;
 }
 .layer4_div{
     background-color: #d4d4d4;
-    margin: 5px 5px 5px 50px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    -webkit-print-color-adjust: exact;
+    margin: 3px 3px 3px 50px;
 }
 .layer5_div{
     background-color: #e7e7e7;
-    margin: 5px 5px 5px 50px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
-}
+    margin: 3px 3px 3px 50px;
+ }
 .layer6_div{
     background-color: whitesmoke;
-    margin: 5px 5px 5px 50px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
+    margin: 3px 3px 3px 50px;
 }
 .layer6_div{
     background-color: white;
-    margin: 5px 5px 5px 50px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
+    margin: 3px 3px 3px 50px;
 }
 .layer7_div{
     background-color: whitesmoke;
-    margin: 5px 5px 5px 50px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
+    margin: 3px 3px 3px 50px;
 }
 .layer8_div{
     background-color: #e7e7e7;
-    margin: 5px 5px 5px 50px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
+    margin: 3px 3px 3px 50px;
 }
 .layer9_div{
     background-color: #d4d4d4;
-    margin: 5px 5px 5px 50px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
+    margin: 3px 3px 3px 50px;
 }
 .layer10_div{
     background-color: #a7a7a7;
-    margin: 5px 5px 5px 50px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
+    margin: 3px 3px 3px 50px;
 }
 .layer2{
     font-size: large
@@ -108,13 +81,13 @@ hr.solid {
 
 }
 .layer8{
-    padding-left: 210px;
+
 }
 .layer9{
-    padding_left: 240px;
+
 }
 .layer10{
-    padding-left: 270px;
+
 }
 #searched_class{
     font-size: 20px;
