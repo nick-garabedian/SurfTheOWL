@@ -113,7 +113,7 @@ def bad_letter_in_string(string):
     return False
 
 
-def get_data_instances(something):  # gets the instances of a Unit cowl class
+def get_data_instances(something):  # gets the instances of a Unit owl class
     friendly_name_instance_list = []
     if not is_class_datatype(something):
         string = 'TriboDataFAIR.'+something+'.instances()'
@@ -339,7 +339,7 @@ def main_search(className):
                                                 f_key10 = className_to_friendlyName(key10)
                                                 friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4][f_key5][f_key6][f_key7][f_key8][f_key9][f_key10] = output10[2]
 
-        # separate other objects for different appearance. prefer because further maybe complete object necessary -------------------------------
+        # separate other objects for different appearance. prefer because further maybe complete datatree necessary -------------------------------
         # delete objects from class list ------------------
         keys_p = list(classes_dic[className].keys())
         length = len(keys_p)
@@ -364,8 +364,8 @@ def main_search(className):
                         length -= 1
             j += 1
         # generate object list with friendly name ----------------
-        special_objects_friendly = []
-        for item in object_refer_pair:
+        special_objects_friendly = [] # Structure = [[friendly object name, property ], [...], ...] list because possible overwrite as dict when tow keys are the same
+        for item in object_refer_pair: # Structure= [({object: property},{friendly object: property}),(...),...]
             special_objects_friendly.append([list(item[1].keys())[0], item[1][list(item[1].keys())[0]]])
         # -------------------------------------------------------------------------------------------------------------------------------------------
 
