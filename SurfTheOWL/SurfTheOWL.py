@@ -248,119 +248,52 @@ def children(key):
 
 def main_search(className):
     if className in all_owl_classes:
-        classes_dic = {className: []}
+        classes_dict = {className: []}
         friendly_class_name_list = eval('TriboDataFAIR.'+className+'.friendlyName')
         friendly_class_name = friendly_class_name_list[0]
-        friendly_classes_dic = {friendly_class_name: []}
-        output = children(className)
-        classes_dic[className] = output[0]
-        first_layer_keys = output[1]
-        friendly_classes_dic[friendly_class_name] = output[2]
-        object_refer_pair = [] # placeholder list of refer objects for comparison an separation in existing list. prefer way because in further it might be necessary to get all objects
+        friendly_classes_dict = {friendly_class_name: []}
 
-        for key1 in first_layer_keys:
-            #print(key1 + '    -key1')
-            output1= children(key1)
-            second_layer_keys = output1[1]
-            classes_dic[className][key1] = output1[0]
-            f_key1 = className_to_friendlyName(key1)
-            friendly_classes_dic[friendly_class_name][f_key1] = output1[2]
-            object_refer_pair = output[3] # current only first layer elements refers to other objects
+        def find_process_layers_via_recursion(layer, keys, friendly_layer, depth=0): # keys are separate because some keys are a none owl thing
 
-            for key2 in second_layer_keys:
-                #print(key2+'    -key2')
-                output2 = children(key2)
-                classes_dic[className][key1][key2] = output2[0]
-                third_layer_keys = output2[1]
-                f_key2 = className_to_friendlyName(key2)
-                friendly_classes_dic[friendly_class_name][f_key1][f_key2] = output2[2]
+            if depth == 10:  # search depth
+                return layer, friendly_layer
+            else:
 
-                for key3 in third_layer_keys:
-                    #print(key3+'    -key3')
-                    output3 = children(key3)
-                    classes_dic[className][key1][key2][key3] = output3[0]
-                    fourth_layer_keys = output3[1]
-                    f_key3 = className_to_friendlyName(key3)
-                    friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3] = output3[2]
+                for key in keys:
+                    output = children(key)
+                    layer[key] = output[0]  # class names
+                    friendly_layer[className_to_friendlyName(key)] = output[2]  # friendly class names
+                    next_layer_keys = output[1]  # needed because not every key is searchable, therefore the function child delivers all keys which a wanted keys
 
-                    for key4 in fourth_layer_keys:
-                        #print(key4+'    -key4')
-                        output4 = children(key4)
-                        classes_dic[className][key1][key2][key3][key4] = output4[0]
-                        fifth_layer_keys = output4[1]
-                        f_key4 = className_to_friendlyName(key4)
-                        friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4] = output4[2]
+                    find_process_layers_via_recursion(layer[key], next_layer_keys, friendly_layer[className_to_friendlyName(key)], depth + 1)
 
-                        for key5 in fifth_layer_keys:
-                            #print(key5+'    -key5')
-                            output5 = children(key5)
-                            classes_dic[className][key1][key2][key3][key4][key5] = output5[0]
-                            sixth_layer_keys = output5[1]
-                            f_key5 = className_to_friendlyName(key5)
-                            friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4][f_key5] = output5[2]
+        find_process_layers_via_recursion(classes_dict, [className], friendly_classes_dict)
 
-                            for key6 in sixth_layer_keys:
-                                #print(key6+ '   -key6')
-                                output6 = children(key6)
-                                classes_dic[className][key1][key2][key3][key4][key5][key6] = output6[0]
-                                seventh_layer_keys = output6[1]
-                                f_key6 = className_to_friendlyName(key6)
-                                friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4][f_key5][f_key6] = output6[2]
-
-                                for key7 in seventh_layer_keys:
-                                    #print(key7+ '  -key7')
-                                    output7 = children(key7)
-                                    classes_dic[className][key1][key2][key3][key4][key5][key6][key7] = output7[0]
-                                    eighth_layer_keys = output7[1]
-                                    f_key7 = className_to_friendlyName(key7)
-                                    friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4][f_key5][f_key6][f_key7] = output7[2]
-
-                                    for key8 in eighth_layer_keys:
-                                        #print(key8+'    -key8')
-                                        output8 = children(key8)
-                                        classes_dic[className][key1][key2][key3][key4][key5][key6][key7][key8] = output8[0]
-                                        ninth_layer_keys = output8[1]
-                                        f_key8 = className_to_friendlyName(key8)
-                                        friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4][f_key5][f_key6][f_key7][f_key8] = output8[2]
-
-                                        for key9 in ninth_layer_keys:
-                                            #print(key9+'    -key9')
-                                            output9 = children(key9)
-                                            classes_dic[className][key1][key2][key3][key4][key5][key6][key7][key8][key9] = output9[0]
-                                            tenth_layer_keys = output9[1]
-                                            f_key9 = className_to_friendlyName(key9)
-                                            friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4][f_key5][f_key6][f_key7][f_key8][f_key9] = output9[2]
-
-                                            for key10 in tenth_layer_keys:
-                                                #print(key10+'   -key10')
-                                                output10 = children(key10)
-                                                classes_dic[className][key1][key2][key3][key4][key5][key6][key7][key8][key9][key10] = output10[0]
-                                                eleventh_layer_keys = output10[1]
-                                                f_key10 = className_to_friendlyName(key10)
-                                                friendly_classes_dic[friendly_class_name][f_key1][f_key2][f_key3][f_key4][f_key5][f_key6][f_key7][f_key8][f_key9][f_key10] = output10[2]
+        """placeholder list of refer objects for comparison an separation in existing list. prefer way because in further it might be necessary to get all objects"""
+        object_refer_pair = children(className)[3] # at current state only possible to separate other objects referral in first layer
 
         # separate other objects for different appearance. prefer because further maybe complete datatree necessary -------------------------------
         # delete objects from class list ------------------
-        keys_p = list(classes_dic[className].keys())
+        keys_p = list(classes_dict[className].keys())
         length = len(keys_p)
         i = 0
         while i < length: #delet other object refer from class list
             for item in object_refer_pair:
                 if keys_p[i] == list(item[0].keys())[0]:
-                    if keys_p[i] in classes_dic[className]:
-                        del classes_dic[className][keys_p[i]]
+                    if keys_p[i] in classes_dict[className]:
+                        del classes_dict[className][keys_p[i]]
                         length -= 1
             i += 1
 
         # delete objects from friendly name list ----------------
-        keys_p_f = list(friendly_classes_dic[friendly_class_name].keys())
+        keys_p_f = list(friendly_classes_dict[friendly_class_name].keys())
         length_f = len(keys_p)
         j = 0
         while j < length_f: #delet other object refer from class list (friendly name dict )
             for item in object_refer_pair:
                 if keys_p_f[j] == list(item[1].keys())[0]:
-                    if keys_p_f[j] in friendly_classes_dic[friendly_class_name]:
-                        del friendly_classes_dic[friendly_class_name][keys_p_f[j]]
+                    if keys_p_f[j] in friendly_classes_dict[friendly_class_name]:
+                        del friendly_classes_dict[friendly_class_name][keys_p_f[j]]
                         length -= 1
             j += 1
         # generate object list with friendly name ----------------
@@ -368,11 +301,11 @@ def main_search(className):
         for item in object_refer_pair: # Structure= [({object: property},{friendly object: property}),(...),...]
             special_objects_friendly.append([list(item[1].keys())[0], item[1][list(item[1].keys())[0]]])
         # -------------------------------------------------------------------------------------------------------------------------------------------
-
-        return [friendly_classes_dic, special_objects_friendly]
+        print(special_objects_friendly)
+        return [friendly_classes_dict, special_objects_friendly, classes_dict]
 
 #search_string = "TribologicalExperiment"  # wanted OWL thing
 #search_output = main_search(search_string)
-#print(search_output[0])  # print dict with normal class names
-#print(search_output[1])  # print dict with friendly names
+#print(search_output[2])  # print dict with normal class names
+#print(search_output[0])  # print dict with friendly names
 
