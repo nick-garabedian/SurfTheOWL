@@ -263,7 +263,7 @@ def main_search(className):
                     output = children(key)
                     layer[key] = output[0]  # class names
                     friendly_layer[className_to_friendlyName(key)] = output[2]  # friendly class names
-                    next_layer_keys = output[1]  # needed because not every key is searchable, therefore the function child delivers all keys which a wanted keys
+                    next_layer_keys = output[1]  # needed because not every key is searchable, therefore the function children delivers all keys which a wanted keys
 
                     find_process_layers_via_recursion(layer[key], next_layer_keys, friendly_layer[className_to_friendlyName(key)], depth + 1)
 
@@ -301,7 +301,7 @@ def main_search(className):
         for item in object_refer_pair: # Structure= [({object: property},{friendly object: property}),(...),...]
             special_objects_friendly.append([list(item[1].keys())[0], item[1][list(item[1].keys())[0]]])
         # -------------------------------------------------------------------------------------------------------------------------------------------
-        print(special_objects_friendly)
+
         return [friendly_classes_dict, special_objects_friendly, classes_dict]
 
 #search_string = "TribologicalExperiment"  # wanted OWL thing
