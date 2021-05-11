@@ -2156,7 +2156,7 @@ It ends with demounting of the sample/workpiece from the mounting table.</rdfs:c
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Tactile Surface Profilometry</friendlyName>
+        <friendlyName>Demagnetization Process</friendlyName>
         <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for 1D vizualization.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -3955,7 +3955,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#InstitutionLocation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Location"/>
-        <friendlyName>Institution Location</friendlyName>
+        <friendlyName>Institution (Location)</friendlyName>
         <rdfs:comment>The premises on which an object exists or a process happens.
 *Not to be confused with an institution as an organization, or as an employer.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
@@ -7901,7 +7901,6 @@ For Other Processes: Objects from this class act as the medium around the specim
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Time Duration</friendlyName>
         <rdfs:comment>Any measure of length of time, with or without respect to the universal timeline.</rdfs:comment>
         <rdfs:isDefinedBy>SUMO Ontology (http://www.adampease.org/OP)</rdfs:isDefinedBy>
     </owl:Class>
@@ -8760,7 +8759,7 @@ This array contains one entry for the base body and one entry for the counter bo
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TribometerSpecificationsArray"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Tribometer</friendlyName>
+        <friendlyName>Band Saw</friendlyName>
         <rdfs:comment>Objects from this class pertain to the category of machines called Band Saw.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -11169,7 +11168,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LiterUnit">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#VolumeUnit"/>
-        <friendlyName>L</friendlyName>
+        <friendlyName>l</friendlyName>
     </owl:NamedIndividual>
     
 
