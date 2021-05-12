@@ -7031,7 +7031,7 @@ Refers to common names of information/quantities/elements/entities we capture du
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Seqential Order Position</friendlyName>
+        <friendlyName>Sequential Order Position</friendlyName>
         <rdfs:comment>The physical quantity that places an object in specific position within a sequential order.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -10733,6 +10733,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EK36CupGrindingTool -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EK36CupGrindingTool">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingToolID"/>
+        <friendlyName>EK36</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EK80CupGrindingTool -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EK80CupGrindingTool">
@@ -11330,9 +11339,9 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Meter -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MeterUnit -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Meter">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MeterUnit">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceUnit"/>
         <friendlyName>m</friendlyName>
     </owl:NamedIndividual>
@@ -11375,6 +11384,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MilliMeterUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MilliMeterUnit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceUnit"/>
+        <friendlyName>mm</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Minute -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Minute">
@@ -11407,6 +11425,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MultiLoadCellLoadApplication">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LoadApplicationMethod"/>
         <friendlyName>Multi Load Cell</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#NanoMeterUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#NanoMeterUnit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceUnit"/>
+        <friendlyName>nm</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11472,6 +11499,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Oil">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#InterfacialMediumCategory"/>
         <friendlyName>Oil</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OneOverMinuteUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OneOverMinuteUnit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FrequencyUnit"/>
+        <friendlyName>1/min</friendlyName>
     </owl:NamedIndividual>
     
 
