@@ -4,6 +4,7 @@ import subprocess
 import time
 import signal
 
+# Comment by Nick: Automatically opens a GUI which allows interaction between the server and python command line
 
 django_server = subprocess.Popen(['python','manage.py','runserver']) # start localserver
 

@@ -1,24 +1,19 @@
 from owlready2 import *
 import re
 
-# Here I am testing the integration of Git and PyCharm
-
-property_restrictions = ['some', 'only', 'min', 'max', 'exactly', 'value', 'has_self']
+property_restrictions = ['some', 'only', 'min', 'max', 'exactly', 'value', 'has_self'] # Comment by Nick: So that we know it's not a superclass
 special_restrictions = [['hasTimeStamp', 'dateTimeStamp']]
 OWL_master_name = 'TriboDataFAIR_v0.4.'
 data_input_types = ['float', 'string', 'decimal', 'dateTimeStamp', 'boolean', 'PlainLiteral', 'integer', 'dateTimeStamp']
-#SurfTheOWL/
 TriboDataFAIR = get_ontology('SurfTheOWL/TriboDataFAIR_v0.4.owl').load()
 namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_v0.4.owl')
 
 # reference to other Objects -------------------------------------------------------------------------------------------------
 other_objects_properties = list(TriboDataFAIR.involves.subclasses())  # get all involves properties which refer to a other object
 
-for property in other_objects_properties:  # get children of involves properties
+for property in other_objects_properties:  # get children of involves properties # Comment by Nick: Links to between objects and processes
     other_objects_properties += list(property.subclasses())  # add children to same property list
 
-
-#other_objects_properties += list(TriboDataFAIR.hasPart.subclasses())  # get all hasPart properties which refer to a other object
 other_objects_properties = list(str(i).removeprefix(OWL_master_name)for i in other_objects_properties)  # convert list elements to string and remove master sufix
 
 # ----------------------------------------------------------------------------------------------------------------------------
@@ -29,6 +24,7 @@ def get_all_classes_as_list(class_list):
         element_string = str(element).split('.')
         list_class_names.append(element_string[-1]) # Nick Edited
     return list_class_names
+# Comment by Nick: Makes sure that the main_search is in the code
 all_owl_classes = get_all_classes_as_list(TriboDataFAIR.classes())  # all owl things as list
 
 def get_searchable_classes_from_list(classes_list):  # converts a list of classes in a list as pair with friendly name [[className, friendlyName], ....]
@@ -46,6 +42,7 @@ def get_searchable_classes_from_list(classes_list):  # converts a list of classe
     return searchable_classes_name_pair
 
 # all subs of Procedure get defined as searchable ---------------------------------------------------------------------
+# Comment by Nick: This is to get all the names in the drop-down search menu in the html
 searchable_owl_classes = get_searchable_classes_from_list(list(TriboDataFAIR.Procedure.descendants())) # all owl classes under Procedure which get the searchable classes in frontend 
 #----------------------------------------------------------------------------------------------------------------------
 

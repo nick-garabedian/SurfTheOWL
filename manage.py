@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+# Comment by Nick: This starts the server
 import os
 import sys
 

@@ -2,6 +2,8 @@ from django.shortcuts import render
 from . import SurfTheOWL
 import json
 
+# Comment by Nick: This code is written by Manfred to implement html into Django
+
 html_code = ""
 # Create your views here.
 def landing(request):  # initial call of the website
@@ -14,7 +16,7 @@ def search(request): #search call of website
     list_of_all_classes = SurfTheOWL.searchable_owl_classes
     if request.method == 'POST':
         searched_class  =request.POST.get('searched_class')
-        data = SurfTheOWL.main_search(searched_class)
+        data = SurfTheOWL.main_search(searched_class) # Comment by Nick: Executes our main code
         data_tree = data[0]
         search_result_heading = next(iter(data_tree))
         def generate_html_form_dict_via_recusion(complete_dict, depth=0):
