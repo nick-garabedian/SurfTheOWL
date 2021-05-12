@@ -17,38 +17,33 @@ for property in other_objects_properties:  # get children of involves properties
 
 other_objects_properties = list(str(i).removeprefix(OWL_master_name)for i in other_objects_properties)  # convert list elements to string and remove master sufix
 
-# ----------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------
 
 def get_all_classes_as_list(class_list):
     list_class_names = []
     for element in class_list:
         element_string = str(element).split('.')
-        list_class_names.append(element_string[-1]) # Nick Edited
+        list_class_names.append(element_string[-1])  # Nick Edited
     return list_class_names
 # Comment by Nick: Makes sure that the main_search is in the code
 all_owl_classes = get_all_classes_as_list(TriboDataFAIR.classes())  # all owl things as list
 
+# start define  searchable objects -----------------------------------------
 def get_searchable_classes_from_list(classes_list):  # converts a list of classes in a list as pair with friendly name [[className, friendlyName], ....]
-    friendly_name_list = []
-    normal_class_names = get_all_classes_as_list(classes_list) # get class name 
-
-    for element in classes_list:  # get friendly class Name 
-        friendly_name_list.append(element.friendlyName)
-
     searchable_classes_name_pair = []
-    for i in range(len(friendly_name_list)):
-        if friendly_name_list[i]:  # non searchable classes have no friendly name, so only append if friendly name exists
-            searchable_classes_name_pair.append([normal_class_names[i],friendly_name_list[i][0]])
- 
+    for element in classes_list:  # get friendly class Name
+        searchable_classes_name_pair.append([element, className_to_friendlyName(element)])
+    searchable_classes_name_pair = sorted(searchable_classes_name_pair, key=itemgetter(1)) # sort list after friendly name alphabetic order
     return searchable_classes_name_pair
 
-# all subs of Procedure get defined as searchable ---------------------------------------------------------------------
 # Comment by Nick: This is to get all the names in the drop-down search menu in the html
-searchable_owl_classes = get_searchable_classes_from_list(list(TriboDataFAIR.Entity.descendants())) # all owl classes under Procedure which get the searchable classes in frontend
-searchable_owl_classes = sorted(searchable_owl_classes, key=itemgetter(1))  # sort list after friendly namef alphabetic order
-
-#----------------------------------------------------------------------------------------------------------------------
-
+# executed ad end of file
+Kadi4Mate_objects = str(TriboDataFAIR.Kadi4MatRecord.is_a[2])  # get properties of object Kadi4MateRecord, list element 3 contains Kadi4Mate objects and convert to string to enable manipulation
+Kadi4Mate_objects = Kadi4Mate_objects.removeprefix('TriboDataFAIR_v0.4.documentsDescriptionOf.some(')  # remove main restriction
+Kadi4Mate_objects = Kadi4Mate_objects.removesuffix(')') # remove leftofer
+Kadi4Mate_objects = Kadi4Mate_objects.split(' | ') # convert to list of strings by spliting string on seperator
+Kadi4Mate_objects = list(str(i).removeprefix(OWL_master_name)for i in Kadi4Mate_objects)  # for each string remove owl master name (TriboData.....)
+#---------------------------------------------------------------------------------------------------------------------
 
 def check_for_special_restriction(restriction):
     global special_restrictions
@@ -215,6 +210,8 @@ def className_to_friendlyName(class_name):  # returns the friendly name
     return friendly_name
 
 
+# end define searchable objects -----------------------------------------
+
 def children(key):
     children_classes_dict = {}
     children_keys = []
@@ -316,4 +313,5 @@ def main_search(className):
 #search_output = main_search(search_string)
 #print(search_output[2])  # print dict with normal class names
 #print(search_output[0])  # print dict with friendly names
+searchable_owl_classes = get_searchable_classes_from_list(Kadi4Mate_objects) # all owl classes under Procedure which get the searchable classes in frontend
 
