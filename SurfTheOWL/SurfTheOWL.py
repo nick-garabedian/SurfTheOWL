@@ -45,7 +45,7 @@ def get_searchable_classes_from_list(classes_list):  # converts a list of classe
 # all subs of Procedure get defined as searchable ---------------------------------------------------------------------
 # Comment by Nick: This is to get all the names in the drop-down search menu in the html
 searchable_owl_classes = get_searchable_classes_from_list(list(TriboDataFAIR.Entity.descendants())) # all owl classes under Procedure which get the searchable classes in frontend
-searchable_owl_classes = sorted(searchable_owl_classes, key=itemgetter(1))  # sort list after friendly name alphabetic order
+searchable_owl_classes = sorted(searchable_owl_classes, key=itemgetter(1))  # sort list after friendly namef alphabetic order
 
 #----------------------------------------------------------------------------------------------------------------------
 

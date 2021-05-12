@@ -21,14 +21,12 @@ def search(request): #search call of website
         search_result_heading = next(iter(data_tree))
         def generate_html_form_dict_via_recusion(complete_dict, depth=0):
             global html_code
-            print(complete_dict)
             if isinstance(complete_dict, dict):  # complete dict is dict and no list
                 for key in complete_dict.keys(): # for each key
                     html_code += "<div class=\"layer" + str(depth + 2) + "_div\"><span class=\"bulletpoint\">&#8226; </span><span class=\"layer"+ str(depth + 2) +"\">" + key + " :</span>"
                     if isinstance(complete_dict[key], str) or isinstance(complete_dict[key], list): # if dict key(value) is no dict
                         if isinstance(complete_dict[key], list): # if value is list
                             html_code += "<div class=\"list\">"
-                            print(complete_dict[key], "list")
                             for element in complete_dict[key]: # for each element in list
                                 html_code += "<li>" + str(element) + "</li>" # insert each value
                             html_code += "</div></div>"
