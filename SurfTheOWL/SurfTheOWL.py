@@ -202,14 +202,14 @@ def className_to_friendlyName(class_name):  # returns the friendly name
         friendly_name_list = eval('TriboDataFAIR.'+class_name+'.friendlyName')# get friendly name from Class, delivers list with one item
         if friendly_name_list:
             friendly_name = friendly_name_list[0]
-            print("yes list not empty ")
+
         else:
-            friendly_name = (class_name+" problem with friendly name")
+            friendly_name = class_name+" problem with friendly name"
 
 
     else:  # if not leave it as it is
-        friendly_name = (class_name)
-    print(friendly_name)
+        friendly_name = class_name
+
     return friendly_name
 
 
