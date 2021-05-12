@@ -8,6 +8,11 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+.list {
+    display: -moz-inline-block;
+    margin-left: 150px;
+}
+
 hr.solid {
   border-top: 3px solid #bababa;
 }

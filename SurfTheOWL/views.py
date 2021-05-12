@@ -25,10 +25,10 @@ def search(request): #search call of website
                 html_code += "<div class=\"layer" + str(depth + 2) + "_div\"><span class=\"bulletpoint\">&#8226; </span><span class=\"layer2\">" + key + " :</span>"
                 if isinstance(complete_dict[key], str) or isinstance(complete_dict[key], list): # if dict key(value) is no dict
                     if isinstance(complete_dict[key], list): # if value is list
-                        html_code += "<select>"
+                        html_code += "<div class=\"list\">"
                         for element in complete_dict[key]: # for each element in list
-                            html_code += "<option value=" + element + ">" + element + "</option>" # insert each value
-                        html_code += "</select></div>"
+                            html_code += "<li>" + element + "</li>" # insert each value
+                        html_code += "</div></div>"
                     else: # if value is str
                         html_code += "<span class=\"layer" + str(depth + 2) + "_value\"> " + complete_dict[
                             key] + "</span></div><br>" # insert str
