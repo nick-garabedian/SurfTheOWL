@@ -1,5 +1,6 @@
 from owlready2 import *
 import re
+from operator import itemgetter
 
 property_restrictions = ['some', 'only', 'min', 'max', 'exactly', 'value', 'has_self'] # Comment by Nick: So that we know it's not a superclass
 special_restrictions = [['hasTimeStamp', 'dateTimeStamp']]
@@ -43,7 +44,9 @@ def get_searchable_classes_from_list(classes_list):  # converts a list of classe
 
 # all subs of Procedure get defined as searchable ---------------------------------------------------------------------
 # Comment by Nick: This is to get all the names in the drop-down search menu in the html
-searchable_owl_classes = get_searchable_classes_from_list(list(TriboDataFAIR.Procedure.descendants())) # all owl classes under Procedure which get the searchable classes in frontend 
+searchable_owl_classes = get_searchable_classes_from_list(list(TriboDataFAIR.Entity.descendants())) # all owl classes under Procedure which get the searchable classes in frontend
+searchable_owl_classes = sorted(searchable_owl_classes, key=itemgetter(1))  # sort list after friendly name alphabetic order
+
 #----------------------------------------------------------------------------------------------------------------------
 
 
@@ -206,7 +209,6 @@ def className_to_friendlyName(class_name):  # returns the friendly name
         else:
             friendly_name = class_name+" problem with friendly name"
 
-
     else:  # if not leave it as it is
         friendly_name = class_name
 
@@ -276,32 +278,36 @@ def main_search(className):
 
         # separate other objects for different appearance. prefer because further maybe complete datatree necessary -------------------------------
         # delete objects from class list ------------------
-        keys_p = list(classes_dict[className].keys())
-        length = len(keys_p)
-        i = 0
-        while i < length: #delet other object refer from class list
-            for item in object_refer_pair:
-                if keys_p[i] == list(item[0].keys())[0]:
-                    if keys_p[i] in classes_dict[className]:
-                        del classes_dict[className][keys_p[i]]
-                        length -= 1
-            i += 1
+        if isinstance(classes_dict[className], dict):
+            keys_p = list(classes_dict[className].keys())
+            length = len(keys_p)
+            i = 0
+            while i < length: #delet other object refer from class list
+                for item in object_refer_pair:
+                    if keys_p[i] == list(item[0].keys())[0]:
+                        if keys_p[i] in classes_dict[className]:
+                            del classes_dict[className][keys_p[i]]
+                            length -= 1
+                i += 1
 
         # delete objects from friendly name list ----------------
-        keys_p_f = list(friendly_classes_dict[friendly_class_name].keys())
-        length_f = len(keys_p)
-        j = 0
-        while j < length_f: #delet other object refer from class list (friendly name dict )
-            for item in object_refer_pair:
-                if keys_p_f[j] == list(item[1].keys())[0]:
-                    if keys_p_f[j] in friendly_classes_dict[friendly_class_name]:
-                        del friendly_classes_dict[friendly_class_name][keys_p_f[j]]
-                        length -= 1
-            j += 1
-        # generate object list with friendly name ----------------
-        special_objects_friendly = [] # Structure = [[friendly object name, property ], [...], ...] list because possible overwrite as dict when tow keys are the same
-        for item in object_refer_pair: # Structure= [({object: property},{friendly object: property}),(...),...]
-            special_objects_friendly.append([list(item[1].keys())[0], item[1][list(item[1].keys())[0]]])
+        if isinstance(friendly_classes_dict[friendly_class_name], dict):
+            keys_p_f = list(friendly_classes_dict[friendly_class_name].keys())
+            length_f = len(keys_p)
+            j = 0
+            while j < length_f: #delet other object refer from class list (friendly name dict )
+                for item in object_refer_pair:
+                    if keys_p_f[j] == list(item[1].keys())[0]:
+                        if keys_p_f[j] in friendly_classes_dict[friendly_class_name]:
+                            del friendly_classes_dict[friendly_class_name][keys_p_f[j]]
+                            length -= 1
+                j += 1
+            # generate object list with friendly name ----------------
+            special_objects_friendly = [] # Structure = [[friendly object name, property ], [...], ...] list because possible overwrite as dict when tow keys are the same
+            for item in object_refer_pair: # Structure= [({object: property},{friendly object: property}),(...),...]
+                special_objects_friendly.append([list(item[1].keys())[0], item[1][list(item[1].keys())[0]]])
+        else:
+            special_objects_friendly = []
         # -------------------------------------------------------------------------------------------------------------------------------------------
 
         return [friendly_classes_dict, special_objects_friendly, classes_dict]

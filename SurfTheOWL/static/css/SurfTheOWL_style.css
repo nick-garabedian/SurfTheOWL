@@ -9,10 +9,11 @@ body{
     margin-right: auto;
 }
 .list {
-    display: -moz-inline-block;
-    margin-left: 150px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 20px;
+    vertical-align: top;
 }
-
 hr.solid {
   border-top: 3px solid #bababa;
 }
