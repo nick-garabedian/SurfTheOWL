@@ -78,26 +78,13 @@ def property_restiction_in_string(string):
                 prop = string.split(restriction)
                 if ',' in prop[1]:
                     prop = prop[1].split(', ')
-                    #print(prop[1])
+
                     return prop[1]
                 else:
-                    #print(prop)
-                    #print(prop[1])
+
                     return prop[1]
 
     return False
-
-
-def get_data_type(something):  # gets the input data type of an given owl class
-    string = str(something).split('.')
-    class_string = string[3].startswith(property_restrictions[0])  # is class .... property
-    string = string[3].split('(')
-    string[1] = string[1].replace(')', '')
-    regular_expresion_search = re.search("\'(.+?)\'", string[1])  # get data type from string with regular expresion
-    if regular_expresion_search:
-        string[1] = regular_expresion_search.group(1)
-    return string[1]
-
 
 def bad_letter_in_string(string):
     bad_letter_elements = ['-', '.']
@@ -254,7 +241,7 @@ def main_search(className):
         friendly_class_name = friendly_class_name_list[0]
         friendly_classes_dict = {friendly_class_name: []}
 
-        def find_process_layers_via_recursion(layer, keys, friendly_layer, depth=0): # keys are separate because some keys are a none owl thing
+        def find_classes_layers_via_recursion(layer, keys, friendly_layer, depth=0): # keys are separate because some keys are a none owl thing
 
             if depth == 10:  # search depth
                 return layer, friendly_layer
@@ -266,9 +253,9 @@ def main_search(className):
                     friendly_layer[className_to_friendlyName(key)] = output[2]  # friendly class names
                     next_layer_keys = output[1]  # needed because not every key is searchable, therefore the function children delivers all keys which a wanted keys
 
-                    find_process_layers_via_recursion(layer[key], next_layer_keys, friendly_layer[className_to_friendlyName(key)], depth + 1)
+                    find_classes_layers_via_recursion(layer[key], next_layer_keys, friendly_layer[className_to_friendlyName(key)], depth + 1)
 
-        find_process_layers_via_recursion(classes_dict, [className], friendly_classes_dict)
+        find_classes_layers_via_recursion(classes_dict, [className], friendly_classes_dict)
 
         """placeholder list of refer objects for comparison an separation in existing list. prefer way because in further it might be necessary to get all objects"""
         object_refer_pair = children(className)[3] # at current state only possible to separate other objects referral in first layer

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from . import SurfTheOWL
-import json
+
 
 # Comment by Nick: This code is written by Manfred to implement html into Django
 
