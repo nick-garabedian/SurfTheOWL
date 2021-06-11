@@ -26,7 +26,8 @@
     <h2 >{{search_result_heading}}</h2>  <!-- searched class name-->
         {% for element in data_objects%}
             <div class="specialObjDiv">
-                <span class="bulletpoint">&#8226; </span>
+                <hr class="limb_root">
+                <span class="bulletpoint"> &#9654; </span>
                 <span class="layer2">{{element.0}}: {{element.1}}</span>
             </div>
         {% endfor %}

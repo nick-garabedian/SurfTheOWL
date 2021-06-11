@@ -293,7 +293,7 @@ def main_search(className):
         else:
             special_objects_friendly = []
         # -------------------------------------------------------------------------------------------------------------------------------------------
-
+        print(friendly_classes_dict)
         return [friendly_classes_dict, special_objects_friendly, classes_dict]
 
 #search_string = "TribologicalExperiment"  # wanted OWL thing

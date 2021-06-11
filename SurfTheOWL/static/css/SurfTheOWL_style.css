@@ -3,97 +3,53 @@ body {-webkit-print-color-adjust: exact;}
 }
 body{
     font-family: Arial;
-    width: 1500px;
+    width: 1000px;
 
     margin-left: auto;
     margin-right: auto;
 }
 .list {
     display: inline-block;
-    padding-top: 10px;
+    padding-top: 1px;
     padding-left: 20px;
     vertical-align: top;
 }
 hr.solid {
   border-top: 3px solid #bababa;
 }
+.limb_root{
+    border: dashed black 1px;
+    width: 20px;
+    display: inline-block;
+}
 .bulletpoint{
-    font-size: 25px;
+    font-size: 16px;
 }
 .specialObjDiv{
     background-color: #788f78;
-    margin: 3px 3px 3px 50px;
+    margin: 0px 0px 0px 34px;
+    padding-left: 3px;
+    border-left: dotted black 2px;
 }
 .layer1_div{
-    background-color: lightblue;
+    background-color: whitesmoke;
     padding-left: 5px;
 }
-.layer2_div{
-    background-color: #9b9b9b;
-    margin: 3px 3px 3px 50px;
-}
-.layer3_div{
-    background-color: #a7a7a7;
-    margin: 3px 3px 3px 50px;
-}
-.layer4_div{
-    background-color: #d4d4d4;
-    margin: 3px 3px 3px 50px;
-}
-.layer5_div{
-    background-color: #e7e7e7;
-    margin: 3px 3px 3px 50px;
- }
-.layer6_div{
-    background-color: whitesmoke;
-    margin: 3px 3px 3px 50px;
-}
-.layer6_div{
+.layer_just_div{
     background-color: white;
-    margin: 3px 3px 3px 50px;
+    margin: 0px 0px 0px 34px;
+    padding-left: 3px;
+    border-left: dotted black 2px;
 }
-.layer7_div{
+.layer_odd_div{
     background-color: whitesmoke;
-    margin: 3px 3px 3px 50px;
+    margin: 0px 0px 0px 34px;
+    padding-left: 3px;
+    border-left: dotted black 2px;
 }
-.layer8_div{
-    background-color: #e7e7e7;
-    margin: 3px 3px 3px 50px;
-}
-.layer9_div{
-    background-color: #d4d4d4;
-    margin: 3px 3px 3px 50px;
-}
-.layer10_div{
-    background-color: #a7a7a7;
-    margin: 3px 3px 3px 50px;
-}
+
 .layer2{
     font-size: large
-}
-.layer3{
-
-}
-.layer4{
-
-}
-.layer5{
-
-}
-.layer6{
-
-}
-.layer7{
-
-}
-.layer8{
-
-}
-.layer9{
-
-}
-.layer10{
-
 }
 #searched_class{
     font-size: 20px;
