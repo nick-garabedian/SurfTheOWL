@@ -12242,11 +12242,11 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomS3.05 -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomS3dot05 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomS3.05">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomS3dot05">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Room"/>
-        <friendlyName>S305</friendlyName>
+        <friendlyName>S3.05</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12800,20 +12800,20 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30.48 -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30dot48 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30.48">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30dot48">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Building"/>
         <friendlyName>MZE</friendlyName>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30.49 -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30dot49 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30.49">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30dot49">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Building"/>
-        <friendlyName>μTC</friendlyName>
+        <friendlyName>μTC, 30.49</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12836,9 +12836,9 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#6.1 -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#6dot1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#6.1">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#6dot1">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SoftwareVersion"/>
         <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.1</friendlyName>
     </owl:NamedIndividual>
