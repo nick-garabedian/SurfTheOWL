@@ -12246,7 +12246,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomS3.05">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Room"/>
-        <friendlyName>S3.05</friendlyName>
+        <friendlyName>S305</friendlyName>
     </owl:NamedIndividual>
     
 
