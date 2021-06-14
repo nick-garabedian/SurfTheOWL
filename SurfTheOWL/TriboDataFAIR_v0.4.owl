@@ -898,7 +898,7 @@ The counter body in a model experiment is the sample or body...
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasTechnicalSpecification"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenSpacialInfoCollective"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenSpatialInfoCollective"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <friendlyName>Solid Block</friendlyName>
@@ -945,7 +945,7 @@ Solids can have viscoelasticity.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <friendlyName>Dimensions Information</friendlyName>
-        <rdfs:comment>Class containing information about the spacial dimensions of a block sample.</rdfs:comment>
+        <rdfs:comment>Class containing information about the spatial dimensions of a block sample.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -968,7 +968,7 @@ Solids can have viscoelasticity.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <friendlyName>Indicated Face Orientation</friendlyName>
-        <rdfs:comment>Class containing information about the spacial orientation of the faces of a block sample.</rdfs:comment>
+        <rdfs:comment>Class containing information about the spatial orientation of the faces of a block sample.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -1043,7 +1043,7 @@ Solids can have viscoelasticity.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <friendlyName>Face Orientation Information</friendlyName>
-        <rdfs:comment>Class containing information about the spacial orientation of a block sample.</rdfs:comment>
+        <rdfs:comment>Class containing information about the spatial orientation of a block sample.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -1094,9 +1094,9 @@ Valid after a feature and its side have been defined.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenSpacialInfoCollective -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenSpatialInfoCollective -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenSpacialInfoCollective">
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenSpatialInfoCollective">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimentRelatedCollective"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1116,8 +1116,8 @@ Valid after a feature and its side have been defined.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenShape"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Spacial Information</friendlyName>
-        <rdfs:comment>Class containing information about the spacial (dimensions, position and arientation) details of a block sample.</rdfs:comment>
+        <friendlyName>Spatial Information</friendlyName>
+        <rdfs:comment>Class containing information about the spatial (dimensions, position and arientation) details of a block sample.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -1140,7 +1140,7 @@ Valid after a feature and its side have been defined.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <friendlyName>Indicated Face Orientation</friendlyName>
-        <rdfs:comment>Class containing information about the spacial orientation of the faces of a block sample.</rdfs:comment>
+        <rdfs:comment>Class containing information about the spatial orientation of the faces of a block sample.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -1746,12 +1746,6 @@ Valid after a feature and its side have been defined.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#makesUseOfConsumable"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Coolant"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#physicallyModifies"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimen"/>
             </owl:Restriction>
@@ -1788,17 +1782,25 @@ It ends with demounting of the sample/workpiece from the mounting table.</rdfs:c
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumToolTurningSpeedSetpoint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumPositioningSystemTurningSpeedSetpoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MinimumToolTurningSpeedSetpoint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MinimumPositioningSystemTurningSpeedSetpoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PositioningSystemTurningSpeedSetpoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <friendlyName>Specimen Positioning Info</friendlyName>
-        <rdfs:comment>Class containing information that characterizes the specimen positioning.</rdfs:comment>
+        <rdfs:comment>Class containing information that characterizes the specimen positioning.
+
+This has a major influence on the resulting roughness of the samples&apos; surfaces.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -1926,6 +1928,12 @@ It ends with demounting of the sample/workpiece from the mounting table.</rdfs:c
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Coolant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CoolingMediumFlowRateSetpoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1965,7 +1973,7 @@ It ends with demounting of the sample/workpiece from the mounting table.</rdfs:c
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ToolCleaningTimeIntervalType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Variable Cup Grinding Step</friendlyName>
+        <friendlyName>Cup Grinding Step</friendlyName>
         <rdfs:comment>Class containing the a signle step bundle of parameters needed for a cup grinding process.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -2300,13 +2308,13 @@ A value of 100% indicates the tool can be operated continuosly without need for 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmmissionClassification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmissionClassification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmmissionClassificationStandard"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmissionClassificationStandard"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2926,7 +2934,7 @@ More instances of this class could be added if the files are moved/copied to oth
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FilePurpose">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Role"/>
         <friendlyName>File/s Purpose</friendlyName>
-        <rdfs:comment>Instances of this class specify the purpose of generation of a specific output file during conduction of the experiment.</rdfs:comment>
+        <rdfs:comment>Instances of this class specify the purpose of generation of a specific output file during conduction of the experiment. Free text allowed.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -3251,6 +3259,248 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Furnace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Furnace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PoweredMachine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentGeneralIdentifyingInformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasTechnicalSpecification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecificationsArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Furnace</friendlyName>
+        <rdfs:comment>Objects from this class pertain to the category of machines called furnace.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceCoolingRateSpecificationTuple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceCoolingRateSpecificationTuple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceRelatedCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#StartingTemperatureSetpoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TimeDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Cooling Rate Info</friendlyName>
+        <rdfs:comment>Class containing information about the furnace&apos;s time to room temperature.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceHeatingRateSpecificationTuple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceHeatingRateSpecificationTuple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceRelatedCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TargetTemperatureSetpoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TimeDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Heating Rate Info</friendlyName>
+        <rdfs:comment>Class containing information about the furnace&apos;s time to temperature.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceOperatingSpaceSpecificationsArray -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceOperatingSpaceSpecificationsArray">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceRelatedCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpaceHeight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpaceLength"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpaceWidth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Operating Space Info</friendlyName>
+        <rdfs:comment>Class containing information about the furnace&apos;s available space for sample treatement.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceRelatedCollective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceRelatedCollective">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecificationsCollective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpaceHeight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpaceHeight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Space Height</friendlyName>
+        <rdfs:comment>The maximum height inside the chamber of an furnace.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpaceLength -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpaceLength">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Space Length</friendlyName>
+        <rdfs:comment>The maximum length inside the chamber of an furnace.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpaceWidth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpaceWidth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Space Width</friendlyName>
+        <rdfs:comment>The maximum width inside the chamber of an furnace.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecificationsArray -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecificationsArray">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceRelatedCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceCoolingRateSpecificationTuple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceHeatingRateSpecificationTuple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceOperatingSpaceSpecificationsArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumTemperatureSetting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectMass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PowerSupplyVoltage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PowerSupplyWattage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecimenDeliveryMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SurroundingMediumContolMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TemperatureControlDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TemperatureControlMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Technical Specifications</friendlyName>
+        <rdfs:comment>Class containing information about the technical specifications of an furnace.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#GrindingToolType -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#GrindingToolType">
@@ -3268,6 +3518,29 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Collection"/>
         <rdfs:comment>A Collection of Agents, e.g. a flock of sheep, a herd of goats, or the local Boy Scout troop.</rdfs:comment>
         <rdfs:isDefinedBy>SUMO Ontology (http://www.adampease.org/OP)</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessMagnitude -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessMagnitude">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PhysicalQuantity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasPhysicalUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessScaleUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasRationalNumberValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Hardness Magnitude</friendlyName>
+        <rdfs:comment>The physical quantity that characterizes the phenomenon called Hardness.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -3324,8 +3597,8 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Tactile Surface Profilometry</friendlyName>
-        <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for 1D vizualization.</rdfs:comment>
+        <friendlyName>Hardness Measurement</friendlyName>
+        <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) with various types whose contents indicate the hardness of a speciment based on indentation measurement.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -3335,6 +3608,12 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessMeasurementInputsArray">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CircumstancesCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessScaleUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
@@ -3395,6 +3674,18 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessScaleUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessScaleUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ConversionTargetUnit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PhysicalQuantityUnit"/>
+        <friendlyName>Hardness Scale</friendlyName>
+        <rdfs:comment>The unit that locks the meaning of the amount of the phenomenon of hardness. This gives the scale used for the measurement.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTester -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTester">
@@ -3428,8 +3719,8 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CameraViewType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Available Hardness Testing Lenses</friendlyName>
-        <rdfs:comment>Class containing information about the available hardness testing lenses of a hardness testing system.</rdfs:comment>
+        <friendlyName>Available Hardness Testing Cameras Array</friendlyName>
+        <rdfs:comment>Class containing information about the available hardness testing cameras of a hardness testing system.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -3445,7 +3736,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IndenterType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Available Hardness Testing Indenters</friendlyName>
+        <friendlyName>Available Hardness Testing Indenters Array</friendlyName>
         <rdfs:comment>Class containing information about the available hardness testing indenters of a hardness testing system.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -3462,7 +3753,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LensMagnification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Available Hardness Testing Lenses</friendlyName>
+        <friendlyName>Available Hardness Testing Lenses Array</friendlyName>
         <rdfs:comment>Class containing information about the available hardness testing lenses of a hardness testing system.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -3531,7 +3822,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessMeasurementType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Available Hardness Testing Principles</friendlyName>
+        <friendlyName>Available Hardness Testing Principles Array</friendlyName>
         <rdfs:comment>Class containing information about the available hardness testing procedures of a hardness testing system.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -3589,7 +3880,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTesterXYTableSpecificationsArray"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTesterXYTableSubsystemSpecificationsArray"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3635,14 +3926,20 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTesterXYTableSpecificationsArray -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTesterXYTableSubsystemSpecificationsArray -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTesterXYTableSpecificationsArray">
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTesterXYTableSubsystemSpecificationsArray">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTesterRelatedCollective"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentName"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MotionDeliveryMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3728,7 +4025,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#employsEquipment"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Oven"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Furnace"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4315,6 +4612,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DemagnetizationProcess"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DemagnetizingPlate"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ExperimentOutputFileMetadataArray"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Furnace"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessMeasurement"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessTester"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HeatTreatmentProcess"/>
@@ -4322,7 +4620,6 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MetalSawingProcess"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OpticalSurfaceProfilometer"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OpticalSurfaceProfilometry"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Oven"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecimenCleaningProcess"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TactileSurfaceProfilometer"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TactileSurfaceProfilometry"/>
@@ -4545,7 +4842,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagnificationMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Indenter Type</friendlyName>
+        <friendlyName>Lens Magnification</friendlyName>
         <rdfs:comment>Instances from this class specify the lens magnification.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -4639,22 +4936,22 @@ For Tribometers, the way the normal load is applied can have a big influence on 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmmissionClassification -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmissionClassification -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmmissionClassification">
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmissionClassification">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TechnicalStandard"/>
-        <friendlyName>Magnetic Field Emmission Classification</friendlyName>
+        <friendlyName>Magnetic Field Emission Classification</friendlyName>
         <rdfs:comment>Class containing information about the technical standard emission observed by the magnetic field.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmmissionClassificationStandard -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmissionClassificationStandard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmmissionClassificationStandard">
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmissionClassificationStandard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TechnicalStandard"/>
-        <friendlyName>Magnetic Field Emmission Classification Standard</friendlyName>
+        <friendlyName>Magnetic Field Emission Classification Standard</friendlyName>
         <rdfs:comment>Class containing information about the technical standard observed by the magnetic field emission.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -4892,6 +5189,23 @@ The friendly way to identify it.</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumPositioningSystemTurningSpeedSetpoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumPositioningSystemTurningSpeedSetpoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingProcessSetting"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#AngularVelocitySetpointMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Maximum Positioning System Turning Speed</friendlyName>
+        <rdfs:comment>Instances from this class characterize the maximum permissable turning speed.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumSpecimenHeightWithCeramicCup -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumSpecimenHeightWithCeramicCup">
@@ -4946,7 +5260,7 @@ The friendly way to identify it.</rdfs:comment>
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumTemperatureSetting -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumTemperatureSetting">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
@@ -4963,7 +5277,7 @@ The friendly way to identify it.</rdfs:comment>
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumToolTurningSpeedSetpoint -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumToolTurningSpeedSetpoint">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingProcessSetting"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingMachineSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
@@ -5284,8 +5598,8 @@ The axis is the only one available by the particular sub/system.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TimeDuration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Maximum Duration</friendlyName>
-        <rdfs:comment>Instances from this class characterize the maximum permissible duration for a process maintained by a machine.</rdfs:comment>
+        <friendlyName>Minimum Duration</friendlyName>
+        <rdfs:comment>Instances from this class characterize the minimum permissible duration for a process maintained by a machine.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -5301,7 +5615,7 @@ The axis is the only one available by the particular sub/system.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Replenishment Rate</friendlyName>
+        <friendlyName>Minimum Intensity Threshold</friendlyName>
         <rdfs:comment>Instances from this class determine whether a recorded signal value is considered valid or not.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -5325,10 +5639,27 @@ The axis is the only one available by the particular sub/system.</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MinimumPositioningSystemTurningSpeedSetpoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MinimumPositioningSystemTurningSpeedSetpoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingProcessSetting"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#AngularVelocitySetpointMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Minimum Positioning System Turning Speed</friendlyName>
+        <rdfs:comment>Instances from this class characterize the minimum permissable turning speed.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MinimumToolTurningSpeedSetpoint -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MinimumToolTurningSpeedSetpoint">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingProcessSetting"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingMachineSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
@@ -5925,13 +6256,13 @@ If only one file is used, this is 1.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OpticalSurfaceProfilometryMeasuringPrincipleType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OpticalSurfaceProfilometryMeasuringPrincipleType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SensorModelName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6150,248 +6481,6 @@ If only one file is used, this is 1.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Oven -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Oven">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PoweredMachine"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasIdentifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentGeneralIdentifyingInformation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasTechnicalSpecification"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecificationsArray"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <friendlyName>Oven</friendlyName>
-        <rdfs:comment>Objects from this class pertain to the category of machines called oven.</rdfs:comment>
-        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenCoolingRateSpecificationTuple -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenCoolingRateSpecificationTuple">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenRelatedCollective"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#StartingTemperatureSetpoint"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TimeDuration"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <friendlyName>Cooling Rate Info</friendlyName>
-        <rdfs:comment>Class containing information about the oven&apos;s time to room temperature.</rdfs:comment>
-        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenHeatingRateSpecificationTuple -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenHeatingRateSpecificationTuple">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenRelatedCollective"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TargetTemperatureSetpoint"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TimeDuration"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <friendlyName>Heating Rate Info</friendlyName>
-        <rdfs:comment>Class containing information about the oven&apos;s time to temperature.</rdfs:comment>
-        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenOperatingSpaceSpecificationsArray -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenOperatingSpaceSpecificationsArray">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenRelatedCollective"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpaceHeight"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpaceLength"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpaceWidth"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <friendlyName>Operating Space Info</friendlyName>
-        <rdfs:comment>Class containing information about the oven&apos;s available space for sample treatement.</rdfs:comment>
-        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenRelatedCollective -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenRelatedCollective">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecificationsCollective"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpaceHeight -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpaceHeight">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecification"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <friendlyName>Space Height</friendlyName>
-        <rdfs:comment>The maximum height inside the chamber of an oven.</rdfs:comment>
-        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpaceLength -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpaceLength">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecification"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <friendlyName>Space Length</friendlyName>
-        <rdfs:comment>The maximum length inside the chamber of an oven.</rdfs:comment>
-        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpaceWidth -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpaceWidth">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecification"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <friendlyName>Space Width</friendlyName>
-        <rdfs:comment>The maximum width inside the chamber of an oven.</rdfs:comment>
-        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecification -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecification">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentSpecification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecificationsArray -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecificationsArray">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenRelatedCollective"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaximumTemperatureSetting"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectMass"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenCoolingRateSpecificationTuple"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenHeatingRateSpecificationTuple"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenOperatingSpaceSpecificationsArray"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PowerSupplyVoltage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PowerSupplyWattage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecimenDeliveryMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SurroundingMediumContolMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TemperatureControlDevice"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TemperatureControlMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <friendlyName>Technical Specifications</friendlyName>
-        <rdfs:comment>Class containing information about the technical specifications of an oven.</rdfs:comment>
-        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Physical -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Physical">
@@ -6506,6 +6595,23 @@ If only one file is used, this is 1.</rdfs:comment>
         </rdfs:subClassOf>
         <friendlyName>Positional Repeatability</friendlyName>
         <rdfs:comment>Instances from this class represent the maximum deviation from a prescribed position.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PositioningSystemTurningSpeedSetpoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PositioningSystemTurningSpeedSetpoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingProcessSetting"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#AngularVelocitySetpointMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Positioning System Turning Speed</friendlyName>
+        <rdfs:comment>Instances from this class characterize the set turning speed.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -7010,6 +7116,17 @@ Refers to common names of information/quantities/elements/entities we capture du
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SensorModelName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SensorModelName">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentRelatedName"/>
+        <friendlyName>Sensor Model</friendlyName>
+        <rdfs:comment>The model of specific sensor, which the company has given to its product.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SensoringMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SensoringMethod">
@@ -7222,7 +7339,7 @@ Refers to common names of information/quantities/elements/entities we capture du
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Specimen Cleaning</friendlyName>
+        <friendlyName>Specimen Cleaning Process</friendlyName>
         <rdfs:comment>Class representing the physical process of reducing the amount of residue on a physical object&apos;s surfaces.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -7352,7 +7469,7 @@ Refers to common names of information/quantities/elements/entities we capture du
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Sample ID</friendlyName>
+        <friendlyName>Specimen ID</friendlyName>
         <rdfs:comment>The unique alphanumeric ID of a specimen. Could be an assigned unique ID.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -7453,7 +7570,7 @@ Refers to common names of information/quantities/elements/entities we capture du
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#StartingTemperatureSetpoint -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#StartingTemperatureSetpoint">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
@@ -7478,7 +7595,7 @@ Refers to common names of information/quantities/elements/entities we capture du
             </owl:Restriction>
         </rdfs:subClassOf>
         <friendlyName>Straightness Accuracy</friendlyName>
-        <rdfs:comment>Instances from this class represent the maximum deviation from a prescribed straight motion across the whole range of measurement range.</rdfs:comment>
+        <rdfs:comment>Instances from this class represent the maximum deviation from a prescribed straight motion across the entire measurement range.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -7778,8 +7895,8 @@ For Other Processes: Objects from this class act as the medium around the specim
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TipRadius"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>System/Setup Inputs</friendlyName>
-        <rdfs:comment>Class containing information about the parameters that are put into the involved scientific equipment, to run it optimally.</rdfs:comment>
+        <friendlyName>Scanning Tip Specifications</friendlyName>
+        <rdfs:comment>Class containing information about the parameters that identify the scannig tip and its use in the profilometry measurement.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -7788,8 +7905,8 @@ For Other Processes: Objects from this class act as the medium around the specim
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TargetTemperatureSetpoint -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TargetTemperatureSetpoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FurnaceSpecification"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HeatTreatmentProcessSeeting"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OvenSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
@@ -7901,6 +8018,7 @@ For Other Processes: Objects from this class act as the medium around the specim
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <friendlyName>Time Duration</friendlyName>
         <rdfs:comment>Any measure of length of time, with or without respect to the universal timeline.</rdfs:comment>
         <rdfs:isDefinedBy>SUMO Ontology (http://www.adampease.org/OP)</rdfs:isDefinedBy>
     </owl:Class>
@@ -8759,7 +8877,7 @@ This array contains one entry for the base body and one entry for the counter bo
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TribometerSpecificationsArray"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Band Saw</friendlyName>
+        <friendlyName>Tribometer</friendlyName>
         <rdfs:comment>Objects from this class pertain to the category of machines called Band Saw.</rdfs:comment>
         <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
     </owl:Class>
@@ -9705,7 +9823,7 @@ FROM https://www.lexico.com/en/definition/variable</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Working Area Width</friendlyName>
+        <friendlyName>Working Area Height</friendlyName>
         <rdfs:comment>Instances from this class specify the available height of the volume for manipulation within a machine.
 
 *height is defined in the natural orientation of the equipment.</rdfs:comment>
@@ -9815,7 +9933,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>X-direction Measurement Resoltion</friendlyName>
+        <friendlyName>X-direction Measurement Resolution</friendlyName>
         <rdfs:comment>Instances from this class represent the x-axis/main lateral axis/fast axis resolution that the system can capture.
 
 The axes are the natural ones defined by the manufacturer or when looked at the natural orientation of the machine.</rdfs:comment>
@@ -9868,7 +9986,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Y-direction Travel Range</friendlyName>
+        <friendlyName>X-direction Travel Range</friendlyName>
         <rdfs:comment>Instances from this class represent the distance between the lower  and upper limits of the x-axis/main lateral axis/fast axis.
 
 The axes are the natural ones defined by the manufacturer or when looked at the natural orientation of the machine.</rdfs:comment>
@@ -9923,7 +10041,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <friendlyName>Y-direction Measurement Resoltion</friendlyName>
+        <friendlyName>Y-direction Measurement Resolution</friendlyName>
         <rdfs:comment>Instances from this class represent the y-axis/secondary lateral axis/slow axis resolution that the system can capture.
 
 The axes are the natural ones defined by the manufacturer or when looked at the natural orientation of the machine.</rdfs:comment>
@@ -9992,7 +10110,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpeedSetpointMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <friendlyName>Z-direction Maximum Measurement Speed</friendlyName>
@@ -10049,7 +10167,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasQuantification"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceMagnitude"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpeedSetpointMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <friendlyName>Z-direction Minimum Measurement Speed</friendlyName>
@@ -10273,6 +10391,17 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BoltMandrelMounting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BoltMandrelMounting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BaseSpecimenClampingMethod"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CounterSpecimenClampingMethod"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecimenClampingMethod"/>
+        <friendlyName>Bolt (Mandrel)</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BoltMounting -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BoltMounting">
@@ -10280,7 +10409,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CounterSpecimenClampingMethod"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecimenClampingMethod"/>
         <friendlyName>Bolt</friendlyName>
-        <rdfs:comment>A bolt or bolts compressing the specimen  directly to the machinery&apos;s construction.</rdfs:comment>
+        <rdfs:comment>A bolt or bolts compressing the specimen directly to the machinery&apos;s construction.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -10313,6 +10442,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BrinellIndenterType -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BrinellIndenterType">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IndenterType"/>
+        <friendlyName>Brinell</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CAV7-10-106 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CAV7-10-106">
@@ -10325,7 +10463,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CHR150NProfilometer -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CHR150NProfilometer">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentRelatedName"/>
         <friendlyName>CHR 150 N</friendlyName>
     </owl:NamedIndividual>
     
@@ -10337,8 +10475,8 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BaseSpecimenClampingMethod"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CounterSpecimenClampingMethod"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecimenClampingMethod"/>
+        <friendlyName>Cap on Bolt</friendlyName>
         <rdfs:comment>A cap that compresses the specimen around its periphery while being tightened on the end of a threaded rod, in turn attached to equipment.</rdfs:comment>
-        <rdfs:comment>Cap on Bolt</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -10346,7 +10484,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Category2MagneticFielEmission -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Category2MagneticFielEmission">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmmissionClassification"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmissionClassification"/>
         <friendlyName>Category 2</friendlyName>
     </owl:NamedIndividual>
     
@@ -10356,6 +10494,16 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CementedCarbide">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaterialCategory"/>
+        <friendlyName>Cemented Carbide</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CentiMeterUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CentiMeterUnit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DistanceUnit"/>
+        <friendlyName>cm</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -10377,11 +10525,11 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ChromaticAbberationProfilometry -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ChromaticAberationProfilometry -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ChromaticAbberationProfilometry">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ChromaticAberationProfilometry">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OpticalSurfaceProfilometryMeasuringPrincipleType"/>
-        <friendlyName>Chromatic Abberation</friendlyName>
+        <friendlyName>Chromatic Aberation</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -10574,7 +10722,8 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DINEN12198MagneticEmissionStandard -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DINEN12198MagneticEmissionStandard">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmmissionClassificationStandard"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagneticFieldEmissionClassificationStandard"/>
+        <friendlyName>DIN EN 12198</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -10610,7 +10759,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DegreeUnit">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#AngleUnit"/>
-        <rdfs:comment>°</rdfs:comment>
+        <friendlyName>°</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -10619,7 +10768,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DegreesCelcius">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TemperatureUnit"/>
-        <rdfs:comment>°C</rdfs:comment>
+        <friendlyName>°C</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -10652,6 +10801,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DiamondFixedCleaningAccessory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DiamondFixedCleaningAccessory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ToolCleaningAccessoryType"/>
+        <friendlyName>Diamond (Fixed Installation)</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DifferentialConfiguration -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DifferentialConfiguration">
@@ -10674,7 +10832,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DiscontinuousIrregularToolCleaningTimeInterval">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ToolCleaningTimeIntervalType"/>
-        <friendlyName>Discontinuous (Irregular Tme Interval)</friendlyName>
+        <friendlyName>Discontinuous (Irregular Time Interval)</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -10760,20 +10918,20 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentType -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentType">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Kadi4MatRecordType"/>
-        <friendlyName>Equipment</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ExchangeableMounting -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ExchangeableMounting">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ProbeArmMountingMethod"/>
         <friendlyName>Exchangeable</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Falcon608 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Falcon608">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+        <friendlyName>Falcon 608</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -10825,12 +10983,30 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FriesResearchandTechnologyGmbH -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FriesResearchandTechnologyGmbH">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ManufacturerName"/>
+        <friendlyName>Fries Research and Technology GmbH</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FrontSide -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FrontSide">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenOrientationIndicatingFeatureSide"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenPrincipalTribologicalSide"/>
         <friendlyName>Front</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#GMNGeorgMuellerNuernbergAG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#GMNGeorgMuellerNuernbergAG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ManufacturerName"/>
+        <friendlyName>GMN Georg Mueller Nuernberg AG</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -10850,8 +11026,8 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BaseSpecimenClampingMethod"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CounterSpecimenClampingMethod"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecimenClampingMethod"/>
-        <friendlyName>Glue secures a specimen&apos;s surface to the equipment&apos;s structure.</friendlyName>
         <friendlyName>Gluing</friendlyName>
+        <rdfs:comment>Glue secures a specimen&apos;s surface to the equipment&apos;s structure.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -10910,10 +11086,19 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HV10HardnessMeasurement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HV10HardnessMeasurement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessScaleUnit"/>
+        <friendlyName>HV10</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HV20HardnessMeasurement -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HV20HardnessMeasurement">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessMeasurementType"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessScaleUnit"/>
         <friendlyName>HV20</friendlyName>
     </owl:NamedIndividual>
     
@@ -10944,6 +11129,24 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HeatTreatmentGoal"/>
         <friendlyName>Heating</friendlyName>
         <rdfs:comment>Process step that increases temperature.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HeraeusCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HeraeusCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ManufacturerName"/>
+        <friendlyName>Heraeus</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Hertz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Hertz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FrequencyUnit"/>
+        <friendlyName>Hz</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11002,6 +11205,33 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IndustrialEquipmentType -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IndustrialEquipmentType">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Kadi4MatRecordType"/>
+        <friendlyName>industrialequipment</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IndustrialProcessType -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IndustrialProcessType">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Kadi4MatRecordType"/>
+        <friendlyName>industrialprocess</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Innovatest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Innovatest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ManufacturerName"/>
+        <friendlyName>Innovatest</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IsopropylAlcoholSolvent -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IsopropylAlcoholSolvent">
@@ -11042,7 +11272,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Kelvin">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TemperatureUnit"/>
-        <rdfs:comment>K</rdfs:comment>
+        <friendlyName>K</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11081,8 +11311,8 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BaseSpecimenClampingMethod"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CounterSpecimenClampingMethod"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpecimenClampingMethod"/>
+        <friendlyName>Kinematic Mount and Bolt</friendlyName>
         <rdfs:comment>A bolt or bolts compressing the specimen directly to a kinematic mount, which in turn is attached to the equipment&apos;s structure.</rdfs:comment>
-        <rdfs:comment>Kinematic Mount and Bolt</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -11113,6 +11343,60 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#KnoopHardnessMeasurement">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HardnessMeasurementType"/>
         <friendlyName>Knoop</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#KnoopIndeterType -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#KnoopIndeterType">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IndenterType"/>
+        <friendlyName>Knoop</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LEO801 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LEO801">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+        <friendlyName>LEO-801</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LEO801UltrasonicCleaner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LEO801UltrasonicCleaner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentNonSpecificIdentificatoryName"/>
+        <friendlyName>LEO-801 Ultrasonic Cleaner</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LEOUltrasonicCoLtd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LEOUltrasonicCoLtd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ManufacturerName"/>
+        <friendlyName>LEO Ultrasonic Co Ltd</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LabEquipmentType -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LabEquipmentType">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Kadi4MatRecordType"/>
+        <friendlyName>labequipment</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LabProcessType -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LabProcessType">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Kadi4MatRecordType"/>
+        <friendlyName>labprocess</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11209,6 +11493,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#M110 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#M110">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+        <friendlyName>M110</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MANTUC2442over91 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MANTUC2442over91">
@@ -11223,6 +11516,24 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MB">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FileSizeUnit"/>
         <friendlyName>MB</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MPS2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MPS2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+        <friendlyName>MPS 2</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MPS2R300 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MPS2R300">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+        <friendlyName>MPS 2 R300</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11330,6 +11641,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MetaDataPurpose -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MetaDataPurpose">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FilePurpose"/>
+        <friendlyName>Metadata</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Metal -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Metal">
@@ -11366,6 +11686,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MicroProf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MicroProf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+        <friendlyName>MicroProf</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MicronUnit -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MicronUnit">
@@ -11375,11 +11704,29 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MicronsPerSecond -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MicronsPerSecond">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpeedUnit"/>
+        <friendlyName>µm/s</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MiliLiterUnit -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MiliLiterUnit">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#VolumeUnit"/>
         <friendlyName>ml</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MilimeterPerSecond -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MilimeterPerSecond">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SpeedUnit"/>
+        <friendlyName>mm/s</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11476,6 +11823,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#NullUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#NullUnit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#AngularVelocityUnit"/>
+        <friendlyName>null</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OFECopper -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#OFECopper">
@@ -11566,20 +11922,20 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PalletShape -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PalletShape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenShape"/>
-        <friendlyName>Pallet</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Pascal -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Pascal">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PressureUnit"/>
         <friendlyName>Pa</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PelletShape -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PelletShape">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimenShape"/>
+        <friendlyName>Pellet</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11693,11 +12049,29 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PorousAluminaSoftAndHardCleaningAccessory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PorousAluminaSoftAndHardCleaningAccessory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ToolCleaningAccessoryType"/>
+        <friendlyName>Porous Alumina (Soft Followed by Hard)</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PorousAluminaSoftCleaningAccessory -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#PorousAluminaSoftCleaningAccessory">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ToolCleaningAccessoryType"/>
         <friendlyName>Porous Alumina (Soft)</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Postdoc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Postdoc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ProfessionalCapacity"/>
+        <friendlyName>Postdoc</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11733,7 +12107,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ProcessedDataPurpose">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FilePurpose"/>
-        <rdfs:comment>(Human Readable) Processed Data</rdfs:comment>
+        <friendlyName>(Human Readable) Processed Data</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11788,7 +12162,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RawDataPurpose">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FilePurpose"/>
-        <rdfs:comment>Raw Data</rdfs:comment>
+        <friendlyName>Raw Data</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11850,11 +12224,29 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomR005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomR005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Room"/>
+        <friendlyName>R005</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomR012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomR012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Room"/>
+        <friendlyName>R012</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomS3.05 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RoomS3.05">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Room"/>
-        <friendlyName>Room S3.05</friendlyName>
+        <friendlyName>S3.05</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11872,6 +12264,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#RubberBallAirBlower">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#EquipmentNonSpecificIdentificatoryName"/>
+        <friendlyName>Air Blower Rubber Ball</friendlyName>
     </owl:NamedIndividual>
     
 
