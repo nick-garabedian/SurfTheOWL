@@ -12341,6 +12341,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SixDotOne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SixDotOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SoftwareVersion"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.1</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SlidingAxis -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SlidingAxis">
@@ -12450,6 +12459,24 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HeatTreatmentType"/>
         <friendlyName>Tempering</friendlyName>
         <rdfs:comment>Tempering is a process of heat treating, which is used to increase the toughness of iron-based alloys. It is usually performed after hardening, to reduce some of the excess hardness, and is done by heating the metal to some temperature below the critical point for a certain period of time, then allowing it to cool in still air.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ThirtyDotFourtyEight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ThirtyDotFourtyEight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Building"/>
+        <friendlyName>MZE, 30.48</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ThirtyDotFourtyNine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ThirtyDotFourtyNine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Building"/>
+        <friendlyName>μTC, 30.49</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12800,24 +12827,6 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30dot48 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30dot48">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Building"/>
-        <friendlyName>MZE</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30dot49 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#30dot49">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Building"/>
-        <friendlyName>μTC, 30.49</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#32 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#32">
@@ -12832,15 +12841,6 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#5019A">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
         <friendlyName>Multi Charge Amplifier Type 5019A</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#6dot1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#6dot1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SoftwareVersion"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.1</friendlyName>
     </owl:NamedIndividual>
     
 
