@@ -10354,18 +10354,18 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Big-endianOrdering -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BigEndianOrdering -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Big-endianOrdering">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BigEndianOrdering">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileBytesBitsOrder"/>
         <friendlyName>big-endian ordering</friendlyName>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Big-endianOrdering64-bit -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BigEndianOrdering64Bit -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Big-endianOrdering64-bit">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BigEndianOrdering64Bit">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileBytesBitsOrder"/>
         <friendlyName>big-endian ordering, 64-bit long data type</friendlyName>
     </owl:NamedIndividual>
@@ -10414,9 +10414,9 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BoschVS15665-OL -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BoschVS15665OL -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BoschVS15665-OL">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BoschVS15665OL">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BoschStandard"/>
         <friendlyName>VS 15665-OL</friendlyName>
     </owl:NamedIndividual>
@@ -10451,9 +10451,9 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CAV7-10-106 -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CAV710106 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CAV7-10-106">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CAV710106">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CAVStandard"/>
         <friendlyName>7-10-106</friendlyName>
     </owl:NamedIndividual>
@@ -10909,6 +10909,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Eight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Eight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileValuesSize"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ElasticSpringLoadApplication -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ElasticSpringLoadApplication">
@@ -10956,9 +10965,9 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Floating-PointNumber -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FloatingPointNumber -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Floating-PointNumber">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#FloatingPointNumber">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DatatypeClass"/>
         <friendlyName>Floating-Point Number</friendlyName>
     </owl:NamedIndividual>
@@ -11165,6 +11174,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Hour">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TimeDurationUnit"/>
         <friendlyName>Hour</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HundredCrSix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#HundredCrSix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaterialName"/>
+        <friendlyName>100Cr6 Steel</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11466,18 +11484,18 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Little-endianOrdering -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LittleEndianOrdering -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Little-endianOrdering">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LittleEndianOrdering">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileBytesBitsOrder"/>
         <friendlyName>little-endian ordering</friendlyName>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Little-endianOrdering64-bit -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LittleEndianOrdering64Bit -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Little-endianOrdering64-bit">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LittleEndianOrdering64Bit">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileBytesBitsOrder"/>
         <friendlyName>little-endian ordering, 64-bit long data type</friendlyName>
     </owl:NamedIndividual>
@@ -11632,9 +11650,9 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MercedesBenzDBL6513.00 -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MercedesBenzDBL6513dot00 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MercedesBenzDBL6513.00">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MercedesBenzDBL6513dot00">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MercedesBenzStandard"/>
         <friendlyName>DBL 6513.00</friendlyName>
     </owl:NamedIndividual>
@@ -11763,6 +11781,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MotorizedLeadscrewLoadApplication">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#LoadApplicationMethod"/>
         <friendlyName>Stepper and Lead Screw</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MultiCharge5019A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MultiCharge5019A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+        <friendlyName>Multi Charge Amplifier Type 5019A</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12350,6 +12377,24 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Sixteen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Sixteen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileValuesSize"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SixtyFour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SixtyFour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileValuesSize"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SlidingAxis -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#SlidingAxis">
@@ -12481,6 +12526,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ThirtyTwo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ThirtyTwo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileValuesSize"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TopSide -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TopSide">
@@ -12496,6 +12550,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TransverseAxis">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TribologicalAxisName"/>
         <friendlyName>Transverse</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TwoOneOneZero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#TwoOneOneZero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2110</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12653,6 +12716,14 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#_Info -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#_Info">
+        <rdfs:comment>When entering individuals, do not use dots, dashes in the names, or don&apos;t begin them with a number.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ai0 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ai0">
@@ -12796,69 +12867,6 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MagnificationUnit"/>
         <friendlyName>x</friendlyName>
         <rdfs:comment>times magnification</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#100Cr6 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#100Cr6">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MaterialName"/>
-        <friendlyName>100Cr6 Steel</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#16 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#16">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileValuesSize"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#2110 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#2110">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2110</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#32 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#32">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileValuesSize"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#5019A -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#5019A">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ObjectModelName"/>
-        <friendlyName>Multi Charge Amplifier Type 5019A</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#64 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#64">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileValuesSize"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#8 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#8">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BinaryFileValuesSize"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</friendlyName>
     </owl:NamedIndividual>
     
 
