@@ -37,6 +37,7 @@ def get_searchable_classes_from_list(classes_list):  # converts a list of classe
     return searchable_classes_name_pair
 
 # Comment by Nick: This is to get all the names in the drop-down search menu in the html
+    # To do that, the Record Class has to be listed in the Kadi4MatRecord in the ontology
 # executed ad end of file
 Kadi4Mate_objects = str(TriboDataFAIR.Kadi4MatRecord.is_a[2])  # get properties of object Kadi4MateRecord, list element 3 contains Kadi4Mate objects and convert to string to enable manipulation
 Kadi4Mate_objects = Kadi4Mate_objects.removeprefix('TriboDataFAIR_v0.4.documentsDescriptionOf.some(')  # remove main restriction

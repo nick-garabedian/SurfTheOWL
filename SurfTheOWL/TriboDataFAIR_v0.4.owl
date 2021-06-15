@@ -1350,6 +1350,37 @@ Valid after a feature and its side have been defined.</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CommercialMachiningProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CommercialMachiningProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#IndustrialProcess"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ProcessGeneralIdentifyingInformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#physicallyModifies"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#physicallyResultsIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <friendlyName>Commercial Machining</friendlyName>
+        <rdfs:comment>Class representing the physical process machining a block of material for eventual use in scientific process or equipment.
+
+The exact process is unknown, but it is performed by a firm that is external to the scientific institution.</rdfs:comment>
+        <rdfs:isDefinedBy>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ContentBearingObject -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ContentBearingObject">
@@ -4607,6 +4638,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BandSaw"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#BlockSpecimen"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CommercialMachiningProcess"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingMachine"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#CupGrindingProcess"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#DemagnetizationProcess"/>
@@ -11695,9 +11727,9 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Micro-Epsilon -->
+    <!-- http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MicroEpsilon -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#Micro-Epsilon">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#MicroEpsilon">
         <rdf:type rdf:resource="http://www.semanticweb.org/nickgarabedian/ontologies/2021/0/TriboDataFAIR#ManufacturerName"/>
         <friendlyName>Micro-Epsilon</friendlyName>
     </owl:NamedIndividual>
