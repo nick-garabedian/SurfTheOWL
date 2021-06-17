@@ -66,15 +66,17 @@ def search(request): #search call of website
 
 def download_search_result_json(request): # function to serve a downloadable JSON to request
     global search_output
-    searched_class = next(iter(search_output[0]))  # beautify existing JSON by input the special objects and normal Objects separately
-    downloadable_json = {searched_class:{"special_Objects":[]}}
+    searched_class = next(iter(search_output[0]))
+    downloadable_json = {searched_class: {"normal_Objects": search_output[0][searched_class]}}
+    # beautify existing JSON by input the special objects and normal Objects separately
+    downloadable_json[searched_class]["special_Objects"] = []
     for i in range(len(search_output[1])):
         downloadable_json[searched_class]["special_Objects"].append({search_output[1][i][0]:search_output[1][i][1]})
-    downloadable_json[searched_class]["normal_objects"] = search_output[0][searched_class] # end beautifying
+
 
     json_file = json.dumps(downloadable_json, indent=2, sort_keys=True)  # make a json file
     response = FileResponse(json_file, charset='utf-8')  # setup response as File
-    response['Content-Disposition'] = 'attachment; filename=' + str(searched_class)+ '_json_file' # name JSON file
+    response['Content-Disposition'] = 'attachment; filename=' + str(searched_class)+ '.json' # name JSON file
     response['Content-Type'] = 'application/json' # specific file type
 
     return response
