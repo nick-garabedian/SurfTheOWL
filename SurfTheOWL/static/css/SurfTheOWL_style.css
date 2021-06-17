@@ -57,3 +57,10 @@ hr.solid {
 #submit_button{
     font-size: 20px;
 }
+.json_download_button{
+    font-size: larger;
+    float: right;
+}
+#download_button_div{
+    height: 20px;
+}

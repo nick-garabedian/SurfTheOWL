@@ -20,7 +20,14 @@
     </form>
 
     <hr class="solid">
-
+    {% if search_result_heading %}
+    <div id="download_button_div">
+        <form action="/download_json" method="post">
+            {% csrf_token %}
+            <button class="json_download_button">Download data as JSON</button>
+        </form>
+    </div>
+    {% endif %}
 
     <div class="layer1_div">
     <h2 >{{search_result_heading}}</h2>  <!-- searched class name-->

@@ -19,5 +19,6 @@ from django.urls import path
 from SurfTheOWL import views
 urlpatterns = [
     path('', views.landing),
-    path('Surfing', views.search)
+    path('Surfing', views.search),
+    path('download_json', views.download_search_result_json)
 ]

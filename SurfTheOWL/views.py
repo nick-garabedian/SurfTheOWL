@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from . import SurfTheOWL
+from django.http import FileResponse
+import json
 
 
 # Comment by Nick: This code is written by Manfred to implement html into Django
-
-html_code = ""
+search_output = {} # contains the return of maine_search()
+html_code = "" # contains the data_tree in html code
 # Create your views here.
 def landing(request):  # initial call of the website
     list_of_all_classes = SurfTheOWL.searchable_owl_classes
@@ -13,10 +15,13 @@ def landing(request):  # initial call of the website
 def search(request): #search call of website
     global html_code
     html_code = ""
+    global search_output
+    search_output = {}
     list_of_all_classes = SurfTheOWL.searchable_owl_classes
     if request.method == 'POST':
         searched_class  =request.POST.get('searched_class')
         data = SurfTheOWL.main_search(searched_class) # Comment by Nick: Executes our main code
+        search_output = data # save return of main_search as global variable to serve it in download
         data_tree = data[0]
         search_result_heading = next(iter(data_tree))
         def just_odd_layer_seperation(layer):
@@ -58,3 +63,18 @@ def search(request): #search call of website
                                                     'list_of_all_classes': list_of_all_classes,
                                                    'html_code': html_code,
                                                    })
+
+def download_search_result_json(request):
+    global search_output
+    searched_class = next(iter(search_output[0]))
+    downloadable_json = {searched_class:{"special_Objects":[]}}
+    for i in range(len(search_output[1])):
+        downloadable_json[searched_class]["special_Objects"].append({search_output[1][i][0]:search_output[1][i][1]})
+    downloadable_json[searched_class]["normal_objects"] = search_output[0][searched_class]
+
+    json_file = json.dumps(downloadable_json, indent=2, sort_keys=True)
+    response = FileResponse(json_file, charset='utf-8')
+    response['Content-Disposition'] = 'attachment; filename=' + str(searched_class)+ '_json_file'
+    response['Content-Type'] = 'application/json'
+
+    return response
