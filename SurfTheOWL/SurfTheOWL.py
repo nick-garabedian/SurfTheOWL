@@ -4,10 +4,10 @@ from operator import itemgetter
 
 property_restrictions = ['some', 'only', 'min', 'max', 'exactly', 'value', 'has_self'] # Comment by Nick: So that we know it's not a superclass
 special_restrictions = [['hasTimeStamp', 'dateTimeStamp']]
-OWL_master_name = 'TriboDataFAIR_v0.4.'
+OWL_master_name = 'TriboDataFAIR_Ontology.'
 data_input_types = ['float', 'string', 'decimal', 'dateTimeStamp', 'boolean', 'PlainLiteral', 'integer', 'dateTimeStamp']
-TriboDataFAIR = get_ontology('SurfTheOWL/TriboDataFAIR_v0.4.owl').load()
-namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_v0.4.owl')
+TriboDataFAIR = get_ontology('SurfTheOWL/TriboDataFAIR_Ontology.owl').load()
+namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_Ontology.owl')
 
 # reference to other Objects -------------------------------------------------------------------------------------------------
 other_objects_properties = list(TriboDataFAIR.involves.subclasses())  # get all involves properties which refer to a other object
