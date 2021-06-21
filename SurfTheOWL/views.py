@@ -40,10 +40,10 @@ def search(request): #search call of website
                         if isinstance(complete_dict[key], list): # if value is list
                             html_code += "<div class=\"list\"><table>"#"<div class=\"list\">"
                             for element in complete_dict[key]: # for each element in list
-                                html_code += "<tr><td><span class=\"bullet\"> &bull;  </span>" + str(element) + " <button onclick='copy_to_clipboard(\""+str(element)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>" # insert each value
+                                html_code += "<tr><td><span class=\"bullet\"> &bull;  </span><span class=\"tree_option\">" + str(element) + "</span> <button onclick='copy_to_clipboard(\""+str(element)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>" # insert each value
                             html_code += "</table></div></div>"
                         else: # if value is str
-                            html_code += "<span class=\"layer" + str(depth + 2) + "_value\"> " + complete_dict[
+                            html_code += "<span class=\"tree_value\"> " + complete_dict[
                                 key] + "</span></div><br>" # insert str
                             pass
                     else: # if value is child dict

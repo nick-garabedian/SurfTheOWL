@@ -39,13 +39,19 @@ hr.solid {
     background-color: white;
     margin: 0px 0px 0px 34px;
     padding-left: 3px;
+    padding-top: 5px;
+    padding-bottom: 10px;
     border-left: dotted black 2px;
+    border-top: solid black 1px;
 }
 .layer_odd_div{
     background-color: whitesmoke;
     margin: 0px 0px 0px 34px;
     padding-left: 3px;
+    padding-top: 5px;
+    padding-bottom: 10px;
     border-left: dotted black 2px;
+    border-top: solid black 1px;
 }
 
 .layer2{
@@ -63,4 +69,10 @@ hr.solid {
 }
 #download_button_div{
     height: 20px;
+}
+.tree_option{
+    color: blue;
+}
+.tree_value{
+    color: green;
 }

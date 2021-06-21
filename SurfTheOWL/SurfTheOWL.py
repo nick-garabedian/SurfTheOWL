@@ -11,11 +11,12 @@ namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_Ontology.owl')
 
 # reference to other Objects -------------------------------------------------------------------------------------------------
 other_objects_properties = list(TriboDataFAIR.involves.subclasses())  # get all involves properties which refer to a other object
+other_objects_properties += list(TriboDataFAIR.generates.subclasses())  # get all generates properties which refer to a other object (update 21.06.2021)
 
 for property in other_objects_properties:  # get children of involves properties # Comment by Nick: Links to between objects and processes
     other_objects_properties += list(property.subclasses())  # add children to same property list
 
-other_objects_properties = list(str(i).removeprefix(OWL_master_name)for i in other_objects_properties)  # convert list elements to string and remove master sufix
+other_objects_properties = list(str(i).removeprefix(OWL_master_name)for i in other_objects_properties)  # convert list elements to string and remove master prefix
 
 #----------------------------------------------------------------------------------------------------------------------
 
@@ -42,8 +43,8 @@ def get_searchable_classes_from_list(classes_list):  # converts a list of classe
 
 Kadi4Mate_objects = str(TriboDataFAIR.Kadi4MatRecord.is_a[2])  # get properties of object Kadi4MateRecord, list element 3 contains Kadi4Mate objects and convert to string to enable manipulation
 Kadi4Mate_objects = Kadi4Mate_objects.removeprefix(OWL_master_name+'documentsDescriptionOf.some(')  # remove main restriction
-Kadi4Mate_objects = Kadi4Mate_objects.removesuffix(')') # remove leftofer
-Kadi4Mate_objects = Kadi4Mate_objects.split(' | ') # convert to list of strings by spliting string on seperator
+Kadi4Mate_objects = Kadi4Mate_objects.removesuffix(')') # remove leftover
+Kadi4Mate_objects = Kadi4Mate_objects.split(' | ') # convert to list of strings by splitting string on separator
 Kadi4Mate_objects = list(str(i).removeprefix(OWL_master_name)for i in Kadi4Mate_objects)  # for each string remove owl master name (TriboData.....)
 #---------------------------------------------------------------------------------------------------------------------
 
