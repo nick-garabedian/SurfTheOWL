@@ -39,8 +39,9 @@ def get_searchable_classes_from_list(classes_list):  # converts a list of classe
 # Comment by Nick: This is to get all the names in the drop-down search menu in the html
     # To do that, the Record Class has to be listed in the Kadi4MatRecord in the ontology
 # executed ad end of file
+
 Kadi4Mate_objects = str(TriboDataFAIR.Kadi4MatRecord.is_a[2])  # get properties of object Kadi4MateRecord, list element 3 contains Kadi4Mate objects and convert to string to enable manipulation
-Kadi4Mate_objects = Kadi4Mate_objects.removeprefix('TriboDataFAIR_v0.4.documentsDescriptionOf.some(')  # remove main restriction
+Kadi4Mate_objects = Kadi4Mate_objects.removeprefix(OWL_master_name+'documentsDescriptionOf.some(')  # remove main restriction
 Kadi4Mate_objects = Kadi4Mate_objects.removesuffix(')') # remove leftofer
 Kadi4Mate_objects = Kadi4Mate_objects.split(' | ') # convert to list of strings by spliting string on seperator
 Kadi4Mate_objects = list(str(i).removeprefix(OWL_master_name)for i in Kadi4Mate_objects)  # for each string remove owl master name (TriboData.....)
@@ -302,4 +303,5 @@ def main_search(className):
 #print(search_output[2])  # print dict with normal class names
 #print(search_output)  # print dict with friendly names
 searchable_owl_classes = get_searchable_classes_from_list(Kadi4Mate_objects) # all owl classes under Procedure which get the searchable classes in frontend
+
 
