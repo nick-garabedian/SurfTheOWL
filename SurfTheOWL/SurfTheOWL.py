@@ -219,9 +219,8 @@ def children(key):
         if is_class_datatype(placeholder_keys[i]) and len(placeholder_keys) == 1:  # if input type is a single output than it is no Magnitude, so the input type is direct assigned to parent
             children_classes_dict = placeholder_keys[i]
             friendly_names_dict = placeholder_keys[i]
-            print(children_classes_dict)
+
         elif is_class_datatype(placeholder_keys[i]):
-            print(placeholder_keys[i])
             children_classes_dict['InputValueType'] = placeholder_keys[i]
             del children_classes_dict[placeholder_keys[i]]
             friendly_names_dict['Input Value Type'] = placeholder_keys[i]  # assign data type to friendly name
