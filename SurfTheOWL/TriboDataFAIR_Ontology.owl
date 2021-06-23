@@ -58,6 +58,16 @@ Domain Knowledge Source: TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</r
     
 
 
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#contextualType -->
+
+    <owl:AnnotationProperty rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#contextualType">
+        <rdfs:comment>The entity which identifies the most suitable type to be qualified as when creating a digital record.</rdfs:comment>
+        <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
+        <persistentID>TDO:3000103</persistentID>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#definitionOrigin -->
 
     <owl:AnnotationProperty rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#definitionOrigin">
@@ -706,6 +716,7 @@ The counter body in a model experiment is the sample or body...
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class pertain to the category of machines called band saw.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Band Saw</friendlyName>
         <persistentID>TDO:0000517</persistentID>
@@ -1066,6 +1077,7 @@ The counter body in a model experiment is the sample or body...
         <rdfs:comment>Objects from this class contain a self-binded collection of mass bearing particles.
 
 Solids can have viscoelasticity.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentalObjectType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Solid Block</friendlyName>
         <persistentID>TDO:0000513</persistentID>
@@ -1559,6 +1571,7 @@ Valid after a feature and its side have been defined.</rdfs:comment>
         <rdfs:comment>Class representing the physical process machining a block of material for eventual use in scientific process or equipment.
 
 The exact process is unknown, but it is performed by a firm that is external to the scientific institution.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Commercial Machining</friendlyName>
         <persistentID>TDO:0000209</persistentID>
@@ -1857,6 +1870,7 @@ The exact process is unknown, but it is performed by a firm that is external to 
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class pertain to the category of machines called oven.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Cup Grinding Machine</friendlyName>
         <persistentID>TDO:0000518</persistentID>
@@ -2043,6 +2057,7 @@ The exact process is unknown, but it is performed by a firm that is external to 
         <rdfs:comment>Class representing the physical process of cup grinding of a specimen with the aim of changing its surface characteristcs.
 
 It ends with demounting of the sample/workpiece from the mounting table.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Cup Grinding</friendlyName>
         <persistentID>TDO:0000210</persistentID>
@@ -2405,6 +2420,7 @@ This has a major influence on the resulting roughness of the samples&apos; surfa
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class representing the execution of a particular computer code which extracts/reshapes/processes data from one form to another.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#DataProcessingType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Data Processing</friendlyName>
         <persistentID>TDO:0000207</persistentID>
@@ -2509,6 +2525,7 @@ This has a major influence on the resulting roughness of the samples&apos; surfa
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for 1D vizualization.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Demagnetization</friendlyName>
         <persistentID>TDO:0000211</persistentID>
@@ -2601,6 +2618,7 @@ This has a major influence on the resulting roughness of the samples&apos; surfa
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class pertain to the category of machines called demagnetizing plate.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Demagnetizing Plate</friendlyName>
         <persistentID>TDO:0000519</persistentID>
@@ -3691,6 +3709,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class pertain to the category of machines called furnace.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Furnace</friendlyName>
         <persistentID>TDO:0000520</persistentID>
@@ -4059,6 +4078,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) with various types whose contents indicate the hardness of a speciment based on indentation measurement.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Hardness Measurement</friendlyName>
         <persistentID>TDO:0000214</persistentID>
@@ -4168,6 +4188,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class pertain to the category of machines called hardness tester.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Hardness Tester</friendlyName>
         <persistentID>TDO:0000521</persistentID>
@@ -4536,6 +4557,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class representing the physical process of thermal treatment of a specimen with the aim of changing its selfcontained physical characteristcs.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Heat Treatment</friendlyName>
         <persistentID>TDO:0000212</persistentID>
@@ -4773,6 +4795,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class act as the immediate medium at the tribological interface, which is not the surrounding medium of the instrument as a whole.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentalObjectType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Interfacial Medium</friendlyName>
         <persistentID>TDO:0000514</persistentID>
@@ -6135,6 +6158,7 @@ The axis is the only one available by the particular sub/system.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class representing the physical process of separating metal bodies for eventual use in scientific process or equipment.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Metal Sawing</friendlyName>
         <persistentID>TDO:0000213</persistentID>
@@ -6905,6 +6929,7 @@ If only one file is used, this is 1.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class pertain to the category of machines called optical surface profilometer.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Optical Surface Profilometer</friendlyName>
         <persistentID>TDO:0000522</persistentID>
@@ -7049,6 +7074,7 @@ If only one file is used, this is 1.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for vizualization.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Optical Surface Profilometry</friendlyName>
         <persistentID>TDO:0000215</persistentID>
@@ -8156,6 +8182,7 @@ Refers to common names of information/quantities/elements/entities we capture du
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class representing the physical process of reducing the amount of residue on a physical object&apos;s surfaces.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Specimen Cleaning</friendlyName>
         <persistentID>TDO:0000214</persistentID>
@@ -8546,6 +8573,7 @@ For Other Processes: Objects from this class act as the medium around the specim
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class pertain to the category of machines called tactile surface profilometer.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Tactile Surface Profilometer</friendlyName>
         <persistentID>TDO:0000523</persistentID>
@@ -8644,6 +8672,7 @@ For Other Processes: Objects from this class act as the medium around the specim
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for 1D vizualization.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Tactile Surface Profilometry</friendlyName>
         <persistentID>TDO:0000215</persistentID>
@@ -9236,6 +9265,7 @@ Reference: Dublin Core: http://www.lub.lu.se/cgi-bin/nmdc.pl</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class representing the monitored processes that produce a (set of) wear track(s) on or below a physical surface.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Tribological Experiment</friendlyName>
         <persistentID>TDO:00001</persistentID>
@@ -9814,6 +9844,7 @@ This array contains one entry for the base body and one entry for the counter bo
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class pertain to the category of machines called Band Saw.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Tribometer</friendlyName>
         <persistentID>TDO:0000525</persistentID>
@@ -10296,6 +10327,7 @@ This array contains one entry for the base body and one entry for the counter bo
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Objects from this class pertain to the category of machines called ultrasonic cleaner.</rdfs:comment>
+        <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Ultrasonic Cleaner</friendlyName>
         <persistentID>TDO:0000526</persistentID>
@@ -11732,6 +11764,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#DataProcessingType -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#DataProcessingType">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordType"/>
+        <friendlyName>data processing</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#DeIonizedWater -->
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#DeIonizedWater">
@@ -11927,6 +11968,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExchangeableMounting">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ProbeArmMountingMethod"/>
         <friendlyName>Exchangeable</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentalObjectType -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentalObjectType">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordType"/>
+        <friendlyName>experimental object</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12218,20 +12268,11 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialEquipmentType -->
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType -->
 
-    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialEquipmentType">
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordType"/>
-        <friendlyName>industrialequipment</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcessType -->
-
-    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcessType">
-        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordType"/>
-        <friendlyName>industrialprocess</friendlyName>
+        <friendlyName>industrial procedure</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12400,16 +12441,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordType"/>
-        <friendlyName>labequipment</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabProcessType -->
-
-    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabProcessType">
-        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordType"/>
-        <friendlyName>labprocess</friendlyName>
+        <friendlyName>lab equipment</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -13345,6 +13377,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordType"/>
+        <friendlyName>scientific procedure</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScratchMark -->
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScratchMark">
@@ -13468,15 +13509,6 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SpecimenContainerDelivery">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SpecimenDeliveryMethod"/>
         <friendlyName>Specimen Container</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SpecimenType -->
-
-    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SpecimenType">
-        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordType"/>
-        <friendlyName>Specimen</friendlyName>
     </owl:NamedIndividual>
     
 
