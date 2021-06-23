@@ -1,5 +1,4 @@
 from owlready2 import *
-import re
 from operator import itemgetter
 
 property_restrictions = ['some', 'only', 'min', 'max', 'exactly', 'value', 'has_self'] # Comment by Nick: So that we know it's not a superclass
@@ -217,7 +216,12 @@ def children(key):
         friendly_names_dict = children_classes_dict  # if data assign to friendly names
 
     for i in range(len(placeholder_keys)):
-        if is_class_datatype(placeholder_keys[i]):
+        if is_class_datatype(placeholder_keys[i]) and len(placeholder_keys) == 1:  # if input type is a single output than it is no Magnitude, so the input type is direct assigned to parent
+            children_classes_dict = placeholder_keys[i]
+            friendly_names_dict = placeholder_keys[i]
+            print(children_classes_dict)
+        elif is_class_datatype(placeholder_keys[i]):
+            print(placeholder_keys[i])
             children_classes_dict['InputValueType'] = placeholder_keys[i]
             del children_classes_dict[placeholder_keys[i]]
             friendly_names_dict['Input Value Type'] = placeholder_keys[i]  # assign data type to friendly name
@@ -233,6 +237,7 @@ def children(key):
         else:
             children_keys.append(placeholder_keys[i])
             friendly_names_dict[className_to_friendlyName(placeholder_keys[i])] = children_classes_dict[placeholder_keys[i]]  # assign dict data to friendly name
+        print(friendly_names_dict, children_classes_dict, 'children oputpu')
 
     return [children_classes_dict, children_keys, friendly_names_dict, other_object_refer_pair]
 
@@ -304,5 +309,6 @@ def main_search(className):
 #print(search_output[2])  # print dict with normal class names
 #print(search_output)  # print dict with friendly names
 searchable_owl_classes = get_searchable_classes_from_list(Kadi4Mate_objects) # all owl classes under Procedure which get the searchable classes in frontend
-
+print(TriboDataFAIR.ExperimentTitle.is_a, "ExperimentTitle")
+print(TriboDataFAIR.VoltageMagnitude.is_a, "VoltageMagnitude")
 

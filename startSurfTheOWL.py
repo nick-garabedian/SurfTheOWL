@@ -1,7 +1,6 @@
 import tkinter as tk
 import webbrowser
 import subprocess
-import time
 import signal
 
 # Comment by Nick: Automatically opens a GUI which allows interaction between the server and python command line
