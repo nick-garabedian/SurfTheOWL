@@ -4851,7 +4851,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the flash point the piece of interfacial medium.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (Flash Point Specification)</friendlyName>
         <persistentID>TDO:0000480</persistentID>
     </owl:Class>
     
@@ -4911,7 +4911,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the kinematic viscosity of the piece of interfacial medium.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Kinematic Viscosity</friendlyName>
+        <friendlyName>Kinematic Viscosity Specifications</friendlyName>
         <persistentID>TDO:0000481</persistentID>
     </owl:Class>
     
@@ -4935,7 +4935,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the kinematic viscosity of the piece of interfacial medium.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (Kinematic Viscosity)</friendlyName>
         <persistentID>TDO:0000482</persistentID>
     </owl:Class>
     
@@ -4977,7 +4977,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the mass density of the the piece of interfacial medium.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (Mass Density Specification)</friendlyName>
         <persistentID>TDO:0000484</persistentID>
     </owl:Class>
     
@@ -8013,7 +8013,7 @@ Refers to common names of information/quantities/elements/entities we capture du
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the periphery&apos;s software used.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Array of Software Used</friendlyName>
+        <friendlyName>Software Used Array</friendlyName>
         <persistentID>TDO:0000489</persistentID>
     </owl:Class>
     
@@ -8037,7 +8037,7 @@ Refers to common names of information/quantities/elements/entities we capture du
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the periphery&apos;s software used.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (Software Used)</friendlyName>
         <persistentID>TDO:0000490</persistentID>
     </owl:Class>
     
@@ -9321,7 +9321,7 @@ Reference: Dublin Core: http://www.lub.lu.se/cgi-bin/nmdc.pl</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the parameters that are put into the involved DAQ channels, to run it optimally, but are not directly part of achieving the experimental objectives.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (DAQ Used Channel Info)</friendlyName>
         <persistentID>TDO:0000412</persistentID>
     </owl:Class>
     
@@ -9393,7 +9393,7 @@ Reference: Dublin Core: http://www.lub.lu.se/cgi-bin/nmdc.pl</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the file supplied to the controlling software to run an experiment.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (Input File/s Info)</friendlyName>
         <persistentID>TDO:0000415</persistentID>
     </owl:Class>
     
@@ -9607,7 +9607,7 @@ This array contains one entry for the base body and one entry for the counter bo
 
 This array contains one entry for the base body and one entry for the counter body but may be extended as needed e.g. for experiments with more than one counter body.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (Mounting Information)</friendlyName>
         <persistentID>TDO:0000423</persistentID>
     </owl:Class>
     
@@ -9803,7 +9803,7 @@ This array contains one entry for the base body and one entry for the counter bo
         </rdfs:subClassOf>
         <rdfs:comment>Class containing the a signle step bundle of parameters needed for a tribological process.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (Variable Experimental Step)</friendlyName>
         <persistentID>TDO:0000428</persistentID>
     </owl:Class>
     
@@ -9972,7 +9972,7 @@ This array contains one entry for the base body and one entry for the counter bo
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about all the installed DAQ boards relevant to the tribometer&apos;s measurement.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (Info on Connected DAQ)</friendlyName>
         <persistentID>TDO:0000499</persistentID>
     </owl:Class>
     
@@ -10014,7 +10014,7 @@ This array contains one entry for the base body and one entry for the counter bo
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the installed subsystems responsible for making parts move in the tribometer.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Array of Info on Motion Inducing Subsystems</friendlyName>
+        <friendlyName>Motion Inducing Subsystems Info Array</friendlyName>
         <persistentID>TDO:0000501</persistentID>
     </owl:Class>
     
@@ -10056,7 +10056,7 @@ This array contains one entry for the base body and one entry for the counter bo
         </rdfs:subClassOf>
         <rdfs:comment>Class containing information about the installed subsystems responsible for making parts move in the tribometer.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item</friendlyName>
+        <friendlyName>List Item (Motion Inducing Subsystems Info Array)</friendlyName>
         <persistentID>TDO:0000502</persistentID>
     </owl:Class>
     
