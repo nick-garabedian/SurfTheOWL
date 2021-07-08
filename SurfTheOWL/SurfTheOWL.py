@@ -1,6 +1,7 @@
 from owlready2 import *
 from operator import itemgetter
 
+
 property_restrictions = ['some', 'only', 'min', 'max', 'exactly', 'value', 'has_self'] # Comment by Nick: So that we know it's not a superclass
 special_restrictions = [['hasTimeStamp', 'dateTimeStamp']]
 OWL_master_name = 'TriboDataFAIR_Ontology.'
@@ -236,7 +237,7 @@ def children(key):
         else:
             children_keys.append(placeholder_keys[i])
             friendly_names_dict[className_to_friendlyName(placeholder_keys[i])] = children_classes_dict[placeholder_keys[i]]  # assign dict data to friendly name
-        print(friendly_names_dict, children_classes_dict, 'children oputpu')
+
 
     return [children_classes_dict, children_keys, friendly_names_dict, other_object_refer_pair]
 
@@ -300,8 +301,31 @@ def main_search(className):
         else:
             special_objects_friendly = []
         # -------------------------------------------------------------------------------------------------------------------------------------------
+        # order dict GeneralInfo first, .... --------------------------------------------------------------------------
+        ordered_friendly_classes_dict = {friendly_class_name:{}}
+        order_list_top = ['General Info', 'Experiment Summary', 'Experimental Conditions'] # elements in order on top of dict
+        order_list_bottom = ['Uncontrolled Environmental Conditions','Array Produced File Metadata'] # elements in order on bottom of dict
+        placeholder_for_elements = []
+        for order_key in order_list_top:
+            if order_key in friendly_classes_dict[friendly_class_name]:
+                order_key_value = friendly_classes_dict[friendly_class_name].pop(order_key) # remove element from dict
+                ordered_friendly_classes_dict[friendly_class_name].update({order_key: order_key_value}) # add element to ordered dict
 
-        return [friendly_classes_dict, special_objects_friendly, classes_dict]
+        for order_key in order_list_bottom:
+            if order_key in friendly_classes_dict[friendly_class_name]: # if bottom elements exists
+                placeholder_for_elements.append([order_key, friendly_classes_dict[friendly_class_name].pop(order_key)]) # remove bottom elements from dict
+
+        for key, value in friendly_classes_dict[friendly_class_name].items(): # switch al elements between top and bottom to ordered list, possible because all top and bottom elements a removed
+            ordered_friendly_classes_dict[friendly_class_name].update({key: value})
+
+        del friendly_classes_dict # remove leftover dict
+
+        for element in placeholder_for_elements: # assign all bottom elements to ordered dict
+            ordered_friendly_classes_dict[friendly_class_name].update({element[0]: element[1]})
+
+        # end of ordering the dict -------------------------------------------------------------------------------------
+
+        return [ordered_friendly_classes_dict, special_objects_friendly, classes_dict]
 
 #search_string = "TribologicalExperiment"  # wanted OWL thing
 #search_output = main_search(search_string)
