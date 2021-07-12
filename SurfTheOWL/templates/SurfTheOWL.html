@@ -28,21 +28,28 @@
             <button class="json_download_button">Download data as JSON</button>
         </form>
     </div>
-    {% endif %}
+
 
     <div class="layer1_div">
-    <h2 >{{search_result_heading}}</h2>  <!-- searched class name-->
+        <div class="tooltip">
+            <h2 >{{search_result_heading.0}}</h2>  <!-- searched class name-->
+            <span class="tooltiptext"><b>ID: </b>{{search_result_heading.1}}<br><b>Comment: </b>{{search_result_heading.2}}</span>
+        </div>
+
         {% for element in data_objects%}
             <div class="specialObjDiv">
                 <hr class="limb_root">
                 <span class="bulletpoint"> &#9654; </span>
-                <span class="layer2">{{element.0}}: {{element.1}}</span>
+                    <div class="tooltip"><span><b>{{element.0}}:</b></span>
+                        <span class="tooltiptext"><b>ID: </b>{{element.2}}<br><b>Comment: </b>{{element.3}}</span>
+                    </div>
+                    <span>{{element.1}}</span>
             </div>
         {% endfor %}
         {{html_code | safe}}
+
+    {% endif %}
     </div>
-
-
 </body>
 </html>
 

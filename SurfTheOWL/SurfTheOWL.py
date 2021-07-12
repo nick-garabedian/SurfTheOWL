@@ -200,6 +200,26 @@ def className_to_friendlyName(class_name):  # returns the friendly name
     return friendly_name
 
 
+def get_ID_by_className(class_name):
+    if is_class_a_thing(class_name):  # if class_name exists in OWL
+        identifier = eval('TriboDataFAIR.'+class_name+'.persistentID') # get ID
+        if identifier: # if ID is not empty
+            return identifier[0] # return ID, ID is first list element
+        else : # if ID is empty
+            return 'No ID specified' # return ID is empty
+    else :
+        return None # return None if major error
+
+
+def get_comment_by_className(class_name):
+    if is_class_a_thing(class_name): # if class_name exists in OWL
+        comment = eval('TriboDataFAIR.'+class_name+'.comment') # get comment
+        if comment: # if comment not empty
+            return comment[0] # return comment, comment is first list element
+        else: # if comment is empty
+            return 'No comment specified' # return comment is empty
+    else:
+        return None # return None if major error
 # end define searchable objects -----------------------------------------
 
 def children(key):
@@ -208,6 +228,8 @@ def children(key):
     placeholder_keys = []
     friendly_names_dict = {}
     other_object_refer_pair = [] #[({object: property},{friendly object: property}),(...),...]
+    id_dict = {}
+    comment_dict = {}
     if not end_of_entries(key):
         children_classes_dict = dict.fromkeys(search_class(key))
         placeholder_keys = list(children_classes_dict.keys())
@@ -234,20 +256,28 @@ def children(key):
             del children_classes_dict[placeholder_keys[i]]
             friendly_names_dict[className_to_friendlyName(referred_object)] = object_property  # assign object to friendly name
             other_object_refer_pair.append(({referred_object: object_property},{className_to_friendlyName(referred_object):object_property})) # list of refer objects, to manipulate existing list
+            id_dict[className_to_friendlyName(referred_object)] = get_ID_by_className(referred_object)  # get id from element {friendlyClassName: ID}
+            comment_dict[className_to_friendlyName(referred_object)] = get_comment_by_className(referred_object)  # get comment from element {friendlyClassName: comment}
+
         else:
             children_keys.append(placeholder_keys[i])
             friendly_names_dict[className_to_friendlyName(placeholder_keys[i])] = children_classes_dict[placeholder_keys[i]]  # assign dict data to friendly name
+            id_dict[className_to_friendlyName(placeholder_keys[i])] = get_ID_by_className(placeholder_keys[i]) # get id from element {friendlyClassName: ID}
+            comment_dict[className_to_friendlyName(placeholder_keys[i])] = get_comment_by_className(placeholder_keys[i]) # get comment from element {friendlyClassName: comment}
 
 
-    return [children_classes_dict, children_keys, friendly_names_dict, other_object_refer_pair]
+    return [children_classes_dict, children_keys, friendly_names_dict, other_object_refer_pair, id_dict, comment_dict]
 
 
 def main_search(className):
+
     if className in all_owl_classes:
         classes_dict = {className: []}
         friendly_class_name_list = eval('TriboDataFAIR.'+className+'.friendlyName')
         friendly_class_name = friendly_class_name_list[0]
         friendly_classes_dict = {friendly_class_name: []}
+        id_dict = {friendly_class_name: get_ID_by_className(className)} # set up dict with IDs {friendlyClassName: ID}
+        comment_dict = {friendly_class_name: get_comment_by_className(className)} # set up dict with comments {friendlyClassName: comment}
 
         def find_classes_layers_via_recursion(layer, keys, friendly_layer, depth=0): # keys are separate because some keys are a none owl thing
 
@@ -260,6 +290,8 @@ def main_search(className):
                     layer[key] = output[0]  # class names
                     friendly_layer[className_to_friendlyName(key)] = output[2]  # friendly class names
                     next_layer_keys = output[1]  # needed because not every key is searchable, therefore the function children delivers all keys which a wanted keys
+                    id_dict.update(output[4]) # add children IDs to id dict {friendlyClassName: ID}
+                    comment_dict.update(output[5]) # add children comments to comments dict {friendlyClassName: comment}
 
                     find_classes_layers_via_recursion(layer[key], next_layer_keys, friendly_layer[className_to_friendlyName(key)], depth + 1)
 
@@ -295,9 +327,10 @@ def main_search(className):
                             length -= 1
                 j += 1
             # generate object list with friendly name ----------------
-            special_objects_friendly = [] # Structure = [[friendly object name, property ], [...], ...] list because possible overwrite as dict when tow keys are the same
-            for item in object_refer_pair: # Structure= [({object: property},{friendly object: property}),(...),...]
-                special_objects_friendly.append([list(item[1].keys())[0], item[1][list(item[1].keys())[0]]])
+            special_objects_friendly = [] # Structure = [[friendly object name, property , ID, Comment], [...], ...] list because possible overwrite as dict when two keys are the same
+            for item in object_refer_pair:
+                special_objects_friendly.append([list(item[1].keys())[0], item[1][list(item[1].keys())[0]], id_dict[list(item[1].keys())[0]], comment_dict[list(item[1].keys())[0]]])
+                print(special_objects_friendly)
         else:
             special_objects_friendly = []
         # -------------------------------------------------------------------------------------------------------------------------------------------
@@ -306,12 +339,12 @@ def main_search(className):
         order_list_top = ['General Info', 'Experiment Summary', 'Experimental Conditions'] # elements in order on top of dict
         order_list_bottom = ['Uncontrolled Environmental Conditions','Array Produced File Metadata'] # elements in order on bottom of dict
         placeholder_for_elements = []
-        for order_key in order_list_top:
+        for order_key in order_list_top: # loop top elements
             if order_key in friendly_classes_dict[friendly_class_name]:
                 order_key_value = friendly_classes_dict[friendly_class_name].pop(order_key) # remove element from dict
                 ordered_friendly_classes_dict[friendly_class_name].update({order_key: order_key_value}) # add element to ordered dict
 
-        for order_key in order_list_bottom:
+        for order_key in order_list_bottom: # loop bottom elements
             if order_key in friendly_classes_dict[friendly_class_name]: # if bottom elements exists
                 placeholder_for_elements.append([order_key, friendly_classes_dict[friendly_class_name].pop(order_key)]) # remove bottom elements from dict
 
@@ -325,12 +358,13 @@ def main_search(className):
 
         # end of ordering the dict -------------------------------------------------------------------------------------
 
-        return [ordered_friendly_classes_dict, special_objects_friendly, classes_dict]
+        return [ordered_friendly_classes_dict, special_objects_friendly, classes_dict, id_dict, comment_dict]
 
 #search_string = "TribologicalExperiment"  # wanted OWL thing
 #search_output = main_search(search_string)
 #print(search_output[2])  # print dict with normal class names
 #print(search_output)  # print dict with friendly names
+
 searchable_owl_classes = get_searchable_classes_from_list(Kadi4Mate_objects) # all owl classes under Procedure which get the searchable classes in frontend
 
 

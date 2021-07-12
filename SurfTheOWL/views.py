@@ -23,7 +23,13 @@ def search(request): #search call of website
         data = SurfTheOWL.main_search(searched_class) # Comment by Nick: Executes our main code
         search_output = data # save return of main_search as global variable to serve it in download
         data_tree = data[0]
+        id_dict = data[3]
+        comment_dict = data[4]
         search_result_heading = next(iter(data_tree))
+        def string_to_html_conform_string(string):
+            string = string.replace('\'','´')
+            string = string.replace('\"', '´')
+            return string
         def just_odd_layer_seperation(layer):
             if layer%2 == 0:
                 return "layer_just_div"
@@ -35,7 +41,18 @@ def search(request): #search call of website
             global html_code
             if isinstance(complete_dict, dict):  # complete dict is dict and no list
                 for key in complete_dict.keys(): # for each key
-                    html_code += "<div class=" +just_odd_layer_seperation(depth) + "><hr class=\"limb_root\"><span class=\"bulletpoint\"> &#9660; </span><span class=\"layer"+ str(depth + 2) +"\"><b>" + key + " </b></span><button onclick='copy_to_clipboard(\""+str(key)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button><span><b>: </b></span>"
+                    html_code += "<div class=" +just_odd_layer_seperation(depth) + "><hr class=\"limb_root\"><span class=\"bulletpoint\"> &#9660; </span>" \
+
+
+                    if key in id_dict.keys() and key in comment_dict.keys():
+                        html_code += "<div class=\"tooltip\"><b>" + key + " </b>" \
+                                      "<span class=\"tooltiptext\"><b>ID: </b>"+id_dict[key]+"<br><b>Comment: </b>"+comment_dict[key]+"</span></div>"
+                    else:
+                        html_code += "<span><b>" + key + " </b></span> "
+                    html_code += " <button onclick=\'copy_to_clipboard(\""+string_to_html_conform_string(key)+"\")\'>" \
+                                "<img src='https://img.icons8.com/ios/10/000000/copy.png'/></button>" \
+                                "<span><b> : </b></span>"
+
                     if isinstance(complete_dict[key], str) or isinstance(complete_dict[key], list): # if dict key(value) is no dict
                         if isinstance(complete_dict[key], list): # if value is list
                             html_code += "<div class=\"list\"><table>"#"<div class=\"list\">"
@@ -44,7 +61,7 @@ def search(request): #search call of website
                             html_code += "</table></div></div>"
                         else: # if value is str
                             html_code += "<span class=\"tree_value\"> " + complete_dict[
-                                key] + "</span></div><br>" # insert str
+                                key] + "</span></div>" # insert str
                             pass
                     else: # if value is child dict
                         html_code += "<br>"
@@ -58,10 +75,12 @@ def search(request): #search call of website
 
 
         generate_html_form_dict_via_recusion(data_tree[list(data_tree.keys())[0]]) # call recursive function
-        return render(request, 'SurfTheOWL.html', {'search_result_heading': search_result_heading,
+        return render(request, 'SurfTheOWL.html', {'search_result_heading': [search_result_heading, id_dict[search_result_heading], comment_dict[search_result_heading]],
                                                     'data_objects': data[1],
                                                     'list_of_all_classes': list_of_all_classes,
                                                    'html_code': html_code,
+                                                   'ID_dict': id_dict,
+                                                   'comment_dict': comment_dict,
                                                    })
 
 def download_search_result_json(request): # function to serve a downloadable JSON to request
