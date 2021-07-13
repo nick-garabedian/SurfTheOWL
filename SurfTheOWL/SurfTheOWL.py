@@ -330,7 +330,7 @@ def main_search(className):
             special_objects_friendly = [] # Structure = [[friendly object name, property , ID, Comment], [...], ...] list because possible overwrite as dict when two keys are the same
             for item in object_refer_pair:
                 special_objects_friendly.append([list(item[1].keys())[0], item[1][list(item[1].keys())[0]], id_dict[list(item[1].keys())[0]], comment_dict[list(item[1].keys())[0]]])
-                print(special_objects_friendly)
+                
         else:
             special_objects_friendly = []
         # -------------------------------------------------------------------------------------------------------------------------------------------

@@ -120,3 +120,40 @@ hr.solid {
   visibility: visible;
   opacity: 1;
 }
+.tooltip_bottom {
+  position: relative;
+  display: inline-block;
+  cursor: context-menu;
+  /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+}
+.tooltip_bottom .tooltiptext{
+    visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  padding: 5px 5px 5px 5px;
+  border-radius: 6px;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 80%;
+  left: 0%;
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip_bottom .tooltiptext::after{
+      content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 10%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+.tooltip_bottom:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

@@ -7,7 +7,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/SurfTheOWL_style.css' %}">
     <script type="text/javascript" src="{% static 'js/SurfTheOWL_JavaScript.js' %}" ></script>
-
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
 </head>
 <body>
     <form action="/Surfing" method="post">
@@ -31,7 +31,7 @@
 
 
     <div class="layer1_div">
-        <div class="tooltip">
+        <div class="tooltip_bottom">
             <h2 >{{search_result_heading.0}}</h2>  <!-- searched class name-->
             <span class="tooltiptext"><b>ID: </b>{{search_result_heading.1}}<br><b>Comment: </b>{{search_result_heading.2}}</span>
         </div>
