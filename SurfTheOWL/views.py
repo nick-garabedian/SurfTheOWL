@@ -40,33 +40,49 @@ def search(request): #search call of website
         def generate_html_form_dict_via_recusion(complete_dict, depth=0):
             global html_code
             if isinstance(complete_dict, dict):  # complete dict is dict and no list
-                for key in complete_dict.keys(): # for each key
-                    html_code += "<div class=" +just_odd_layer_seperation(depth) + "><hr class=\"limb_root\"><span class=\"bulletpoint\"> &#9660; </span>" \
+                if len(complete_dict.keys()) == 2 and complete_dict[list(complete_dict.keys())[1]] == 'float': # if is magnitude, consists always of two and input value type is float
+                    html_code += "<div class=\"list\"><table class=\"magnitude\">"
+                    for element in complete_dict[list(complete_dict.keys())[0]]:
+                        html_code += "<tr><td class=\"magnitude_value\"><span class=\"bullet\"> &bull;  </span><span class=\"value_type\">float </span>\
+                        </td><td class=\"magnitude_unit\"><span class=\"tree_option\"> " + str(element) + "</span> \
+                        <button onclick='copy_to_clipboard(\""+str(element)+"\")'>\
+                        <img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>"
+                    html_code += "</table></div>"
+                else:
+                    for key in complete_dict.keys(): # for each key
+                        html_code += "<div class=" +just_odd_layer_seperation(depth) + "><hr class=\"limb_root\"><span class=\"bulletpoint\"> &#9660; </span>" \
 
 
-                    if key in id_dict.keys() and key in comment_dict.keys():
-                        html_code += "<div class=\"tooltip\"><b>" + key + " </b>" \
-                                      "<span class=\"tooltiptext\"><b>ID: </b>"+id_dict[key]+"<br><b>Comment: </b>"+comment_dict[key]+"</span></div>"
-                    else:
-                        html_code += "<span><b>" + key + " </b></span> "
-                    html_code += " <button onclick=\'copy_to_clipboard(\""+string_to_html_conform_string(key)+"\")\'>" \
-                                "<img src='https://img.icons8.com/ios/10/000000/copy.png'/></button>" \
-                                "<span><b> : </b></span>"
+                        if key in id_dict.keys() and key in comment_dict.keys():
+                            html_code += "<div class=\"tooltip\"><b>" + key + " </b>" \
+                                          "<span class=\"tooltiptext\"><b>ID: </b>"+id_dict[key]+"<br><b>Comment: </b>"+comment_dict[key]+"</span></div>"
+                        else:
+                            html_code += "<span><b>" + key + " </b></span> "
+                        html_code += " <button onclick=\'copy_to_clipboard(\""+string_to_html_conform_string(key)+"\")\'>" \
+                                    "<img src='https://img.icons8.com/ios/10/000000/copy.png'/></button>" \
+                                    "<span><b> : </b></span>"
 
-                    if isinstance(complete_dict[key], str) or isinstance(complete_dict[key], list): # if dict key(value) is no dict
-                        if isinstance(complete_dict[key], list): # if value is list
-                            html_code += "<div class=\"list\"><table>"#"<div class=\"list\">"
-                            for element in complete_dict[key]: # for each element in list
-                                html_code += "<tr><td><span class=\"bullet\"> &bull;  </span><span class=\"tree_option\">" + str(element) + "</span> <button onclick='copy_to_clipboard(\""+str(element)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>" # insert each value
-                            html_code += "</table></div></div>"
-                        else: # if value is str
-                            html_code += "<span class=\"tree_value\"> " + complete_dict[
-                                key] + "</span></div>" # insert str
-                            pass
-                    else: # if value is child dict
-                        html_code += "<br>"
-                        generate_html_form_dict_via_recusion(complete_dict[key], depth + 1) # call function again for child dict
-                        html_code += "</div>"
+                        if isinstance(complete_dict[key], str) or isinstance(complete_dict[key], list): # if dict key(value) is no dict
+                            if isinstance(complete_dict[key], list): # if value is list
+                                if len(complete_dict[key]) == 2: # list is magnitude
+                                    pass
+                                else: # list is no magnitude
+                                    html_code += "<div class=\"list\"><table>"#"<div class=\"list\">"
+                                    for element in complete_dict[key]: # for each element in list
+                                        html_code += "<tr><td><span class=\"bullet\"> &bull;  </span><span class=\"tree_option\">" + str(element) + "</span> <button onclick='copy_to_clipboard(\""+str(element)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>" # insert each value
+                                    html_code += "</table></div></div>"
+
+                            else: # if value is str
+                                html_code += "<span class=\"tree_value\"> " + complete_dict[
+                                    key] + "</span></div>" # insert str
+                                pass
+                        else: # if value is child dict
+                            if len(complete_dict[key].keys()) == 2 and complete_dict[key][list(complete_dict[key].keys())[1]] == 'float':  # if child layer is  a magnitude  classified by float input value type dont add a breakpoint
+                                pass # do nothing
+                            else:
+                                html_code += "<br>"
+                            generate_html_form_dict_via_recusion(complete_dict[key], depth + 1) # call function again for child dict
+                            html_code += "</div>" # close main div
             elif isinstance(complete_dict, list):  # if complete_dict is only a single list, in deep Objects possible
                 html_code += "<div class=\"list\"><table>"#"<div class=\"list\">"
                 for element in complete_dict:  # for each element in list

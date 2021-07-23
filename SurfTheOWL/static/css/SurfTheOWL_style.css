@@ -11,7 +11,7 @@ body{
 .list {
     display: inline-block;
     padding-top: 1px;
-    padding-left: 20px;
+    padding-left: 10px;
     vertical-align: top;
 }
 hr.solid {
@@ -27,7 +27,7 @@ hr.solid {
 }
 .specialObjDiv{
     background-color: #788f78;
-    margin: 0px 0px 0px 34px;
+    margin: 0px 0px 0px 14px;
     padding-left: 3px;
     border-left: dotted black 2px;
 }
@@ -37,7 +37,7 @@ hr.solid {
 }
 .layer_just_div{
     background-color: white;
-    margin: 0px 0px 0px 34px;
+    margin: 0px 0px 0px 14px;
     padding-left: 3px;
     /*padding-top: 5px;*/
     border-left: dotted black 2px;
@@ -45,7 +45,7 @@ hr.solid {
 }
 .layer_odd_div{
     background-color: whitesmoke;
-    margin: 0px 0px 0px 34px;
+    margin: 0px 0px 0px 14px;
     padding-left: 3px;
     /*padding-top: 5px;*/
     border-left: dotted black 2px;
@@ -156,4 +156,7 @@ hr.solid {
 .tooltip_bottom:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+.value_type{
+    color: green;
 }
