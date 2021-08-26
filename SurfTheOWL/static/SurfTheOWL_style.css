@@ -1,0 +1,162 @@
+@media print {
+body {-webkit-print-color-adjust: exact;}
+}
+body{
+    font-family: Arial;
+    width: 1000px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.list {
+    display: inline-block;
+    padding-top: 1px;
+    padding-left: 10px;
+    vertical-align: top;
+}
+hr.solid {
+  border-top: 3px solid #bababa;
+}
+.limb_root{
+    border: dashed black 1px;
+    width: 20px;
+    display: inline-block;
+}
+.bulletpoint{
+    font-size: 16px;
+}
+.specialObjDiv{
+    background-color: #788f78;
+    margin: 0px 0px 0px 14px;
+    padding-left: 3px;
+    border-left: dotted black 2px;
+}
+.layer1_div{
+    background-color: whitesmoke;
+    padding-left: 5px;
+}
+.layer_just_div{
+    background-color: white;
+    margin: 0px 0px 0px 14px;
+    padding-left: 3px;
+    /*padding-top: 5px;*/
+    border-left: dotted black 2px;
+    border-top: solid grey 1px;
+}
+.layer_odd_div{
+    background-color: whitesmoke;
+    margin: 0px 0px 0px 14px;
+    padding-left: 3px;
+    /*padding-top: 5px;*/
+    border-left: dotted black 2px;
+    border-top: solid grey 1px;
+}
+
+.layer2{
+    font-size: large
+}
+#searched_class{
+    font-size: 20px;
+}
+#submit_button{
+    font-size: 20px;
+}
+.json_download_button{
+    font-size: larger;
+    float: right;
+}
+#download_button_div{
+    height: 40px;
+}
+.tree_option{
+    color: blue;
+}
+.tree_value{
+    color: green;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: context-menu;
+  /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  padding: 5px 5px 5px 5px;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 115%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip_bottom {
+  position: relative;
+  display: inline-block;
+  cursor: context-menu;
+  /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+}
+.tooltip_bottom .tooltiptext{
+    visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  padding: 5px 5px 5px 5px;
+  border-radius: 6px;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 80%;
+  left: 0%;
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip_bottom .tooltiptext::after{
+      content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 10%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+.tooltip_bottom:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.value_type{
+    color: green;
+}

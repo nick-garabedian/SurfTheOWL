@@ -7,7 +7,8 @@ special_restrictions = [['hasTimeStamp', 'dateTimeStamp']]
 OWL_master_name = 'TriboDataFAIR_Ontology.'
 data_input_types = ['float', 'string', 'decimal', 'dateTimeStamp', 'boolean', 'PlainLiteral', 'integer', 'dateTimeStamp']
 TriboDataFAIR = get_ontology('SurfTheOWL/TriboDataFAIR_Ontology.owl').load()
-namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_Ontology.owl')
+
+#namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_Ontology.owl')
 
 # reference to other Objects -------------------------------------------------------------------------------------------------
 other_objects_properties = list(TriboDataFAIR.involves.subclasses())  # get all involves properties which refer to a other object

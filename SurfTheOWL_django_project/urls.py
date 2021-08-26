@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from SurfTheOWL import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('', views.landing),
     path('Surfing', views.search),
     path('download_json', views.download_search_result_json)
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
