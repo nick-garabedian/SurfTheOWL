@@ -3146,24 +3146,6 @@ Note that this is only used for files produced by the experiment (i.e. output fi
     
 
 
-    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentTitle -->
-
-    <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentTitle">
-        <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Title"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#hasText"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Title of the experiment chosen by the operator/generated according to a (to be defined) set of rules.</rdfs:comment>
-        <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Experiment Title</friendlyName>
-        <persistentID>TDO:0000177</persistentID>
-    </owl:Class>
-    
-
-
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentTraveledDistance -->
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentTraveledDistance">
@@ -3522,7 +3504,7 @@ More instances of this class could be added if the files are moved/copied to oth
         <rdfs:comment>Class containing information about the flashpoint acquisition of the interfacial medium.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Flash Point Acquisition Method</friendlyName>
-        <persistentID>TDO:0000218</persistentID>
+        <persistentID>TDO:0000533</persistentID>
     </owl:Class>
     
 
@@ -3592,7 +3574,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
         <rdfs:comment>The physical quantity that characterizes the phenomenon called force.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Force Magnitude</friendlyName>
-        <persistentID>TDO:0000365</persistentID>
+        <persistentID>TDO:0000536</persistentID>
     </owl:Class>
     
 
@@ -5319,14 +5301,6 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordTitle -->
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kadi4MatRecordTitle">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#EquipmentName"/>
-                    <rdf:Description rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentTitle"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Title"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -6016,7 +5990,7 @@ The friendly way to identify it.</rdfs:comment>
 The axis is the only one available by the particular sub/system.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Measurement Range</friendlyName>
-        <persistentID>TDO:0000263</persistentID>
+        <persistentID>TDO:0000535</persistentID>
     </owl:Class>
     
 
@@ -6289,7 +6263,7 @@ The axis is the only one available by the particular sub/system.</rdfs:comment>
         <rdfs:comment>Instances from this class represent the minimum permissable measument speed.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Minimum Measurement Speed</friendlyName>
-        <persistentID>TDO:0000265</persistentID>
+        <persistentID>TDO:0000534</persistentID>
     </owl:Class>
     
 
@@ -7077,7 +7051,7 @@ If only one file is used, this is 1.</rdfs:comment>
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Optical Surface Profilometry</friendlyName>
-        <persistentID>TDO:0000215</persistentID>
+        <persistentID>TDO:0000532</persistentID>
     </owl:Class>
     
 
@@ -7498,12 +7472,6 @@ In the Kadi4Mat the data type for this is Date — dd. &quot;Month&quot; yyyy HH
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ProcessGeneralIdentifyingInformation">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IdentificatoryCollective"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#isComprisedOf"/>
-                <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentTitle"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#isComprisedOf"/>
@@ -8185,7 +8153,7 @@ Refers to common names of information/quantities/elements/entities we capture du
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Specimen Cleaning</friendlyName>
-        <persistentID>TDO:0000214</persistentID>
+        <persistentID>TDO:0000531</persistentID>
     </owl:Class>
     
 
@@ -9268,7 +9236,7 @@ Reference: Dublin Core: http://www.lub.lu.se/cgi-bin/nmdc.pl</rdfs:comment>
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Tribological Experiment</friendlyName>
-        <persistentID>TDO:00001</persistentID>
+        <persistentID>TDO:0000001</persistentID>
     </owl:Class>
     
 
@@ -9843,7 +9811,7 @@ This array contains one entry for the base body and one entry for the counter bo
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TribometerSpecificationsArray"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Objects from this class pertain to the category of machines called Band Saw.</rdfs:comment>
+        <rdfs:comment>Objects from this class pertain to the category of machines that perform tribological experiments as their primary use.</rdfs:comment>
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Tribometer</friendlyName>
