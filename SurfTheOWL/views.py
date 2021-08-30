@@ -63,18 +63,15 @@ def search(request): #search call of website
                                     "<span><b> : </b></span>"
 
                         if isinstance(complete_dict[key], str) or isinstance(complete_dict[key], list): # if dict key(value) is no dict
-                            if isinstance(complete_dict[key], list): # if value is list
-                                if len(complete_dict[key]) == 2: # list is magnitude
-                                    pass
-                                else: # list is no magnitude
-                                    html_code += "<div class=\"list\"><table>"#"<div class=\"list\">"
-                                    for element in complete_dict[key]: # for each element in list
-                                        html_code += "<tr><td><span class=\"bullet\"> &bull;  </span><span class=\"tree_option\">" + str(element) + "</span> <button onclick='copy_to_clipboard(\""+str(element)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>" # insert each value
-                                    html_code += "</table></div></div>"
+                            if isinstance(complete_dict[key], list):  # if value is list, magnitudes a seperated before
+                                html_code += "<div class=\"list\"><table>"
+                                for element in complete_dict[key]: # for each element in list
+                                    html_code += "<tr><td><span class=\"bullet\"> &bull;  </span><span class=\"tree_option\">" + str(element) + "</span> <button onclick='copy_to_clipboard(\""+str(element)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>" # insert each value
+                                html_code += "</table></div></div>"
 
                             else: # if value is str
                                 html_code += "<span class=\"tree_value\"> " + complete_dict[
-                                    key] + "</span></div>" # insert str
+                                    key] + "</span></div>" # insert str close main div
                                 pass
                         else: # if value is child dict
                             if len(complete_dict[key].keys()) == 2 and complete_dict[key][list(complete_dict[key].keys())[1]] == 'float':  # if child layer is  a magnitude  classified by float input value type dont add a breakpoint
@@ -88,6 +85,7 @@ def search(request): #search call of website
                 for element in complete_dict:  # for each element in list
                     html_code += "<tr><td>" + element + "</td></tr>"  # insert each value
                 html_code += "</table></div>"
+
 
 
         generate_html_form_dict_via_recusion(data_tree[list(data_tree.keys())[0]]) # call recursive function
