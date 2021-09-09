@@ -361,11 +361,6 @@ def main_search(className):
 
         return [ordered_friendly_classes_dict, special_objects_friendly, classes_dict, id_dict, comment_dict]
 
-#search_string = "TribologicalExperiment"  # wanted OWL thing
-#search_output = main_search(search_string)
-#print(search_output[2])  # print dict with normal class names
-#print(search_output)  # print dict with friendly names
-
 searchable_owl_classes = get_searchable_classes_from_list(Kadi4Mate_objects) # all owl classes under Procedure which get the searchable classes in frontend
 
 
