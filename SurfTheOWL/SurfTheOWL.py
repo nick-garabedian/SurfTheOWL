@@ -273,6 +273,8 @@ def children(key):
 def main_search(className):
 
     if className in all_owl_classes:
+        contextual_type_definition = str(eval('TriboDataFAIR.' + className + '.contextualType')[0]).removeprefix(OWL_master_name)  # get defined context type
+        contextual_type_definition_friendly = eval('TriboDataFAIR.'+contextual_type_definition+'.friendlyName')[0]  # get friendly name of context type
         classes_dict = {className: []}
         friendly_class_name_list = eval('TriboDataFAIR.'+className+'.friendlyName')
         friendly_class_name = friendly_class_name_list[0]
@@ -338,16 +340,16 @@ def main_search(className):
         # order dict GeneralInfo first, .... --------------------------------------------------------------------------
         ordered_friendly_classes_dict = {friendly_class_name:{}}
         order_list_top = ['General Info', 'Experiment Summary', 'Experimental Conditions'] # elements in order on top of dict
-        order_list_bottom = ['Uncontrolled Environmental Conditions','Array Produced File Metadata'] # elements in order on bottom of dict
+        order_list_bottom = ['Uncontrolled Environmental Conditions', 'Array Produced File Metadata'] # elements in order on bottom of dict
         placeholder_for_elements = []
-        for order_key in order_list_top: # loop top elements
+        for order_key in order_list_top:  # loop top elements
             if order_key in friendly_classes_dict[friendly_class_name]:
                 order_key_value = friendly_classes_dict[friendly_class_name].pop(order_key) # remove element from dict
                 ordered_friendly_classes_dict[friendly_class_name].update({order_key: order_key_value}) # add element to ordered dict
 
-        for order_key in order_list_bottom: # loop bottom elements
-            if order_key in friendly_classes_dict[friendly_class_name]: # if bottom elements exists
-                placeholder_for_elements.append([order_key, friendly_classes_dict[friendly_class_name].pop(order_key)]) # remove bottom elements from dict
+        for order_key in order_list_bottom:  # loop bottom elements
+            if order_key in friendly_classes_dict[friendly_class_name]:  # if bottom elements exists
+                placeholder_for_elements.append([order_key, friendly_classes_dict[friendly_class_name].pop(order_key)])  # remove bottom elements from dict
 
         for key, value in friendly_classes_dict[friendly_class_name].items(): # switch al elements between top and bottom to ordered list, possible because all top and bottom elements a removed
             ordered_friendly_classes_dict[friendly_class_name].update({key: value})
@@ -357,9 +359,11 @@ def main_search(className):
         for element in placeholder_for_elements: # assign all bottom elements to ordered dict
             ordered_friendly_classes_dict[friendly_class_name].update({element[0]: element[1]})
 
+
+
         # end of ordering the dict -------------------------------------------------------------------------------------
 
-        return [ordered_friendly_classes_dict, special_objects_friendly, classes_dict, id_dict, comment_dict]
+        return [ordered_friendly_classes_dict, special_objects_friendly, classes_dict, id_dict, comment_dict, contextual_type_definition_friendly]
 
 searchable_owl_classes = get_searchable_classes_from_list(Kadi4Mate_objects) # all owl classes under Procedure which get the searchable classes in frontend
 

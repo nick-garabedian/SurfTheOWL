@@ -160,3 +160,21 @@ hr.solid {
 .value_type{
     color: green;
 }
+.contextual_type{
+    margin-left: 30px;
+    padding: 3px;
+    border-radius: 3px;
+    background: #4ac1f7;
+}
+.heading{
+    font-size: 36px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: block;
+}
+#spacer1{
+    height: 5px;
+}
+#spacer2{
+    height: 20px;
+}

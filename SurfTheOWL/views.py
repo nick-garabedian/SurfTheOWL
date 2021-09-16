@@ -7,6 +7,7 @@ import json
 # Comment by Nick: This code is written by Manfred to implement html into Django
 search_output = {} # contains the return of maine_search()
 html_code = "" # contains the data_tree in html code
+context_type = ""
 # Create your views here.
 def landing(request):  # initial call of the website
     list_of_all_classes = SurfTheOWL.searchable_owl_classes
@@ -17,6 +18,8 @@ def search(request): #search call of website
     html_code = ""
     global search_output
     search_output = {}
+    global context_type
+    context_type = ""
     list_of_all_classes = SurfTheOWL.searchable_owl_classes
     if request.method == 'POST':
         searched_class  =request.POST.get('searched_class')
@@ -25,17 +28,19 @@ def search(request): #search call of website
         data_tree = data[0]
         id_dict = data[3]
         comment_dict = data[4]
+        context_type = data[5]
         search_result_heading = next(iter(data_tree))
+
         def string_to_html_conform_string(string):
-            string = string.replace('\'','´')
+            string = string.replace('\'', '´')
             string = string.replace('\"', '´')
             return string
+
         def just_odd_layer_seperation(layer):
-            if layer%2 == 0:
+            if layer % 2 == 0:
                 return "layer_just_div"
             else:
                 return "layer_odd_div"
-
 
         def generate_html_form_dict_via_recusion(complete_dict, depth=0):
             global html_code
@@ -89,7 +94,7 @@ def search(request): #search call of website
 
 
         generate_html_form_dict_via_recusion(data_tree[list(data_tree.keys())[0]]) # call recursive function
-        return render(request, 'SurfTheOWL.html', {'search_result_heading': [search_result_heading, id_dict[search_result_heading], comment_dict[search_result_heading]],
+        return render(request, 'SurfTheOWL.html', {'search_result_heading': [search_result_heading, id_dict[search_result_heading], comment_dict[search_result_heading], context_type],
                                                     'data_objects': data[1],
                                                     'list_of_all_classes': list_of_all_classes,
                                                    'html_code': html_code,
@@ -99,8 +104,9 @@ def search(request): #search call of website
 
 def download_search_result_json(request): # function to serve a downloadable JSON to request
     global search_output
+    global context_type
     searched_class = next(iter(search_output[0]))
-    downloadable_json = {searched_class: {"normal_Objects": search_output[0][searched_class]}}
+    downloadable_json = {searched_class: {"Contextual Type": context_type,  "normal_Objects": search_output[0][searched_class]}}
     # beautify existing JSON by input the special objects and normal Objects separately
     downloadable_json[searched_class]["special_Objects"] = []
     for i in range(len(search_output[1])):
