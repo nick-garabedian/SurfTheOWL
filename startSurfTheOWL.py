@@ -6,7 +6,7 @@ import time
 
 # Comment by Nick: Automatically opens a GUI which allows interaction between the server and python command line
 
-django_server = subprocess.Popen(['manage.exe', 'runserver', '127.0.0.1:8000', '--noreload'])  # start localserver
+django_server = subprocess.Popen(['python', 'manage.py', 'runserver', '127.0.0.1:8000'])  # start localserver
 
 
  # open browser and call local server
@@ -15,9 +15,8 @@ def terminate():
     django_server.send_signal(signal.CTRL_C_EVENT) # quit local server
     window.quit()  # quit tkinter window
 
-def open_browser_afte_time():
-    time.sleep(2)
-    webbrowser.open("http://127.0.0.1:8000/")
+
+
 
 window = tk.Tk()
 window.title('SurfTheOWL')
@@ -35,5 +34,6 @@ GUI_info.insert('end', text)
 GUI_info.configure(state='disabled')
 GUI_terminate.pack()
 GUI_terminate.config(font=('Arial', 26))
+webbrowser.open("http://127.0.0.1:8000/")
 
 window.mainloop()
