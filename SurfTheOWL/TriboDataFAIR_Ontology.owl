@@ -628,7 +628,7 @@ The counter body in a model experiment is the sample or body...
         </rdfs:subClassOf>
         <rdfs:comment>The physical quantity that characterizes the phenomenon called angular velocity.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Anglular Velocity Setpoint Magnitude</friendlyName>
+        <friendlyName>Angular Velocity Setpoint Magnitude</friendlyName>
         <persistentID>TDO:0000373</persistentID>
     </owl:Class>
     
@@ -984,7 +984,7 @@ The counter body in a model experiment is the sample or body...
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#NumberOfValueSetsInFile"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances of this class contain the information to open/access/read and interprete a *.bin file contents adequately.</rdfs:comment>
+        <rdfs:comment>Instances of this class contain the information to open/access/read and interprete a *.bin file&apos;s contents adequately.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>*.bin File Technical Specifications</friendlyName>
         <persistentID>TDO:0000430</persistentID>
@@ -1014,7 +1014,7 @@ The counter body in a model experiment is the sample or body...
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Offset Amount that has to be applied to all data in a file to get meaningful values.</rdfs:comment>
+        <rdfs:comment>Offset amount that has to be applied to all data in a file to get meaningful values.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Binary File Offset Amount</friendlyName>
         <persistentID>TDO:0000336</persistentID>
@@ -1044,7 +1044,7 @@ The counter body in a model experiment is the sample or body...
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#BinaryFileValuesSize">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#FileRelatedVariable"/>
-        <rdfs:comment>Instances of this class quatify the size in bits of the values to read.</rdfs:comment>
+        <rdfs:comment>Instances of this class quantify the size in bits of the values to read.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Size of Values to Read</friendlyName>
         <persistentID>TDO:0000338</persistentID>
@@ -1074,12 +1074,12 @@ The counter body in a model experiment is the sample or body...
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#BlockSpecimenSpatialInfoCollective"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Objects from this class contain a self-binded collection of mass bearing particles.
+        <rdfs:comment>Objects from this class contain a self-bound collection of mass bearing particles.
 
 Solids can have viscoelasticity.</rdfs:comment>
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ExperimentalObjectType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Solid Block</friendlyName>
+        <friendlyName>Block Specimen</friendlyName>
         <persistentID>TDO:0000513</persistentID>
     </owl:Class>
     
@@ -1119,7 +1119,7 @@ Solids can have viscoelasticity.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ObjectWidth"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information about the spatial dimensions of a block sample.</rdfs:comment>
+        <rdfs:comment>Class containing information about the spatial dimensions of a block specimen.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Dimensions Information</friendlyName>
         <persistentID>TDO:0000455</persistentID>
@@ -1143,7 +1143,7 @@ Solids can have viscoelasticity.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#BlockSpecimenOrientationIndicatingFeatureType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information about the spatial orientation of the faces of a block sample.</rdfs:comment>
+        <rdfs:comment>Class containing information about the spatial orientation of a specific face of a block specimen.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Indicated Face Orientation</friendlyName>
         <persistentID>TDO:0000456</persistentID>
@@ -1179,7 +1179,7 @@ Solids can have viscoelasticity.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#MaterialName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information about the material details of a block sample.</rdfs:comment>
+        <rdfs:comment>Class containing information about the material details of a block specimen.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Material Information</friendlyName>
         <persistentID>TDO:0000457</persistentID>
@@ -1197,7 +1197,7 @@ Solids can have viscoelasticity.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#MaterialFerromagnetism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information about the material details of a block sample. These pieces of information are either reported (and assumed true) by the vendor, or are of general knowledge, but have not specifically been measured by a FAIR&apos;ly described process.</rdfs:comment>
+        <rdfs:comment>Class containing information about the material details of a block specimen. These pieces of information are either reported (and assumed true) by the vendor, or are of general knowledge, but have not specifically been measured by a FAIR&apos;ly described process.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Nominally Known Material Information</friendlyName>
         <persistentID>TDO:0000458</persistentID>
@@ -1221,7 +1221,7 @@ Solids can have viscoelasticity.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#BlockSpecimenPrincipalTribologicalSide"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information about the spatial orientation of a block sample.</rdfs:comment>
+        <rdfs:comment>Class containing information about the spatial orientation of a block specimen.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Face Orientation Information</friendlyName>
         <persistentID>TDO:0000459</persistentID>
@@ -1300,7 +1300,7 @@ Valid after a feature and its side have been defined.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#BlockSpecimenShape"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information about the spatial (dimensions, position and arientation) details of a block sample.</rdfs:comment>
+        <rdfs:comment>Class containing information about the spatial (dimensions, position and arientation) details of a block specimen.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Spatial Information</friendlyName>
         <persistentID>TDO:0000460</persistentID>
@@ -1356,7 +1356,7 @@ Valid after a feature and its side have been defined.</rdfs:comment>
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Building">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Location"/>
-        <owl:versionInfo>The &quot;unique identifier&quot; of the building within the specific institution.</owl:versionInfo>
+        <rdfs:comment>The &quot;unique identifier&quot; of the building within the specific institution.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Building</friendlyName>
         <persistentID>TDO:0000527</persistentID>
@@ -1671,7 +1671,7 @@ The exact process is unknown, but it is performed by a firm that is external to 
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Scaling factor that has to be applied to data. The conversion factor to convert V/mA raw-signal into something physical meaningful.</rdfs:comment>
+        <rdfs:comment>Scaling factor that has to be applied to data. The conversion factor to convert V/mA raw-signal into something physically meaningful.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Conversion Factor</friendlyName>
         <persistentID>TDO:0000285</persistentID>
@@ -1689,7 +1689,7 @@ The exact process is unknown, but it is performed by a firm that is external to 
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Scaling offset that has to be applied to data. The conversion offset to convert V / mA raw-signal into something physical meaningful.</rdfs:comment>
+        <rdfs:comment>Scaling offset that has to be applied to data. The conversion offset to convert V / mA raw-signal into something physically meaningful.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Conversion Offset</friendlyName>
         <persistentID>TDO:0000286</persistentID>
@@ -1701,7 +1701,7 @@ The exact process is unknown, but it is performed by a firm that is external to 
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ConversionTargetUnit">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ClassificationCategory"/>
-        <rdfs:comment>Instances from this class lock the meaning of a magnitude. Their purpose is to indicate the convesion target.</rdfs:comment>
+        <rdfs:comment>Instances from this class lock the meaning of a magnitude. Their purpose is to indicate the conversion target.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Target Unit of Conversion</friendlyName>
         <persistentID>TDO:0000104</persistentID>
@@ -1713,7 +1713,7 @@ The exact process is unknown, but it is performed by a firm that is external to 
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Coolant">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#FunctionalFluid"/>
-        <rdfs:comment>The coolant used most often in industrial process. Important: this is the object used to cool the medium, and not its material such as a particular chemical composition (that is instead an abstract representation of the internal structure).</rdfs:comment>
+        <rdfs:comment>The coolant used most often in industrial processes. Important: this is the object used to cool the medium, and not its material such as a particular chemical composition (that is instead an abstract representation of the internal structure).</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Coolant</friendlyName>
         <persistentID>TDO:0000515</persistentID>
@@ -1767,7 +1767,7 @@ The exact process is unknown, but it is performed by a firm that is external to 
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Delimiter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances of this class contain the information to open/access/read and interprete a *.csv file contents adequately.</rdfs:comment>
+        <rdfs:comment>Instances of this class contain the information to open/access/read and interprete a *.csv file&apos;s contents adequately.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>*.csv File Technical Specifications</friendlyName>
         <persistentID>TDO:0000431</persistentID>
@@ -1869,7 +1869,7 @@ The exact process is unknown, but it is performed by a firm that is external to 
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#CupGrindingMachineSpecificationsArray"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Objects from this class pertain to the category of machines called oven.</rdfs:comment>
+        <rdfs:comment>Objects from this class pertain to the category of machines called cup grinding machine.</rdfs:comment>
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#LabEquipmentType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Cup Grinding Machine</friendlyName>
@@ -2054,7 +2054,7 @@ The exact process is unknown, but it is performed by a firm that is external to 
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#BlockSpecimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class representing the physical process of cup grinding of a specimen with the aim of changing its surface characteristcs.
+        <rdfs:comment>Class representing the physical process of cup grinding of a specimen with the aim of changing its surface characteristics.
 
 It ends with demounting of the sample/workpiece from the mounting table.</rdfs:comment>
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType"/>
@@ -2103,9 +2103,9 @@ It ends with demounting of the sample/workpiece from the mounting table.</rdfs:c
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#PositioningSystemTurningSpeedSetpoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information that characterizes the specimen positioning.
+        <rdfs:comment>Class containing information that characterizes the block specimen positioning.
 
-This has a major influence on the resulting roughness of the samples&apos; surfaces.</rdfs:comment>
+This has a major influence on the resulting roughness of the sample&apos;s surfaces.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Specimen Positioning Info</friendlyName>
         <persistentID>TDO:0000395</persistentID>
@@ -2207,7 +2207,7 @@ This has a major influence on the resulting roughness of the samples&apos; surfa
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TurningFrequencySetpoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information that characterizes the griding tool.</rdfs:comment>
+        <rdfs:comment>Class containing information that characterizes the grinding tool.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Cup Grinding Tool Info</friendlyName>
         <persistentID>TDO:0000398</persistentID>
@@ -2285,7 +2285,7 @@ This has a major influence on the resulting roughness of the samples&apos; surfa
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ToolCleaningTimeIntervalType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing the a signle step bundle of parameters needed for a cup grinding process.</rdfs:comment>
+        <rdfs:comment>Class containing a signle step bundle of parameters needed for a cup grinding process.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>List Item (Cup Grinding Step)</friendlyName>
         <persistentID>TDO:0000399</persistentID>
@@ -2375,7 +2375,7 @@ This has a major influence on the resulting roughness of the samples&apos; surfa
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances of this class indicate whether the sensor&apos;s dark correction function prior the measurement was performed.</rdfs:comment>
+        <rdfs:comment>Instances of this class indicate whether the sensor&apos;s dark correction function prior to the measurement was performed.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Dark Correction Performed</friendlyName>
         <persistentID>TDO:0000202</persistentID>
@@ -2462,7 +2462,7 @@ This has a major influence on the resulting roughness of the samples&apos; surfa
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#DecimalSeparator">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Character"/>
-        <rdfs:comment>Instances of this class specify the decimal seperator used in a file.</rdfs:comment>
+        <rdfs:comment>Instances of this class specify the decimal separator used in a file.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Decimal Separator</friendlyName>
         <persistentID>TDO:0000511</persistentID>
@@ -2524,7 +2524,7 @@ This has a major influence on the resulting roughness of the samples&apos; surfa
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#BlockSpecimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for 1D vizualization.</rdfs:comment>
+        <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for 1D visualization.</rdfs:comment>
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#IndustrialProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Demagnetization</friendlyName>
@@ -2640,7 +2640,7 @@ This has a major influence on the resulting roughness of the samples&apos; surfa
 
 The duty cycle provides information on how long a demagnetizing system may run. It is typically given as a relative ratio of on-time/total time in percent.
 
-A value of 100% indicates the tool can be operated continuosly without need for cooldown pauses.</rdfs:comment>
+A value of 100% indicates the tool can be operated continuously without need for cooldown pauses.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Duty Cycle</friendlyName>
         <persistentID>TDO:0000243</persistentID>
@@ -2726,7 +2726,7 @@ A value of 100% indicates the tool can be operated continuosly without need for 
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#WorkingAreaWidth"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information about the technical specifications of a hardness testing system.</rdfs:comment>
+        <rdfs:comment>Class containing information about the technical specifications of a demagnetizing plate.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Technical Specifications</friendlyName>
         <persistentID>TDO:0000464</persistentID>
@@ -2794,7 +2794,7 @@ A value of 100% indicates the tool can be operated continuosly without need for 
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>The physical quantity that characterizes the quantity called Distance.</rdfs:comment>
+        <rdfs:comment>The physical quantity that characterizes the quantity called distance.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Distance Magnitude</friendlyName>
         <persistentID>TDO:0000362</persistentID>
@@ -2818,7 +2818,7 @@ A value of 100% indicates the tool can be operated continuosly without need for 
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>The physical quantity that characterizes the quantity called Distance.</rdfs:comment>
+        <rdfs:comment>The physical quantity that characterizes the quantity called distance.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Distance Magnitude</friendlyName>
         <persistentID>TDO:0000374</persistentID>
@@ -3002,7 +3002,7 @@ A value of 100% indicates the tool can be operated continuosly without need for 
         <rdfs:comment>The type of machine and the way it is referred to.
 The friendly way to identify it.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Equipment Name</friendlyName>
+        <friendlyName>Equipment/Product Model</friendlyName>
         <persistentID>TDO:0000152</persistentID>
     </owl:Class>
     
@@ -3356,7 +3356,7 @@ More instances of this class could be added if the files are moved/copied to oth
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#FileSizeMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances of this class quatify a file size.</rdfs:comment>
+        <rdfs:comment>Instances of this class quantify a file size.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>File Size</friendlyName>
         <persistentID>TDO:0000339</persistentID>
@@ -3423,7 +3423,7 @@ More instances of this class could be added if the files are moved/copied to oth
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#FileType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances of this class contain the information to open/access/read and interprete a file contents adequately.</rdfs:comment>
+        <rdfs:comment>Instances of this class contain the information to open/access/read and interprete a file&apos;s contents adequately.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>File Technical Specifications</friendlyName>
         <persistentID>TDO:0000433</persistentID>
@@ -3453,7 +3453,7 @@ More instances of this class could be added if the files are moved/copied to oth
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#DistanceMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>The travel range of the precise/fine/slow vertical drive of the machine&apos;s column (the distance inbetween lower limit and upper limit of the z-axis/vertical axis).</rdfs:comment>
+        <rdfs:comment>The travel range of the precise/fine/slow vertical drive of the machine&apos;s column (the distance in between lower limit and upper limit of the z-axis/vertical axis).</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Fine Vertical Travel Range</friendlyName>
         <persistentID>TDO:0000234</persistentID>
@@ -3647,7 +3647,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment>The physical quantity that characterizes the quantity called frequency.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Frequncy Magnitude</friendlyName>
+        <friendlyName>Frequency Magnitude</friendlyName>
         <persistentID>TDO:0000366</persistentID>
     </owl:Class>
     
@@ -4134,7 +4134,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ClassificationCategory"/>
         <rdfs:comment>Instances from this class specify the hardness measuring principle.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>List Item (Hardness Measurement Type)</friendlyName>
+        <friendlyName>Hardness Measurement Type</friendlyName>
         <persistentID>TDO:0000132</persistentID>
     </owl:Class>
     
@@ -4633,7 +4633,7 @@ First underground/basement floor has value &quot;-1&quot;</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TargetTemperatureSetpoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing the a signle step bundle of parameters needed for a heat treatment process.</rdfs:comment>
+        <rdfs:comment>Class containing a signle step bundle of parameters needed for a heat treatment process.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>List Item (Variable Heat Treatment Step)</friendlyName>
         <persistentID>TDO:0000404</persistentID>
@@ -4721,7 +4721,7 @@ FROM https://en.wikipedia.org/wiki/Industrial_processes</rdfs:comment>
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#InfeedMode">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#DeliveryMethod"/>
-        <rdfs:comment>Instances from this class indicate the type of infeed method,</rdfs:comment>
+        <rdfs:comment>Instances of this class indicate the type of infeed method.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Infeed Mode</friendlyName>
         <persistentID>TDO:0000190</persistentID>
@@ -5603,7 +5603,7 @@ For Tribometers, the way the normal load is applied can have a big influence on 
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#InterfacialMediumRelatedName"/>
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#OrganizationName"/>
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SpecimenRelatedName"/>
-        <rdfs:comment>The official name of the insitution where object was manufactured.</rdfs:comment>
+        <rdfs:comment>The official name of the insitution where the object was manufactured.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Company/Vendor Name</friendlyName>
         <persistentID>TDO:0000155</persistentID>
@@ -5895,7 +5895,7 @@ The friendly way to identify it.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#AngularVelocitySetpointMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances from this class characterize the maximum permissable turning speed.</rdfs:comment>
+        <rdfs:comment>Instances from this class characterize the maximum permissable working tool turning speed.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Maximum Working Tool Turning Speed</friendlyName>
         <persistentID>TDO:0000238</persistentID>
@@ -6239,7 +6239,7 @@ The axis is the only one available by the particular sub/system.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#hasCount"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Instances from this class determine whether a recorded signal value is considered valid or not.</rdfs:comment>
@@ -6296,7 +6296,7 @@ The axis is the only one available by the particular sub/system.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#AngularVelocitySetpointMagnitude"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances from this class characterize the minimum permissable turning speed.</rdfs:comment>
+        <rdfs:comment>Instances from this class characterize the minimum permissable working tool turning speed.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Minimum Working Tool Turning Speed</friendlyName>
         <persistentID>TDO:0000240</persistentID>
@@ -6480,7 +6480,7 @@ If only one file is used, this is 1.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instaces from this class represent the total number of measurements for one sample.</rdfs:comment>
+        <rdfs:comment>Instances of this class represent the total number of measurements for one sample.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Number of Collected Profiles</friendlyName>
         <persistentID>TDO:0000306</persistentID>
@@ -6498,7 +6498,7 @@ If only one file is used, this is 1.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instaces from this class represent the total number of measurements for one sample.</rdfs:comment>
+        <rdfs:comment>Instances of this class represent the total number of measurements for one sample.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Number of Collected Profiles</friendlyName>
         <persistentID>TDO:0000358</persistentID>
@@ -6516,9 +6516,9 @@ If only one file is used, this is 1.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances from this class privode information on how many individual value sets a file contains (= number of individual time series or number of recorded channels).</rdfs:comment>
+        <rdfs:comment>Instances from this class provide information on how many individual value sets a file contains (= number of individual time series or number of recorded channels).</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Number of Individual Value Sets in FIle</friendlyName>
+        <friendlyName>Number of Individual Value Sets in File</friendlyName>
         <persistentID>TDO:0000359</persistentID>
     </owl:Class>
     
@@ -6734,7 +6734,7 @@ If only one file is used, this is 1.</rdfs:comment>
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ObjectModelName">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#EquipmentRelatedName"/>
-        <rdfs:comment>The model of equipment/object, which the company has given to its product.</rdfs:comment>
+        <rdfs:comment>The model name of equipment/object, which the company has given to its product.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Equipment/Product Model</friendlyName>
         <persistentID>TDO:0000156</persistentID>
@@ -6878,7 +6878,7 @@ If only one file is used, this is 1.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#UserToken"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information about who performed the a scientific process, or is responsible for an object.</rdfs:comment>
+        <rdfs:comment>Class containing information about who performed a scientific process, or is responsible for an object.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Operator/s in Charge</friendlyName>
         <persistentID>TDO:0000441</persistentID>
@@ -7047,7 +7047,7 @@ If only one file is used, this is 1.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#UncontrolledEnvironmentalConditionsArray"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for vizualization.</rdfs:comment>
+        <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for visualization.</rdfs:comment>
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Optical Surface Profilometry</friendlyName>
@@ -7509,12 +7509,11 @@ In the Kadi4Mat the data type for this is Date — dd. &quot;Month&quot; yyyy HH
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Subsection holds information about WHEN the experiment was conducted.
+        <rdfs:comment>Subsection holds information about when the experiment was conducted.
 
 Please note:
 
-In the Kadi4Mat the data type for this is Date — dd. &quot;Month&quot; yyyy HH:MM:SS.
-If you have to enter the date somewhere else, see subsections.</rdfs:comment>
+In the Kadi4Mat the data type for this is Date.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Timestamp</friendlyName>
         <persistentID>TDO:0000387</persistentID>
@@ -7730,7 +7729,7 @@ Refers to common names of information/quantities/elements/entities we capture du
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ResearchInstitutionName">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#OrganizationName"/>
-        <rdfs:comment>The official name of the insitution which the responsible person/oprator belongs to.</rdfs:comment>
+        <rdfs:comment>The official name of the institution which the responsible person/operator belongs to.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Institution Name</friendlyName>
         <persistentID>TDO:0000172</persistentID>
@@ -7752,7 +7751,7 @@ Refers to common names of information/quantities/elements/entities we capture du
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Location"/>
-        <rdfs:comment>The &quot;unique identifier&quot; of the room in which a processes occur or objects reside.</rdfs:comment>
+        <rdfs:comment>The &quot;unique identifier&quot; of the room in which a process occurs or an object resides.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Room Number</friendlyName>
         <persistentID>TDO:0000530</persistentID>
@@ -8060,7 +8059,7 @@ Refers to common names of information/quantities/elements/entities we capture du
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#hasCount"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Instances from this class characterize the spark out time given in number of table roations.</rdfs:comment>
@@ -8218,7 +8217,7 @@ Refers to common names of information/quantities/elements/entities we capture du
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SpecimenCleaningProcedureType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing the a signle step bundle of parameters needed for a specimen cleaning process.</rdfs:comment>
+        <rdfs:comment>Class containing a signle step bundle of parameters needed for a specimen cleaning process.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>List Item (Specimen Cleaning Step)</friendlyName>
         <persistentID>TDO:0000408</persistentID>
@@ -8639,7 +8638,7 @@ For Other Processes: Objects from this class act as the medium around the specim
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#BlockSpecimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for 1D vizualization.</rdfs:comment>
+        <rdfs:comment>Class representing the monitored processes that produce a (set of) file(s) whose contents could be used for 1D visualization.</rdfs:comment>
         <contextualType rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ScientificProcedureType"/>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Tactile Surface Profilometry</friendlyName>
@@ -8729,7 +8728,7 @@ For Other Processes: Objects from this class act as the medium around the specim
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TipRadius"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class containing information about the parameters that identify the scannig tip and its use in the profilometry measurement.</rdfs:comment>
+        <rdfs:comment>Class containing information about the parameters that identify the scanning tip and its use in the profilometry measurement.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Scanning Tip Specifications</friendlyName>
         <persistentID>TDO:0000410</persistentID>
@@ -8822,7 +8821,7 @@ For Other Processes: Objects from this class act as the medium around the specim
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>The physical quantity that characterizes the phenomenon called Temperature.</rdfs:comment>
+        <rdfs:comment>The physical quantity that characterizes the phenomenon called temperature.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Temperature Magnitude</friendlyName>
         <persistentID>TDO:0000382</persistentID>
@@ -8939,7 +8938,7 @@ For Other Processes: Objects from this class act as the medium around the specim
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TimeSeriesContentSpecificationsArrayItem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances of this class contain the information about the content of a file (what information are stored and how to interprete it).
+        <rdfs:comment>Instances of this class contain the information about the content of a file (what information is stored and how to interprete it).
 
 A list (an array) of all time series contained in a file. These can be recorded sensor signals (forces, positions, ...), time stamps, test programm steps etc.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
@@ -8995,7 +8994,7 @@ A list (an array) of all time series contained in a file. These can be recorded 
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TimeSeriesUnitConversionSpecificationsArray"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances of this class contain the information about the content of a file (what information are stored and how to interprete it).
+        <rdfs:comment>Instances of this class contain the information about the content of a file (what information is stored and how to interprete it).
 
 A list (an array) of all time series contained in a file. These can be recorded sensor signals (forces, positions, ...), time stamps, test programm steps etc.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
@@ -10252,7 +10251,7 @@ This array contains one entry for the base body and one entry for the counter bo
 
     <owl:Class rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TurningDirectionSetpoint">
         <rdfs:subClassOf rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#CupGrindingMachineSpecification"/>
-        <rdfs:comment>The direction of motion when the relative (to the machine) motion sets in.</rdfs:comment>
+        <rdfs:comment>The direction of motion when the relative (with respect to the machine) motion sets in.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Turning Direction</friendlyName>
         <persistentID>TDO:0000242</persistentID>
@@ -10411,7 +10410,7 @@ This array contains one entry for the base body and one entry for the counter bo
         </rdfs:subClassOf>
         <rdfs:comment>The phenomenon called temperature of the surroundings.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
-        <friendlyName>Uncontrolled Envirnment Temperature</friendlyName>
+        <friendlyName>Uncontrolled Environment Temperature</friendlyName>
         <persistentID>TDO:0000356</persistentID>
     </owl:Class>
     
@@ -10439,7 +10438,7 @@ This array contains one entry for the base body and one entry for the counter bo
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#UncontrolledEnvironmentTemperature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Information on surrounding conditions that are not actively chosen or controlled by the researcher however might play a role in the outcome of the scientific process (e.g. &quot;moon phase&quot;, &quot;weather&quot;, &quot;Pollenflugsaison&quot;, ...).
+        <rdfs:comment>Information on surrounding conditions that are not actively chosen or controlled by the researcher, which, however, might play a role in the outcome of the scientific process (e.g. &quot;moon phase&quot;, &quot;weather&quot;, ...).
 
 Correlations might show up only once a big enough (well-curated) dataset is produced.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
@@ -10530,10 +10529,10 @@ FROM https://www.lexico.com/en/definition/variable</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#hasCount"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances from this class characterize the number of 360° rotations the sample mounting table completes in-between two infeed steps.</rdfs:comment>
+        <rdfs:comment>Instances from this class characterize the number of 360° rotations the sample mounting table completes in between two infeed steps.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Vertical Infeed Table Rotations Interval</friendlyName>
         <persistentID>TDO:0000298</persistentID>
@@ -10551,7 +10550,7 @@ FROM https://www.lexico.com/en/definition/variable</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TimeDuration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Instances from this class characterize the vertical infeed time interval in a process. i.e. The time in-between two individual infeed operations.</rdfs:comment>
+        <rdfs:comment>Instances from this class characterize the vertical infeed time interval in a process. i.e. The time in between two individual infeed operations.</rdfs:comment>
         <definitionOrigin>TriboData Team at IAM-CMS at KIT, Karlsruhe, Germany</definitionOrigin>
         <friendlyName>Vertical Infeed Time Interval</friendlyName>
         <persistentID>TDO:0000299</persistentID>
@@ -11372,7 +11371,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#BlowingWIthCompressedAirCleaning">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SpecimenCleaningProcedureType"/>
         <rdfs:comment>Remove loose particles/dust/residue by applying compressed air.</rdfs:comment>
-        <friendlyName>Blowing WIth Compressed Air</friendlyName>
+        <friendlyName>Blowing With Compressed Air</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -11490,6 +11489,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#CentiMeterUnit">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#DistanceUnit"/>
         <friendlyName>cm</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#CentreSuissedElectroniqueetdeMicrotechnique -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#CentreSuissedElectroniqueetdeMicrotechnique">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ManufacturerName"/>
+        <friendlyName>Centre Suisse d&apos;Electronique et de Microtechnique</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12182,6 +12190,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#HommelEtamic -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#HommelEtamic">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ManufacturerName"/>
+        <friendlyName>Hommel-Etamic</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Hour -->
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Hour">
@@ -12295,6 +12312,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Kelvin">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TemperatureUnit"/>
         <friendlyName>K</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#KennametalInc -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#KennametalInc">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ManufacturerName"/>
+        <friendlyName>Kennametal Inc.</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12547,6 +12573,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#MPS2R300">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ObjectModelName"/>
         <friendlyName>MPS 2 R300</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#MW210133 -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#MW210133">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ObjectModelName"/>
+        <friendlyName>MW 210-13-3</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -12886,6 +12921,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Oil">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#InterfacialMediumCategory"/>
         <friendlyName>Oil</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#OilSurroundingMedium -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#OilSurroundingMedium">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SurroundingMediumType"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -13273,11 +13317,20 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
-    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room316 -->
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room316a -->
 
-    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room316">
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room316a">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">316</friendlyName>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">316a</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#RoomR002 -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#RoomR002">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">002</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -13286,7 +13339,25 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#RoomR005">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">005</friendlyName>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">005</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#RoomR006 -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#RoomR006">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">006</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#RoomR010 -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#RoomR010">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">010</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -13295,7 +13366,7 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#RoomR012">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Room"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">012</friendlyName>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">012</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -13426,6 +13497,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SixHundredEightyOne -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SixHundredEightyOne">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Building"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">681</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Sixteen -->
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Sixteen">
@@ -13517,6 +13597,24 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#StrainGaugeMeasuringPrinciple -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#StrainGaugeMeasuringPrinciple">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#SensoringMethod"/>
+        <friendlyName>Strain Gauge</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#T8000R120400 -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#T8000R120400">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ObjectModelName"/>
+        <friendlyName>T8000 R120-400</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TapeMounting -->
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TapeMounting">
@@ -13544,15 +13642,6 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#HeatTreatmentType"/>
         <rdfs:comment>Tempering is a process of heat treating, which is used to increase the toughness of iron-based alloys. It is usually performed after hardening, to reduce some of the excess hardness, and is done by heating the metal to some temperature below the critical point for a certain period of time, then allowing it to cool in still air.</rdfs:comment>
         <friendlyName>Tempering</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TheCentreSuissedElectroniqueetdeMicrotechnique -->
-
-    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TheCentreSuissedElectroniqueetdeMicrotechnique">
-        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ManufacturerName"/>
-        <friendlyName>The Centre Suisse d&apos;Electronique et de Microtechnique</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -13742,6 +13831,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#WCNi">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#MaterialName"/>
         <friendlyName>WC-Ni</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#WagnerMagnete -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#WagnerMagnete">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ManufacturerName"/>
+        <friendlyName>Wagner Magnete</friendlyName>
     </owl:NamedIndividual>
     
 
@@ -13946,12 +14044,30 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#txtFileType -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#txtFileType">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#FileType"/>
+        <friendlyName>*.txt</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#xUnit -->
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#xUnit">
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#MagnificationUnit"/>
         <rdfs:comment>times magnification</rdfs:comment>
         <friendlyName>x</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Two11dash15/16 -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Two11dash15/16">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ObjectModelName"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">211-15/16</friendlyName>
     </owl:NamedIndividual>
 </rdf:RDF>
 
