@@ -5,7 +5,7 @@
 3. Open the unzipped folder and double-click on ```SurfTheOWL.bat```
 4. Now your Browser opens and SurfTheOWL is running 
 
->**Please note:** If you are used an older version of SurfTheOWL before, delete the cached data in your browser, because some new features need to be reloaded. An old cached stylesheet can course that some elements are not displayed as intended. To delete your cached data got to your browser settings and in the tab data you can delete the browser cache data.
+>**Please note:** If you have used an older version of SurfTheOWL before, delete the cached data in your browser, because some new features need to be reloaded. An old cached stylesheet can course that some elements are not displayed as intended. To delete your cached data got to your browser settings and in the tab data you can delete the browser cache data.
 
 ### Surf another OWL
 Replace the "```TriboDataFAIR_Ontology.owl```" in folder ```SurfTheOWL``` with a new Ontology.
