@@ -6,7 +6,7 @@
 4. Now your Browser opens and SurfTheOWL is running 
 
 ### Surf another OWL
-Replace the "```TriboDataFAIR_Ontology.owl```" in folder ```SurfTheOWL with a new Ontology.
+Replace the "```TriboDataFAIR_Ontology.owl```" in folder ```SurfTheOWL``` with a new Ontology.
 
 
 ---
