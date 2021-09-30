@@ -8,7 +8,7 @@
 >**Please note:** If you have used an older version of SurfTheOWL before, delete the cached data in your browser, because some new features need to be reloaded. An old cached stylesheet can course that some elements are not displayed as intended. To delete your cached data got to your browser settings and in the tab data you can delete the browser cache data.
 
 ### Surf another OWL
-Replace the "```TriboDataFAIR_Ontology.owl```" in folder ```SurfTheOWL``` with a new Ontology.
+Replace the "```TriboDataFAIR_Ontology.owl```" in folder ```SurfTheOWL``` with a new Ontology. The Ontology name have to be the same. If you want to change the name, you have to edit the Python/Django Project, see below.
 >**Please note:** If you are defining new classes and instances the name of these should follow a good naming convention and be Python compatible, because if you are using code reserved characters the code will not run a throw an error.
 >* Name can not start with a number
 >* Name only contain A-Z, a-z, 0-9 
