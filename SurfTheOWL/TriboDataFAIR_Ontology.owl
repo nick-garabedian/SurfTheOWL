@@ -13692,6 +13692,15 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
     
 
 
+    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Two11dash15slash16 -->
+
+    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Two11dash15slash16">
+        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ObjectModelName"/>
+        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">211-15/16</friendlyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TwoOneOneZero -->
 
     <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#TwoOneOneZero">
@@ -14059,15 +14068,6 @@ The axes are the natural ones defined by the manufacturer or when looked at the 
         <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#MagnificationUnit"/>
         <rdfs:comment>times magnification</rdfs:comment>
         <friendlyName>x</friendlyName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Two11dash15/16 -->
-
-    <owl:NamedIndividual rdf:about="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#Two11dash15/16">
-        <rdf:type rdf:resource="https://www.iam.kit.edu/cms/download/TriboDataFAIR_Ontology.owl#ObjectModelName"/>
-        <friendlyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">211-15/16</friendlyName>
     </owl:NamedIndividual>
 </rdf:RDF>
 
