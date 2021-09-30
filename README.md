@@ -9,7 +9,7 @@
 
 ### Surf another OWL
 Replace the "```TriboDataFAIR_Ontology.owl```" in folder ```SurfTheOWL``` with a new Ontology. The Ontology name have to be the same. If you want to change the name, you have to edit the Python/Django Project, see below.
->**Please note:** If you are defining new classes and instances the name of these should follow a good naming convention and be Python compatible, because if you are using code reserved characters the code will not run and throw an error.
+>**Please note:** If you are defining new classes and instances in the Ontology the name of these should follow a good naming convention and be Python compatible, because if you are using code reserved characters the code will not run and throw an error.
 >* Name can not start with a number
 >* Name only contain A-Z, a-z, 0-9 
 >* Name can not use special characters such as * .  -  +  / etc.
@@ -38,7 +38,7 @@ It also opens a little GUI whit which you can terminate all started subprocesses
 ### Surf another OWL 
 replace the "```TriboDataFAIR_Ontology.owl```" with a new file, in dir ```./SurfTheOWL/TriboDaterFAIR_Ontology.owl```.
 Change the name of the to opened file in the script "```SurfTheOWL.py```", dir ```./SurfTheOWL/SurfTheOWL.py```
->**Please note:** If you are defining new classes and instances the name of these should follow a good naming convention and be Python compatible, because if you are using code reserved characters the code will not run a throw an error.
+>**Please note:** If you are defining new classes and instances in the Ontology the name of these should follow a good naming convention and be Python compatible, because if you are using code reserved characters the code will not run a throw an error.
 >* Name can not start with a number
 >* Name only contain A-Z, a-z, 0-9 
 >* Name can not use special characters such as * .  -  +  / etc.
