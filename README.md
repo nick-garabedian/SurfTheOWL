@@ -31,7 +31,7 @@ Replace the "```TriboDataFAIR_Ontology.owl```" in folder ```SurfTheOWL``` with a
 Just open the "start SurfTheOWL.py" file. 
 This will open your Browser, and you can start surfing the OWL.
 It also opens a little GUI whit which you can terminate all started subprocesses.(big red Button) 
->**Please note:** If you are used an older version of SurfTheOWL before, delete the cached data in your browser, because some new features need to be reloaded. An old cached stylesheet can course that some elements are not displayed as intended. To delete your cached data got to your browser settings an in the Tab Data you can delete the browser cache data.
+>**Please note:** If you have used an older version of SurfTheOWL before, delete the cached data in your browser, because some new features need to be reloaded. An old cached stylesheet can course that some elements are not displayed as intended. To delete your cached data got to your browser settings an in the Tab Data you can delete the browser cache data.
 
 
 
