@@ -35,7 +35,7 @@
             <span class="heading">{{search_result_heading.0}}</span>  <!-- searched class name-->
             <div id="spacer1"></div>
             <span class="contextual_type">{{ search_result_heading.3 }}</span>
-            <span class="tooltiptext"><b>ID: </b>{{search_result_heading.1}}<br><b>Comment: </b>{{search_result_heading.2}}</span>
+            <span class="tooltiptext"><b>ID: </b>{{search_result_heading.1}}<br><b>Comment: </b><br>{{search_result_heading.2}}</span>
             <div id="spacer2"></div>
         </div>
 
@@ -44,7 +44,10 @@
                 <hr class="limb_root">
                 <span class="bulletpoint"> &#9654; </span>
                     <div class="tooltip"><span><b>{{element.0}}:</b></span>
-                        <span class="tooltiptext"><b>ID: </b>{{element.2}}<br><b>Comment: </b>{{element.3}}</span>
+                        <span class="tooltiptext">
+                            <b>ID: </b>{{element.2}}<br>
+                            <b>Comment: </b><br>{{element.3}}
+                        </span>
                     </div>
                     <span>{{element.1}}</span>
             </div>

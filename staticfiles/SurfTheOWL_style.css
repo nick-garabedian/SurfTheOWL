@@ -84,11 +84,15 @@ hr.solid {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 400px;
+  min-width: 25vw;
+  max-width: 40vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #555;
   color: #fff;
   text-align: left;
-  padding: 5px 5px 5px 5px;
+  padding: 7px 7px 7px 7px;
   border-radius: 6px;
 
   /* Position the tooltip text */
@@ -173,7 +177,7 @@ hr.solid {
     display: block;
 }
 #spacer1{
-    height: 10px;
+    height: 5px;
 }
 #spacer2{
     height: 20px;

@@ -91,7 +91,7 @@ def property_restiction_in_string(string):
     return False
 
 def bad_letter_in_string(string):
-    bad_letter_elements = ['-', '.']
+    bad_letter_elements = ['-', '.', '/']
     for letter in bad_letter_elements:
         if letter in string or string[0].isdigit():
             return True
@@ -106,8 +106,8 @@ def get_data_instances(something):  # gets the instances of a Unit owl class
         instance_list = eval(string)
 
         if instance_list:  # returns true if list is not empty
-            for i in range(len(instance_list)):
-                instance_string = str(instance_list[i]).removeprefix(OWL_master_name)
+            for instance in instance_list:
+                instance_string = str(instance).removeprefix(OWL_master_name)
                 if not bad_letter_in_string(instance_string):
                     friendly_name_instance = eval('TriboDataFAIR.'+instance_string+'.friendlyName')
                     if friendly_name_instance:
@@ -116,7 +116,7 @@ def get_data_instances(something):  # gets the instances of a Unit owl class
                         friendly_name_instance_list.append(instance_string)
 
                 else:
-                    friendly_name_instance_list.append(instance_string)
+                    friendly_name_instance_list.append('##-  bad letter (-) or (.) or (/) in class name  -##  '+instance_string)
         
         return friendly_name_instance_list
 

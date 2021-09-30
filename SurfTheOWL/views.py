@@ -60,7 +60,7 @@ def search(request): #search call of website
 
                         if key in id_dict.keys() and key in comment_dict.keys():
                             html_code += "<div class=\"tooltip\"><b>" + key + " </b>" \
-                                          "<span class=\"tooltiptext\"><b>ID: </b>"+id_dict[key]+"<br><b>Comment: </b>"+comment_dict[key]+"</span></div>"
+                                          "<span class=\"tooltiptext\"><b>ID: </b>"+id_dict[key]+"<br><b>Comment: </b><br>"+comment_dict[key]+"</span></div>"
                         else:
                             html_code += "<span><b>" + key + " </b></span> "
                         html_code += " <button onclick=\'copy_to_clipboard(\""+string_to_html_conform_string(key)+"\")\'>" \
