@@ -40,7 +40,11 @@
         </div>
 
         {% for element in data_objects%}
-            <div class="specialObjDiv">
+            {% if element.0 == "File"%}
+                <div class="specialObjDiv specialObjDivFile">
+            {% else %}
+                <div class="specialObjDiv ">
+            {% endif %}
                 <hr class="limb_root">
                 <span class="bulletpoint"> &#9654; </span>
                     <div class="tooltip"><span><b>{{element.0}}:</b></span>

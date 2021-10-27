@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SurfTheOWL</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Welcome.css' %}">
+    <script type="text/javascript" src="{% static 'Welcome.js' %}" ></script>
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
+
+</head>
+<body>
+<div class="welcome_container">
+    <div class="welcome">
+        <h1>Welcome to SurfTheOWL</h1>
+        <img src="{% static 'favicon.svg' %}" alt="Surfing OWL" height=400>
+        <p id="loading_text">Loading Ontology "{{ OWL_file_name }}owl"</p>
+    </div>
+</div>
+
+
+</body>
+</html>

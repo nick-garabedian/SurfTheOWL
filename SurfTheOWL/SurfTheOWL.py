@@ -99,8 +99,9 @@ def bad_letter_in_string(string):
     return False
 
 
-def get_data_instances(something):  # gets the instances of a Unit owl class
-    friendly_name_instance_list = []
+def get_data_instances(something):  # gets the instances of a owl class
+    instances_list = [] # list of dicts
+    comment_dict = {}
     if not is_class_datatype(something):
         string = 'TriboDataFAIR.'+something+'.instances()'
         instance_list = eval(string)
@@ -110,15 +111,29 @@ def get_data_instances(something):  # gets the instances of a Unit owl class
                 instance_string = str(instance).removeprefix(OWL_master_name)
                 if not bad_letter_in_string(instance_string):
                     friendly_name_instance = eval('TriboDataFAIR.'+instance_string+'.friendlyName')
-                    if friendly_name_instance:
-                        friendly_name_instance_list.append(friendly_name_instance[0])
-                    else:
-                        friendly_name_instance_list.append(instance_string)
+                    # get comment of instance, if it is defined--------------------------------
+                    if eval('TriboDataFAIR.'+instance_string+'.comment'):
+                        comment_instance = eval('TriboDataFAIR.'+instance_string+'.comment') # returns list with one entry
 
-                else:
-                    friendly_name_instance_list.append('##-  bad letter (-) or (.) or (/) in class name  -##  '+instance_string)
+                    else:
+                        comment_instance = False
+                    #END------------------------------------------------------------------------
+                    # build return friendly-name and comment------------------------------------
+                    if friendly_name_instance and comment_instance:
+                        instances_list.append( friendly_name_instance[0]) # append friendly-name
+                        comment_dict.update({friendly_name_instance[0]: comment_instance[0]}) # push comment
+                    elif friendly_name_instance: # no comment defined but friendly name
+                        instances_list.append(friendly_name_instance[0])
+                    elif comment_instance: # no friendly name assigned but comment
+                        instances_list.append(instance_string)
+                        comment_dict.update({instance_string: comment_instance[0]})
+                    else: # no friendly name assigned and no comment
+                        instances_list.append(instance_string)
+                    #END-----------------------------------------------------------------------
+                else: # if instance not callable because naming-convention, instance comment also not callable
+                    instances_list.append('##-  bad letter (-) or (.) or (/) in class name  -##  ' + instance_string)
         
-        return friendly_name_instance_list
+        return [instances_list, comment_dict]# list of dicts
 
 
 
@@ -230,13 +245,16 @@ def children(key):
     friendly_names_dict = {}
     other_object_refer_pair = [] #[({object: property},{friendly object: property}),(...),...]
     id_dict = {}
-    comment_dict = {}
+    class_comment_dict = {}
+    instances_comment_dict = {}
     if not end_of_entries(key):
         children_classes_dict = dict.fromkeys(search_class(key))
         placeholder_keys = list(children_classes_dict.keys())
 
     else:
-        children_classes_dict = get_data_instances(key)
+        instances = get_data_instances(key)
+        children_classes_dict = instances[0]
+        instances_comment_dict.update(instances[1]) # push instances comments in comment_dict
         friendly_names_dict = children_classes_dict  # if data assign to friendly names
 
     for i in range(len(placeholder_keys)):
@@ -258,16 +276,16 @@ def children(key):
             friendly_names_dict[className_to_friendlyName(referred_object)] = object_property  # assign object to friendly name
             other_object_refer_pair.append(({referred_object: object_property},{className_to_friendlyName(referred_object):object_property})) # list of refer objects, to manipulate existing list
             id_dict[className_to_friendlyName(referred_object)] = get_ID_by_className(referred_object)  # get id from element {friendlyClassName: ID}
-            comment_dict[className_to_friendlyName(referred_object)] = get_comment_by_className(referred_object)  # get comment from element {friendlyClassName: comment}
+            class_comment_dict[className_to_friendlyName(referred_object)] = get_comment_by_className(referred_object)  # get comment from element {friendlyClassName: comment}
 
         else:
             children_keys.append(placeholder_keys[i])
             friendly_names_dict[className_to_friendlyName(placeholder_keys[i])] = children_classes_dict[placeholder_keys[i]]  # assign dict data to friendly name
             id_dict[className_to_friendlyName(placeholder_keys[i])] = get_ID_by_className(placeholder_keys[i]) # get id from element {friendlyClassName: ID}
-            comment_dict[className_to_friendlyName(placeholder_keys[i])] = get_comment_by_className(placeholder_keys[i]) # get comment from element {friendlyClassName: comment}
+            class_comment_dict[className_to_friendlyName(placeholder_keys[i])] = get_comment_by_className(placeholder_keys[i]) # get comment from element {friendlyClassName: comment}
 
 
-    return [children_classes_dict, children_keys, friendly_names_dict, other_object_refer_pair, id_dict, comment_dict]
+    return [children_classes_dict, children_keys, friendly_names_dict, other_object_refer_pair, id_dict, class_comment_dict, instances_comment_dict]
 
 
 def main_search(className):
@@ -281,6 +299,7 @@ def main_search(className):
         friendly_classes_dict = {friendly_class_name: []}
         id_dict = {friendly_class_name: get_ID_by_className(className)} # set up dict with IDs {friendlyClassName: ID}
         comment_dict = {friendly_class_name: get_comment_by_className(className)} # set up dict with comments {friendlyClassName: comment}
+        instances_comment_dict ={}
 
         def find_classes_layers_via_recursion(layer, keys, friendly_layer, depth=0): # keys are separate because some keys are a none owl thing
 
@@ -295,6 +314,7 @@ def main_search(className):
                     next_layer_keys = output[1]  # needed because not every key is searchable, therefore the function children delivers all keys which a wanted keys
                     id_dict.update(output[4]) # add children IDs to id dict {friendlyClassName: ID}
                     comment_dict.update(output[5]) # add children comments to comments dict {friendlyClassName: comment}
+                    instances_comment_dict.update(output[6])
 
                     find_classes_layers_via_recursion(layer[key], next_layer_keys, friendly_layer[className_to_friendlyName(key)], depth + 1)
 
@@ -359,11 +379,9 @@ def main_search(className):
         for element in placeholder_for_elements: # assign all bottom elements to ordered dict
             ordered_friendly_classes_dict[friendly_class_name].update({element[0]: element[1]})
 
-
-
         # end of ordering the dict -------------------------------------------------------------------------------------
 
-        return [ordered_friendly_classes_dict, special_objects_friendly, classes_dict, id_dict, comment_dict, contextual_type_definition_friendly]
+        return [ordered_friendly_classes_dict, special_objects_friendly, classes_dict, id_dict, comment_dict, contextual_type_definition_friendly, instances_comment_dict]
 
 searchable_owl_classes = get_searchable_classes_from_list(Kadi4Mate_objects) # all owl classes under Procedure which get the searchable classes in frontend
 

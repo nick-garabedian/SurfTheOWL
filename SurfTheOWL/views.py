@@ -9,7 +9,10 @@ search_output = {} # contains the return of maine_search()
 html_code = "" # contains the data_tree in html code
 context_type = ""
 # Create your views here.
-def landing(request):  # initial call of the website
+def welcome(request): # initial call of the website, after timeout redirected to landing
+    return render(request, 'Welcome.html', {'OWL_file_name': SurfTheOWL.OWL_master_name})
+
+def landing(request):  # landing after welcome
     list_of_all_classes = SurfTheOWL.searchable_owl_classes
     return render(request, 'SurfTheOWL.html', {'list_of_all_classes': list_of_all_classes})
 
@@ -29,6 +32,7 @@ def search(request): #search call of website
         id_dict = data[3]
         comment_dict = data[4]
         context_type = data[5]
+        instance_comment_dict = data[6]
         search_result_heading = next(iter(data_tree))
 
         def string_to_html_conform_string(string):
@@ -42,16 +46,23 @@ def search(request): #search call of website
             else:
                 return "layer_odd_div"
 
-        def generate_html_form_dict_via_recusion(complete_dict, depth=0):
+        def generate_html_form_dict_via_recursion(complete_dict, depth=0):
             global html_code
             if isinstance(complete_dict, dict):  # complete dict is dict and no list
-                if len(complete_dict.keys()) == 2 and complete_dict[list(complete_dict.keys())[1]] == 'float': # if is magnitude, consists always of two and input value type is float
+                if len(complete_dict.keys()) == 2 and (complete_dict[list(complete_dict.keys())[1]] == 'float' or complete_dict[list(complete_dict.keys())[1]] == 'int') : # if is magnitude, consists always of two keys, the input value type is a float or a int
+                    value_type = complete_dict[list(complete_dict.keys())[1]]
                     html_code += "<div class=\"list\"><table class=\"magnitude\">"
                     for element in complete_dict[list(complete_dict.keys())[0]]:
-                        html_code += "<tr><td class=\"magnitude_value\"><span class=\"bullet\"> &bull;  </span><span class=\"value_type\">float </span>\
-                        </td><td class=\"magnitude_unit\"><span class=\"tree_option\"> " + str(element) + "</span> \
-                        <button onclick='copy_to_clipboard(\""+str(element)+"\")'>\
-                        <img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>"
+                        if element in instance_comment_dict.keys(): # if instance comment exist
+                            html_code += "<tr><td class=\"magnitude_value\"><span class=\"bullet\"> &bull;  </span><span class=\"value_type\">"+str(value_type)+" </span>\
+                            </td><td class=\"magnitude_unit\"><span class=\"tree_option tooltip\"><b>" + str(element) + "</b><span class=\"tooltiptext\">" + str(instance_comment_dict[element]) + "</span></span> \
+                            <button onclick='copy_to_clipboard(\""+str(element)+"\")'>\
+                            <img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>"
+                        else:
+                            html_code += "<tr><td class=\"magnitude_value\"><span class=\"bullet\"> &bull;  </span><span class=\"value_type\">"+str(value_type)+"</span>\
+                            </td><td class=\"magnitude_unit\"><span class=\"tree_option\"> " + str(element) + "</span> \
+                            <button onclick='copy_to_clipboard(\""+str(element)+"\")'>\
+                            <img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>"
                     html_code += "</table></div>"
                 else:
                     for key in complete_dict.keys(): # for each key
@@ -71,7 +82,10 @@ def search(request): #search call of website
                             if isinstance(complete_dict[key], list):  # if value is list, magnitudes a seperated before
                                 html_code += "<div class=\"list\"><table>"
                                 for element in complete_dict[key]: # for each element in list
-                                    html_code += "<tr><td><span class=\"bullet\"> &bull;  </span><span class=\"tree_option\">" + str(element) + "</span> <button onclick='copy_to_clipboard(\""+str(element)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>" # insert each value
+                                    if element in instance_comment_dict.keys(): # if comment exist on instance
+                                        html_code += "<tr><td><span class=\"bullet\"> &bull;  </span><span class=\"tree_option tooltip\"><b>" + str(element) + "</b><span class=\"tooltiptext\">" + str(instance_comment_dict[element]) + "</span></span> <button onclick='copy_to_clipboard(\""+str(element)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>"
+                                    else:
+                                        html_code += "<tr><td><span class=\"bullet\"> &bull;  </span><span class=\"tree_option\">" + str(element) + "</span> <button onclick='copy_to_clipboard(\""+str(element)+"\")'><img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>" # insert each value
                                 html_code += "</table></div></div>"
 
                             else: # if value is str
@@ -79,11 +93,11 @@ def search(request): #search call of website
                                     key] + "</span></div>" # insert str close main div
                                 pass
                         else: # if value is child dict
-                            if len(complete_dict[key].keys()) == 2 and complete_dict[key][list(complete_dict[key].keys())[1]] == 'float':  # if child layer is  a magnitude  classified by float input value type dont add a breakpoint
+                            if len(complete_dict[key].keys()) == 2 and (complete_dict[key][list(complete_dict[key].keys())[1]] == 'float' or complete_dict[key][list(complete_dict[key].keys())[1]] == 'int'):  # if child layer is  a magnitude  classified by float or int input value type dont add a html-break
                                 pass # do nothing
                             else:
                                 html_code += "<br>"
-                            generate_html_form_dict_via_recusion(complete_dict[key], depth + 1) # call function again for child dict
+                            generate_html_form_dict_via_recursion(complete_dict[key], depth + 1) # call function again for child dict
                             html_code += "</div>" # close main div
             elif isinstance(complete_dict, list):  # if complete_dict is only a single list, in deep Objects possible
                 html_code += "<div class=\"list\"><table>"#"<div class=\"list\">"
@@ -93,7 +107,7 @@ def search(request): #search call of website
 
 
 
-        generate_html_form_dict_via_recusion(data_tree[list(data_tree.keys())[0]]) # call recursive function
+        generate_html_form_dict_via_recursion(data_tree[list(data_tree.keys())[0]]) # call recursive function
         return render(request, 'SurfTheOWL.html', {'search_result_heading': [search_result_heading, id_dict[search_result_heading], comment_dict[search_result_heading], context_type],
                                                     'data_objects': data[1],
                                                     'list_of_all_classes': list_of_all_classes,
