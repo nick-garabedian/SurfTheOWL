@@ -1,6 +1,6 @@
 # SurfTheOWL
 ## Simple use of SurfTheOWL 
-1. Download the zip file ```SurfTheOWL_executable.zip```
+1. [Download the zip file ```SurfTheOWL_executable.zip```](https://github.com/nick-garabedian/SurfTheOWL/releases/tag/v1.0)
 2. Unzip the file for example via 7zip
 3. Open the unzipped folder and double-click on ```SurfTheOWL.bat```
 4. Now your Browser opens and SurfTheOWL is running 
