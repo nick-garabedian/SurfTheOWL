@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 # Comment by Nick: These are the setting on how the server is managed
 from pathlib import Path
 import os
+import mimetypes
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -117,6 +118,10 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+# adding right mime types to files
+mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("text/javascript", ".js", True)
+
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_URL = '/staticfiles/'
 STATICFILES_DIRS = [

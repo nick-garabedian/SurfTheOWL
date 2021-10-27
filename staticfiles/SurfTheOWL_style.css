@@ -16,9 +16,6 @@ body{
     padding-left: 10px;
     vertical-align: top;
 }
-.magnitude {
-    display: inline-table;
-}
 hr.solid {
   border-top: 3px solid #bababa;
 }
