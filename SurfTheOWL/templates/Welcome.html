@@ -14,10 +14,35 @@
     <div class="welcome">
         <h1>Welcome to SurfTheOWL</h1>
         <img src="{% static 'favicon.svg' %}" alt="Surfing OWL" height=400>
-        <p id="loading_text">Loading Ontology "{{ OWL_file_name }}owl"</p>
-    </div>
-</div>
+        <p id="loading_text">Loading Ontology: "{{ OWL_file_name }}owl"</p>
 
+        <div style="width: 100%">
+            <div id="loader"></div>
+        </div>
+
+        <div class="startup">
+            <form action="/download_duplicate_ids" method="post">
+                {% csrf_token %}
+            <button class="st_bt" type="submit">Found {{ number_of_duplicate_ids }} duplicate TDOs</button>
+        </form>
+        </div>
+
+        <div class="startup" >
+            <form action="/download_classes_no_id" method="post">
+                {% csrf_token %}
+                <button class="st_bt" type="submit">Found {{ number_of_classes_no_id }} Classes with no TDO identifier</button>
+            </form>
+        </div>
+        <div style="text-align: center; padding: 1em">
+            <form action="/landing" method="post">
+                {% csrf_token %}
+                <button type="submit" id="SurfTheOWL_start">Start</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>

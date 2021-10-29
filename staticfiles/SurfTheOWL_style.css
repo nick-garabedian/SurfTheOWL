@@ -187,3 +187,10 @@ hr.solid {
 #spacer2{
     height: 20px;
 }
+.special_mag_space{
+    padding-left: 40px;
+}
+.grid_temp{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}

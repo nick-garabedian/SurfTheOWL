@@ -5,8 +5,9 @@ from operator import itemgetter
 property_restrictions = ['some', 'only', 'min', 'max', 'exactly', 'value', 'has_self'] # Comment by Nick: So that we know it's not a superclass
 special_restrictions = [['hasTimeStamp', 'dateTimeStamp']]
 OWL_master_name = 'TriboDataFAIR_Ontology.'
+OWL_path = 'SurfTheOWL/TriboDataFAIR_Ontology.owl'
 data_input_types = ['float', 'string', 'decimal', 'dateTimeStamp', 'boolean', 'PlainLiteral', 'integer', 'dateTimeStamp']
-TriboDataFAIR = get_ontology('SurfTheOWL/TriboDataFAIR_Ontology.owl').load()
+TriboDataFAIR = get_ontology(OWL_path).load()
 
 #namespace = TriboDataFAIR.get_namespace('SurfTheOWL/TriboDataFAIR_Ontology.owl')
 
@@ -250,6 +251,11 @@ def children(key):
     if not end_of_entries(key):
         children_classes_dict = dict.fromkeys(search_class(key))
         placeholder_keys = list(children_classes_dict.keys())
+        if get_data_instances(key)[0]: # quit rare, but if class have subclasses and instances, get both
+            instances = get_data_instances(key)
+            instances_comment_dict.update(instances[1]) # push comments
+            children_classes_dict['Individuals'] = instances[0] # push instances
+            friendly_names_dict['Individuals'] = instances[0] # push friendly name instances
 
     else:
         instances = get_data_instances(key)
@@ -380,6 +386,7 @@ def main_search(className):
             ordered_friendly_classes_dict[friendly_class_name].update({element[0]: element[1]})
 
         # end of ordering the dict -------------------------------------------------------------------------------------
+
 
         return [ordered_friendly_classes_dict, special_objects_friendly, classes_dict, id_dict, comment_dict, contextual_type_definition_friendly, instances_comment_dict]
 

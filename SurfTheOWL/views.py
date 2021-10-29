@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . import SurfTheOWL
+from . import FindDublicateIDs
 from django.http import FileResponse
 import json
 
@@ -8,9 +9,20 @@ import json
 search_output = {} # contains the return of maine_search()
 html_code = "" # contains the data_tree in html code
 context_type = ""
+duplicate_ids = []
+owl_classes_with_no_id = []
+
 # Create your views here.
 def welcome(request): # initial call of the website, after timeout redirected to landing
-    return render(request, 'Welcome.html', {'OWL_file_name': SurfTheOWL.OWL_master_name})
+    setup_output = FindDublicateIDs.check_ids(SurfTheOWL.OWL_path)
+
+    global duplicate_ids
+    duplicate_ids = setup_output[0]
+
+    global owl_classes_with_no_id
+    owl_classes_with_no_id = setup_output[1]
+
+    return render(request, 'Welcome.html', {'OWL_file_name': SurfTheOWL.OWL_master_name, 'number_of_duplicate_ids': len(setup_output[0]), 'number_of_classes_no_id': len(setup_output[1])})
 
 def landing(request):  # landing after welcome
     list_of_all_classes = SurfTheOWL.searchable_owl_classes
@@ -46,10 +58,18 @@ def search(request): #search call of website
             else:
                 return "layer_odd_div"
 
+        def get_value_if_value_exist(c_dict_as_array, index):
+
+            if index < len(c_dict_as_array):
+                return str(c_dict_as_array[index])
+            else:
+                return False
+
+
         def generate_html_form_dict_via_recursion(complete_dict, depth=0):
             global html_code
             if isinstance(complete_dict, dict):  # complete dict is dict and no list
-                if len(complete_dict.keys()) == 2 and (complete_dict[list(complete_dict.keys())[1]] == 'float' or complete_dict[list(complete_dict.keys())[1]] == 'int') : # if is magnitude, consists always of two keys, the input value type is a float or a int
+                if len(complete_dict.keys()) == 2 and ('Input Value Type' in complete_dict.keys()):#(complete_dict[list(complete_dict.keys())[1]] == 'float' or complete_dict[list(complete_dict.keys())[1]] == 'int') : # if is magnitude, consists always of two keys, the input value type is a float or a int
                     value_type = complete_dict[list(complete_dict.keys())[1]]
                     html_code += "<div class=\"list\"><table class=\"magnitude\">"
                     for element in complete_dict[list(complete_dict.keys())[0]]:
@@ -64,6 +84,38 @@ def search(request): #search call of website
                             <button onclick='copy_to_clipboard(\""+str(element)+"\")'>\
                             <img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td></tr>"
                     html_code += "</table></div>"
+                elif len(complete_dict.keys()) == 3 and ('Input Value Type' in complete_dict.keys()): # special magnitude case
+                    value_type = complete_dict[list(complete_dict.keys())[2]]
+                    units_key = list(complete_dict.keys())[1]
+                    instances_key = list(complete_dict.keys())[0]
+                    longest_array = complete_dict[units_key] if len(complete_dict[units_key]) > len(complete_dict[instances_key]) else complete_dict[instances_key]
+                    html_code += "<div class=\"list\"><table class=\"magnitude\">"
+                    for i in range(len(longest_array)):
+                        html_code += "<tr><td class=\"magnitude_value\"><span class=\"bullet\"> &bull;  </span><span class=\"value_type\">"+value_type+"</span>\
+                        </td>"
+                        if get_value_if_value_exist(complete_dict[instances_key], i):
+                            if get_value_if_value_exist(complete_dict[instances_key], i) in instance_comment_dict.keys():
+                                html_code += "<td class=\"magnitude_unit\"><span class=\"tree_option tooltip\"><b>" + get_value_if_value_exist(complete_dict[instances_key], i) + "</b><span class=\"tooltiptext\">" + str(instance_comment_dict[get_value_if_value_exist(complete_dict[instances_key], i)]) + "</span></span><button onclick='copy_to_clipboard(\""+ get_value_if_value_exist(complete_dict[instances_key], i)+ "\")'>\
+                                            <img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td>"
+                            else:
+                                html_code +=  "<td class=\"magnitude_unit\"><span class=\"tree_option\"> " + get_value_if_value_exist(complete_dict[instances_key], i) + "</span><button onclick='copy_to_clipboard(\""+ get_value_if_value_exist(complete_dict[instances_key], i)+ "\")'>\
+                                                <img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td>"
+                        else:
+                            html_code += "<td></td>"
+                        if get_value_if_value_exist(complete_dict[units_key], i):
+                            if get_value_if_value_exist(complete_dict[units_key], i) in instance_comment_dict.keys():
+                                html_code += "<td class=\"magnitude_unit\"><span class=\"tree_option tooltip\"><b>" + get_value_if_value_exist(
+                                    complete_dict[units_key], i) + "</b><span class=\"tooltiptext\">" + str(
+                                    instance_comment_dict[get_value_if_value_exist(complete_dict[units_key], i)]) + "</span></span><button onclick='copy_to_clipboard(\"" + get_value_if_value_exist(complete_dict[instances_key], i) + "\")'>\
+                                                                           <img src='https://img.icons8.com/ios/10/000000/copy.png'/></button></td>"
+                            else:
+                                html_code += "<td class=\"magnitude_unit special_mag_space\"><span class=\"bullet\"> &bull;  </span><span class=\"tree_option\"> " + get_value_if_value_exist(complete_dict[units_key], i)+ "</span><button onclick='copy_to_clipboard(\""+ get_value_if_value_exist(complete_dict[units_key], i)+ "\")'>\
+                        <img src='https://img.icons8.com/ios/10/000000/copy.png'/></button><td>"
+                        else:
+                            html_code += "<td></td>"
+                        html_code += "</tr>"
+                    html_code += "</table></div>"
+
                 else:
                     for key in complete_dict.keys(): # for each key
                         html_code += "<div class=" +just_odd_layer_seperation(depth) + "><hr class=\"limb_root\"><span class=\"bulletpoint\"> &#9660; </span>" \
@@ -95,6 +147,8 @@ def search(request): #search call of website
                         else: # if value is child dict
                             if len(complete_dict[key].keys()) == 2 and (complete_dict[key][list(complete_dict[key].keys())[1]] == 'float' or complete_dict[key][list(complete_dict[key].keys())[1]] == 'int'):  # if child layer is  a magnitude  classified by float or int input value type dont add a html-break
                                 pass # do nothing
+                            elif len(complete_dict[key].keys()) == 3 and ('Input Value Type' in complete_dict[key].keys()):  # if child layer is  a special magnitude dont add a html-break
+                                pass
                             else:
                                 html_code += "<br>"
                             generate_html_form_dict_via_recursion(complete_dict[key], depth + 1) # call function again for child dict
@@ -131,5 +185,23 @@ def download_search_result_json(request): # function to serve a downloadable JSO
     response = FileResponse(json_file, charset='utf-8')  # setup response as File
     response['Content-Disposition'] = 'attachment; filename=' + str(searched_class)+ '.json' # name JSON file
     response['Content-Type'] = 'application/json' # specific file type
+
+    return response
+
+def download_class_no_id(request): # serve array classes with no id
+    global owl_classes_with_no_id
+    file = json.dumps(owl_classes_with_no_id, indent=2, sort_keys=True)
+    response = FileResponse(file, charset='utf-8')
+    response['Content-Disposition'] = 'attachment; filename=OWL_Classes_with_no_TDO.json'  # name JSON file
+    response['Content-Type'] = 'application/json'  # specific file type
+
+    return response
+
+def download_du_ids(request): # serve array classes with duplicate id
+    global duplicate_ids
+    file = json.dumps(duplicate_ids, indent=2, sort_keys=True)
+    response = FileResponse(file, charset='utf-8')
+    response['Content-Disposition'] = 'attachment; filename=OWL_Classes_with_duplicate_id.json'  # name JSON file
+    response['Content-Type'] = 'application/json'  # specific file type
 
     return response

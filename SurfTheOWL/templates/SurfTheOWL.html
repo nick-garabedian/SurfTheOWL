@@ -10,15 +10,22 @@
     <link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
 </head>
 <body>
-    <form action="/Surfing" method="post">
-        {% csrf_token %}
-        <select name="searched_class" id="searched_class">
-            {% for element in list_of_all_classes %}
-            <option value="{{element.0}}">{{element.1}}</option> <!--value=normal class name, >< = friendly name   -->
-            {% endfor %}
-        </select>
-        <button id="submit_button" type="submit">SEARCH</button>
-    </form>
+    <div class="grid_temp">
+        <div style="margin-top: auto; margin-bottom: auto">
+            <form action="/Surfing" method="post">
+                {% csrf_token %}
+                <select name="searched_class" id="searched_class">
+                    {% for element in list_of_all_classes %}
+                    <option value="{{element.0}}">{{element.1}}</option> <!--value=normal class name, >< = friendly name   -->
+                    {% endfor %}
+                </select>
+                <button id="submit_button" type="submit">SEARCH</button>
+            </form>
+        </div>
+        <div style="width: 100%; text-align: right">
+            <img src="{% static 'favicon.svg' %}" width="50" height="50" style="border: solid 1px lightgray; padding: 2px;">
+        </div>
+    </div>
 
     <hr class="solid">
     {% if search_result_heading %}

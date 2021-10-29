@@ -24,5 +24,7 @@ urlpatterns = [
     path('landing', views.landing),
     path('', views.welcome),
     path('Surfing', views.search),
-    path('download_json', views.download_search_result_json)
+    path('download_json', views.download_search_result_json),
+    path('download_duplicate_ids', views.download_du_ids),
+    path('download_classes_no_id', views.download_class_no_id)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
