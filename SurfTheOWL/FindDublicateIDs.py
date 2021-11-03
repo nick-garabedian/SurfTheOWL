@@ -8,7 +8,7 @@ def check_ids(owl_file_path):
     classes_id = []
     duplicate_ids = []
 
-    # get all ids and classes with no id
+    # get all ids and classes with no id, is just able to prof all classes if they have a id, because Classes which are used to sort other classes appear with no data pattern which is specific to them.
     for child in root: # some data (class etc.)
         if child.tag == '{http://www.w3.org/2002/07/owl#}Class':
             class_name = list(child.attrib.values()) # get class name

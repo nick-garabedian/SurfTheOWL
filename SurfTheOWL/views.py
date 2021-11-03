@@ -20,7 +20,8 @@ def welcome(request): # initial call of the website, after timeout redirected to
     duplicate_ids = setup_output[0]
 
     global owl_classes_with_no_id
-    owl_classes_with_no_id = setup_output[1]
+    owl_classes_with_no_id = setup_output[1] # not used because "Sorting Classes", cant be seperated form all other Classes, because they have no special data pattern.
+    #functionality is send to browser, but there in the html template, the needed code to display them is commented out.
 
     return render(request, 'Welcome.html', {'OWL_file_name': SurfTheOWL.OWL_master_name, 'number_of_duplicate_ids': len(setup_output[0]), 'number_of_classes_no_id': len(setup_output[1])})
 
