@@ -27,6 +27,6 @@ def check_ids(owl_file_path):
         element = classes_id.pop(0) # get element and remove it from mother list
         ids = list(map(lambda item: item[1], classes_id)) # convert 2 dim. List to just 1 dim TDO-id-list
         if element[1] in ids: # if current id is also in leftover ids, than id is a duplicate one
-            duplicate_ids.append((classes_id[i][0], element[1])) # if id is duplicate, save class name and id in list duplicate_ids
+            duplicate_ids.append((element[0], element[1])) # if id is duplicate, save class name and id in list duplicate_ids
 
     return [duplicate_ids, classes_with_no_id]

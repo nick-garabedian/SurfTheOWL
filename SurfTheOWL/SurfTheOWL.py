@@ -392,4 +392,3 @@ def main_search(className):
 
 searchable_owl_classes = get_searchable_classes_from_list(Kadi4Mate_objects) # all owl classes under Procedure which get the searchable classes in frontend
 
-
