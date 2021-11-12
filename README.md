@@ -1,4 +1,5 @@
 # SurfTheOWL
+<img src="https://github.com/nick-garabedian/SurfTheOWL/blob/master/staticfiles/favicon.svg" width=50 height=50 style="background-color: white">
 ![IMAGE_DESCRIPTION](https://github.com/nick-garabedian/SurfTheOWL/blob/master/staticfiles/favicon.svg)
 
 ## Simple use of SurfTheOWL 
