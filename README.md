@@ -1,6 +1,6 @@
 # SurfTheOWL
-<img src="https://github.com/nick-garabedian/SurfTheOWL/blob/master/staticfiles/favicon.svg" width=50 height=50 style="background-color: white">
-![IMAGE_DESCRIPTION](https://github.com/nick-garabedian/SurfTheOWL/blob/master/staticfiles/favicon.svg)
+<img src="https://github.com/nick-garabedian/SurfTheOWL/blob/master/staticfiles/favicon.svg" width=100 height=100 style="background-color: white">
+
 
 ## Simple use of SurfTheOWL 
 1. [Download the zip file ```SurfTheOWL_executable.zip```](https://github.com/nick-garabedian/SurfTheOWL/releases/tag/v1.2)
