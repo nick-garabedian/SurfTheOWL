@@ -1,5 +1,5 @@
 # SurfTheOWL
-![IMAGE_DESCRIPTION](https://raw.githubusercontent.com/nick-garabedian/SurfTheOWL/staticfiles/favicon.svg)
+![IMAGE_DESCRIPTION](https://github.com/nick-garabedian/SurfTheOWL/blob/master/staticfiles/favicon.svg)
 
 ## Simple use of SurfTheOWL 
 1. [Download the zip file ```SurfTheOWL_executable.zip```](https://github.com/nick-garabedian/SurfTheOWL/releases/tag/v1.2)
