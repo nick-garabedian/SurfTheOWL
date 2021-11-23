@@ -6,7 +6,7 @@
 SurfTheOWL is a software that can be used to query an ontology with a specific structure - currently applied only to [TriboDataFAIR-Ontology](https://github.com/nick-garabedian/TriboDataFAIR-Ontology/) - and display the possible key-value pairs that constitute a record in an electronic lab notebook for a specific laboratory object or procedure.
 
 ## Simple use of SurfTheOWL 
-1. [Download the zip file ```SurfTheOWL_executable.zip```](https://github.com/nick-garabedian/SurfTheOWL/releases/tag/v1.2)
+1. [Download the zip file ```SurfTheOWL_executable.zip```](https://github.com/nick-garabedian/SurfTheOWL/releases)
 2. Unzip the file for example via 7zip
 3. Open the unzipped folder and double-click on ```SurfTheOWL.bat```
 4. Now your Browser opens and SurfTheOWL is running 
