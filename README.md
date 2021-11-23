@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/349357816.svg)](https://zenodo.org/badge/latestdoi/349357816)
+
 # SurfTheOWL
 <img src="https://github.com/nick-garabedian/SurfTheOWL/blob/master/staticfiles/favicon.svg" width=100 height=100 style="background-color: white">
 
